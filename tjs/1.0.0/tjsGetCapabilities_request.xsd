@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:tjs="http://www.opengis.net/tjs/1.0" targetNamespace="http://www.opengis.net/tjs/1.0" elementFormDefault="qualified" version="1.0" xml:lang="en">
+	<annotation>
+		<appinfo>$Id: tjsGetCapabilities_request.xsd 2010-02-10 $</appinfo>
+		<documentation>
+			<description>This XML Schema specifies the content of the TJS GetCapabilities request.</description>
+			<copyright>Copyright (c) 2010 OpenGIS, All Rights Reserved. </copyright>
+		</documentation>
+	</annotation>
+	<!-- ========= includes and imports ================================ -->
+	<import namespace="http://www.opengis.net/ows/1.1" schemaLocation="../../ows/1.1.0/owsGetCapabilities.xsd"/>
+	<!-- ========= top level element =================================== -->
+	<element name="GetCapabilities">
+		<annotation>
+			<documentation>Request to a TJS to perform the GetCapabilities operation. This operation allows a client to retrieve a Capabilities XML document providing metadata for the specific TJS server. In this XML encoding, no "request" parameter is included, since the element name specifies the specific operation. </documentation>
+		</annotation>
+		<complexType>
+			<complexContent>
+				<extension base="ows:GetCapabilitiesType">
+					<attribute name="service" use="required" fixed="TJS">
+						<annotation>
+							<documentation>Service type identifier requested by the client.</documentation>
+						</annotation>
+					</attribute>
+					<attribute name="language">
+						<annotation>
+							<documentation>Language requested by the client for all human readable text in the response.  Consists of a two or five character RFC 4646 language code.</documentation>
+						</annotation>
+					</attribute>
+				</extension>
+			</complexContent>
+		</complexType>
+	</element>
+</schema>

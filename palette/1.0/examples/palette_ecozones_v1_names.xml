@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../stylesheets/palette2html.xsl"?>
+<Palette xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../palette.xsd">
+	<Title>Ecozone Colors</Title>
+	<Abstract>Colors used on the Ecozones of Canada map</Abstract>
+	<ColorSet ramp="false">
+		<Color id="1" value="CCFFFF" tip="Arctic Cordillera" />
+		<Color id="2" value="99CCCC" tip="Northern Arctic" />
+		<Color id="3" value="0099CC" tip="Southern Arctic" />
+		<Color id="4" value="CCCCCC" tip="Taiga Plains" />
+		<Color id="5" value="999999" tip="Taiga Shield" />
+		<Color id="6" value="66CC66" tip="Boreal Shield" />
+		<Color id="7" value="66CCCC" tip="Atlantic Maritime" />
+		<Color id="8" value="CCCC99" tip="Mixedwood Plains" />
+		<Color id="9" value="CCFFCC" tip="Boreal Plains" />
+		<Color id="10" value="FFFF99" tip="Prairies" />
+		<Color id="11" value="CC99CC" tip="Taiga Cordillera" />
+		<Color id="12" value="9966CC" tip="Boreal Cordillera" />
+		<Color id="13" value="006600" tip="Pacific Maritime" />
+		<Color id="14" value="99CC00" tip="Montane Cordillera" />
+		<Color id="15" value="CCFF99" tip="Hudson Plains" />
+	</ColorSet>
+</Palette>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xrs="http://www.opengis.net/xrs/1.0.0" targetNamespace="http://www.opengis.net/xrs/1.0.0" elementFormDefault="qualified" version="1.0.0" xml:lang="en">
+	<xs:annotation>
+		<xs:appinfo>$Id: xrsGetCapabilitiesResponse.xsd 2007-05-31 $</xs:appinfo>
+		<xs:documentation>
+			<xs:description>Response to an XRS GetCapabilities Request.</xs:description>
+			<xs:copyright>Copyright (c) 2007 Government of Canada, All Rights Reserved. </xs:copyright>
+		</xs:documentation>
+	</xs:annotation>
+	<!-- ==============================================================-->
+	<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="../../../xlink/1.0.0/xlinks.xsd"/>
+	<xs:include schemaLocation="xrsSimpleElements.xsd"/>
+	<!-- ==============================================================-->
+	<xs:complexType name="CollectionType">
+		<xs:sequence>
+			<xs:element ref="xrs:Identifier"/>
+			<xs:element ref="xrs:Title"/>
+			<xs:element ref="xrs:URN"/>
+			<xs:element ref="xrs:SchemaURL"/>
+			<xs:element ref="xrs:RegisterURL"/>
+			<xs:element ref="xrs:GetRegistrationsURL"/>
+			<xs:element ref="xrs:SearchURL"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

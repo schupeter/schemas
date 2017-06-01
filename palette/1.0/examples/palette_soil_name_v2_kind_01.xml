@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../stylesheets/palette2html.xsl"?>
+<Palette xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../palette.xsd">
+	<Title>Kind of Material (KIND)</Title>
+	<Abstract>Colors used to map Soil Name Table v2 Kind of Material.</Abstract>
+	<ColorSet ramp="false">
+		<Color id="M" value="A87000" tip="Mineral"/>
+		<Color id="O" value="FF99EB" tip="Organic"/>
+		<Color id="N" value="E04A2C" tip="Non-soil"/>
+		<Color id="U" value="B2B2B2" tip="Urban"/>
+	</ColorSet>
+</Palette>

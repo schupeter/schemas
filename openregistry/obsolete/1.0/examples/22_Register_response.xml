@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RegisterResponse service="XRS" version="1.0" serviceURL="http://foo.bar/foo">
+	<Request>
+		<Register>
+			<ResourceType>GDAS:1.0</ResourceType>
+			<URL>http://foo.bar/foo</URL>
+		</Register>
+	</Request>
+	<Registration>
+		<Succeeded>
+			<Collection>
+				<ResourceType>GDAS:1.0</ResourceType>
+				<Title>GDAS XML files</Title>
+				<URI>OGC:…</URI>
+				<SchemaURL>http://foo.bar/foo.xsd</SchemaURL>
+			</Collection>
+			<Message>URL registered successfully.</Message>
+		</Succeeded>
+	</Registration>
+</RegisterResponse>

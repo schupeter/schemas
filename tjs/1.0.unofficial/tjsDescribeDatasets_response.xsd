@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:tjs="http://www.opengis.net/tjs/1.0" targetNamespace="http://www.opengis.net/tjs/1.0" elementFormDefault="qualified" version="1.0" xml:lang="en">
+	<annotation>
+		<appinfo>$Id: tjsDescribeDatasets_response.xsd 2009-06-01 $</appinfo>
+		<documentation>
+			<description>This XML Schema specifies the content of the TJS DescribeDatasets response.</description>
+			<copyright>Copyright (c) 2009 OpenGIS, All Rights Reserved. </copyright>
+		</documentation>
+	</annotation>
+	<!-- ========= includes and imports ================================ -->
+	<include schemaLocation="tjsAll.xsd"/>
+	<!-- ========= top level element =================================== -->
+	<element name="DatasetDescriptions">
+		<annotation>
+			<documentation>Response containing full descriptions of all datasets containing data which can be joined to the identified spatial frameworks.</documentation>
+		</annotation>
+		<complexType>
+			<complexContent>
+				<extension base="tjs:ResponseBaseType">
+					<sequence>
+						<element name="Framework" type="tjs:FrameworkDescribeDatasetType" maxOccurs="unbounded">
+							<annotation>
+								<documentation>Spatial framework for which attribute data is housed on this server.</documentation>
+							</annotation>
+						</element>
+					</sequence>
+				</extension>
+			</complexContent>
+		</complexType>
+	</element>
+	<!-- ========= other elements and types ============================ -->
+	<complexType name="FrameworkDescribeDatasetType">
+		<sequence>
+			<element ref="tjs:FrameworkURI"/>
+			<element ref="tjs:Organization"/>
+			<element ref="tjs:Title"/>
+			<element ref="tjs:Abstract"/>
+			<element ref="tjs:ReferenceDate"/>
+			<element ref="tjs:Version"/>
+			<element ref="tjs:Documentation" minOccurs="0"/>
+			<element ref="tjs:FrameworkKey"/>
+			<element ref="tjs:BoundingBox"/>
+			<element name="Dataset" maxOccurs="unbounded">
+				<complexType>
+					<sequence>
+						<element ref="tjs:DatasetURI"/>
+						<element ref="tjs:Organization"/>
+						<element ref="tjs:Title"/>
+						<element ref="tjs:Abstract"/>
+						<element ref="tjs:ReferenceDate"/>
+						<element ref="tjs:Version"/>
+						<element ref="tjs:Documentation" minOccurs="0"/>
+						<element ref="tjs:DatasetKey"/>
+						<element ref="tjs:KeyRelationship"/>
+						<element ref="tjs:KeyComplete"/>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+</schema>

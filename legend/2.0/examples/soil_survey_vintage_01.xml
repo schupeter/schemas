@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../stylesheets/legend2html.xsl"?>
+<Legend version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../legend.xsd">
+	<Title>Soil Survey Vintage</Title>
+	<Abstract>Classes used to map the vintage of soil survey scans.</Abstract>
+	<Classes type="ordinal" title_en="Soil Survey Vintage"  title_fr="Études pédologique: Date de publication">
+		<Class rank="1" identifier="2000s" color="00FF7F" title_en="since 2000" title_fr="depuis 2000"/>
+		<Class rank="2" identifier="1990s" color="00FF2A" title_en="1990s" title_fr="les années 1990"/>
+		<Class rank="3" identifier="1980s" color="AAFF2A" title_en="1980s" title_fr="les années 1980"/>
+		<Class rank="4" identifier="1970s" color="FFFF2A" title_en="1970s" title_fr="les années 1970"/>
+		<Class rank="5" identifier="1960s" color="FFD400" title_en="1960s" title_fr="les années 1960"/>
+		<Class rank="6" identifier="1950s" color="FF7F00" title_en="1950s" title_fr="les années 1950"/>
+		<Class rank="7" identifier="b1950" color="FF0000" title_en="before 1950" title_fr="avant 1950"/>
+	</Classes>
+</Legend>

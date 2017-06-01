@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CollectionContents service="OpenRegistry" version="1.0" serviceURL="http://foo.bar/foo" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openregistry.info/schemas/openregistry/1.0 ..\orsGetCollection_response.xsd" xmlns="http://openregistry.info/schemas/openregistry/1.0" xml:lang="en">
+	<Collection identifier="GDAS:1.0" uri="http://foo.bar/foo" schema="http://foo.bar/foo.xsd" objectCount="45">
+		<Title>GDAS XML files version 1.0</Title>
+		<Objects>
+			<Object identifier="http://foo.bar/foo1">
+			<Object identifier="http://foo.bar/foo2">
+			<Object identifier="http://foo.bar/foo3">
+		</Objects>
+	</Collection>
+</CollectionContents>

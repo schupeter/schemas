@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<FrameworkDescriptions service="GLS" version="0.12" xml:lang="en-CA" xmlns="http://www.opengis.net/gls/0.12" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/gls/0.12  ../glsDescribeFrameworks_response.xsd">
+	<Framework>
+		<FrameworkURI>statcan.ca</FrameworkURI>
+		<Organization>Statistics Canada</Organization>
+		<Title>Provinces and Territories of Canada</Title>
+		<Abstract>Provincial and Territorial boundaries used for the 2001 Census of Canada. </Abstract>
+		<ReleaseDate>2001-06-03</ReleaseDate>
+		<Documentation>http://geodepot.statcan.ca/Diss/Data/Geography/n_cd_e.cfm</Documentation>
+		<FrameworkKey>pr</FrameworkKey>
+		<BoundingBox>
+			<Minimum>
+				<Latitude>40</Latitude>
+				<Longitude>-138</Longitude>
+			</Minimum>
+			<Maximum>
+				<Latitude>90</Latitude>
+				<Longitude>-47</Longitude>
+			</Maximum>
+		</BoundingBox>
+	</Framework>
+	<Framework>
+		<FrameworkURI>statcan.ca</FrameworkURI>
+		<Organization>Statistics Canada</Organization>
+		<Title>Census Divisions</Title>
+		<Abstract>Census divisions defined for the 2001 Census of Canada. </Abstract>
+		<ReleaseDate>2001-06-03</ReleaseDate>
+		<Documentation>http://geodepot.statcan.ca/Diss/Data/Geography/n_cd_e.cfm</Documentation>
+		<FrameworkKey>cd</FrameworkKey>
+		<BoundingBox>
+			<Minimum>
+				<Latitude>40</Latitude>
+				<Longitude>-138</Longitude>
+			</Minimum>
+			<Maximum>
+				<Latitude>90</Latitude>
+				<Longitude>-47</Longitude>
+			</Maximum>
+		</BoundingBox>
+	</Framework>
+	<Framework>
+		<FrameworkURI>statcan.ca</FrameworkURI>
+		<Organization>Statistics Canada</Organization>
+		<Title>Census Subdivisions</Title>
+		<Abstract>Census subdivisions defined for the 2001 Census of Canada. </Abstract>
+		<ReleaseDate>2001-06-03</ReleaseDate>
+		<Documentation>http://geodepot.statcan.ca/Diss/Data/Geography/n_cd_e.cfm</Documentation>
+		<FrameworkKey>csd</FrameworkKey>
+		<BoundingBox>
+			<Minimum>
+				<Latitude>40</Latitude>
+				<Longitude>-138</Longitude>
+			</Minimum>
+			<Maximum>
+				<Latitude>90</Latitude>
+				<Longitude>-47</Longitude>
+			</Maximum>
+		</BoundingBox>
+	</Framework>
+</FrameworkDescriptions>

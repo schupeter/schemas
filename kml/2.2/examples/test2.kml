@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml>
+<Document id="SLC_Boundaries">
+  <name>SLC_Boundaries</name>
+  <Snippet></Snippet>
+  <Folder id="FeatureLayer0">
+    <name>SLC_Boundaries</name>
+    <Snippet></Snippet>
+    <Placemark id="ID_00000"></Placemark>
+	</Folder>
+</Document>
+</kml>

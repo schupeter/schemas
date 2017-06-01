@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ors="http://geoprocessing.info/openregistry/1.0" targetNamespace="http://geoprocessing.info/openregistry/1.0" elementFormDefault="qualified" version="1.0" xml:lang="en">
+	<xs:annotation>
+		<xs:appinfo>$Id: orsRootAttributeGroup.xsd 2010-05-10 $</xs:appinfo>
+		<xs:documentation>
+			<xs:description>Response to an ors GetCapabilities Request.</xs:description>
+			<xs:copyright>Copyright (c) 2010 Government of Canada, All Rights Reserved. </xs:copyright>
+		</xs:documentation>
+	</xs:annotation>
+	<!-- ==============================================================-->
+	<xs:attributeGroup name="RootAttributeGroup">
+		<xs:annotation>
+			<xs:documentation>Attributes found in the root elements of all responses.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="service" type="xs:string" use="required" fixed="OpenRegistry">
+			<xs:annotation>
+				<xs:documentation>The type of web service.  In this case, a Open Registry Service, so fixed as "OpenRegistry".</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="version" type="xs:string" use="required" fixed="1.0">
+			<xs:annotation>
+				<xs:documentation>The version of the web service interface.  In this case fixed as "1.0".</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="serviceURL" type="xs:anyURI" use="required">
+			<xs:annotation>
+				<xs:documentation>The URL of the Capabilities document for this service instance.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="lang" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>The language of the human readable text provided by this service instance.  Normally also the language of the content of the documents found in the collections within this registry.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+</xs:schema>

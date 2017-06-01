@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../stylesheets/palette2html.xsl"?>
+<Palette xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../palette.xsd">
+	<Title>Soil Order</Title>
+	<Abstract>Colors used to map Soil Name Table v2 Soil Order (ORDER3).</Abstract>
+	<ColorSet ramp="false">
+		<Color id="BR" value="B08D0B" tip="Brunisol"/>
+		<Color id="CH" value="DC660F" tip="Chernozem"/>
+		<Color id="CY" value="3E88E1" tip="Cryosol"/>
+		<Color id="GL" value="2E6EAE" tip="Gleysol"/>
+		<Color id="LU" value="E5E56B" tip="Luvisol"/>
+		<Color id="OR" value="FF99EB" tip="Organic"/>
+		<Color id="PZ" value="064A11" tip="Podzol"/>
+		<Color id="RG" value="5E5999" tip="Regosol"/>
+		<Color id="SZ" value="B31400" tip="Solonetz"/>
+		<Color id="VE" value="B6A071" tip="Vertisol"/>
+		<Color id="-" value="B2B2B2" tip="n/a"/>
+	</ColorSet>
+</Palette>

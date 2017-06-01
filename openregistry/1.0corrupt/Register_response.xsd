@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ors="http://openregistry.info/schemas/openregistry/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" targetNamespace="http://openregistry.info/schemas/openregistry/1.0" elementFormDefault="qualified">
+	<xs:annotation>
+		<xs:appinfo>$Id: orsRegister_response.xsd 2011-01-01 $</xs:appinfo>
+		<xs:documentation>
+			<xs:description>Response to an OpenRegistry Register request.</xs:description>
+			<xs:copyright>Copyright (c) 2011 Government of Canada, All Rights Reserved. </xs:copyright>
+		</xs:documentation>
+	</xs:annotation>
+	<!-- ==============================================================-->
+	<xs:include schemaLocation="common/orsCollectionType.xsd"/>
+	<xs:include schemaLocation="common/orsRootAttributeGroup.xsd"/>
+	<!-- ==============================================================-->
+	<xs:element name="RegisterResponse">
+		<xs:annotation>
+			<xs:documentation>Response to a Register request.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="OriginalRequest">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Register">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="ors:Identifier"/>
+										<xs:element ref="ors:URL"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Registration">
+					<xs:complexType>
+						<xs:choice>
+							<xs:element name="Succeeded">
+								<xs:annotation>
+									<xs:documentation>Include when ResourceURL was successfully added to the Registry.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Collection" type="ors:CollectionType"/>
+										<xs:element name="Message" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Failed">
+								<xs:annotation>
+									<xs:documentation>Include when ResourceURL was not added to the Registry.</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Collection" type="ors:CollectionType"/>
+										<xs:element name="Message" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:choice>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attributeGroup ref="ors:RootAttributeGroup"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

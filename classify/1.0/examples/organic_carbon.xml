@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/schemas/classify/1.0/stylesheets/NumericClassification.xsl"?>
+<NumericClassification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../NumericClassification.xsd">
+	<Title>Organic Carbon Classification #2</Title>
+	<Abstract>This classification ranks organic carbon data into 8 classes.</Abstract>
+	<AttributeToRank>
+		<Title>Organic Carbon</Title>
+		<Abstract>Organc Carbon</Abstract>
+		<Values>
+			<Measure type="http://www.w3.org/TR/xmlschema-2/#float" length="3" decimals="0">
+				<UOM reference="http://unitsofmeasure.org/">
+					<ShortForm>%</ShortForm>
+					<LongForm>percent by weight</LongForm>
+				</UOM>
+			</Measure>
+		</Values>
+	</AttributeToRank>
+	<ResultantValues>
+		<Ordinal type="http://www.w3.org/TR/xmlschema-2/#string" length="2" decimals="0">
+			<Classes>
+				<Title>Organic carbon content (%)</Title>
+				<Abstract>Organic Carbon content (%) palette from EUSOILS</Abstract>
+				<Documentation></Documentation>
+			</Classes>
+		</Ordinal>
+	</ResultantValues>
+	<RankingScheme>
+		<HighestClass rank="1" minValue="35" includeMinValue="false" identifier="" title="&gt; 35.0" color="6B0000"/>
+		<MidClass rank="2" minValue="25" includeMinValue="true" identifier="" title="25.0 - 35.0" color="91330A"/>
+		<MidClass rank="3" minValue="12.5" includeMinValue="true" identifier="" title="12.5 - 25.0" color="BF5E18"/>
+		<MidClass rank="4" minValue="6.0" includeMinValue="true" identifier="" title="6.0 - 12.5" color="E08626"/>
+		<MidClass rank="5" minValue="2.0" includeMinValue="true" identifier="" title="2.0 - 6.0" color="F5B32E"/>
+		<MidClass rank="6" minValue="1.0" includeMinValue="true" identifier="" title="1.0 - 2.0" color="FFFF73"/>
+		<MidClass rank="7" minValue="0.01" includeMinValue="true" identifier="0.01 - 1" title="" color="CCCCCC"/>
+		<LowestClass rank="8" identifier="8" title="0 - 0.01" color="FFFFFF"/>
+		<ExceptionClass identifier="n/a" originalValue="-9" title="Not Available" color="E2E2E2"/>
+	</RankingScheme>
+</NumericClassification>

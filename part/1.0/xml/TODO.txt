@@ -1,0 +1,3 @@
+add <Filter> to <Source> and <Target>  
+
+change FrameworkDomain,Name,Version to FrameworkURI (started on some xml files in 1.1.0)

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by Peter Schut (Agriculture & Agri-Food Canada) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xrs="http://www.opengis.net/xrs/1.0.0" targetNamespace="http://www.opengis.net/xrs/1.0.0" elementFormDefault="qualified" version="1.0.0" xml:lang="en">
+	<xs:annotation>
+		<xs:appinfo>$Id: xrsGetCapabilitiesResponse.xsd 2007-05-31 $</xs:appinfo>
+		<xs:documentation>
+			<xs:description>Response to an XRS GetCapabilities Request.</xs:description>
+			<xs:copyright>Copyright (c) 2007 Government of Canada, All Rights Reserved. </xs:copyright>
+		</xs:documentation>
+	</xs:annotation>
+	<!-- ==============================================================-->
+	<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="../../../xlink/1.0.0/xlinks.xsd"/>
+	<!-- ==============================================================-->
+	<xs:element name="ResourceType" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>The identifier of this collection that is used in XRS operations to select this collection.  Normally the identifier is a single word that identifies the XML document type found in this collection.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="Title" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>A human readable title that describes the type of XML documents found in this collection.  Normally the title is used for display to a human.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="URN" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>The URN of the type of XML documents found in this collection.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="SchemaURL" type="xrs:ReferenceType">
+		<xs:annotation>
+			<xs:documentation>The URL of the XML Schema that can be used to validate the XML documents found in this collection.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="RegisterURL" type="xrs:ReferenceType">
+		<xs:annotation>
+			<xs:documentation>The URL of the Register operation.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="GetRegistrationsURL" type="xrs:ReferenceType">
+		<xs:annotation>
+			<xs:documentation>The URL of the GetRegistrations operation.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="SearchURL" type="xrs:ReferenceType">
+		<xs:annotation>
+			<xs:documentation>The URL of  the Search operation</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="URL" type="xs:anyURI">
+		<xs:annotation>
+			<xs:documentation>The URL of an XML file that should be / is included in a collection in this registry.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="Xpath" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>A valid Xpath that is found in the XML documents in this collection and thus can be used in queries. </xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<!-- ==============================================================-->
+	<xs:complexType name="ReferenceType">
+		<xs:attribute ref="xlink:href" use="required"/>
+	</xs:complexType>
+</xs:schema>

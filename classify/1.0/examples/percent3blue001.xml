@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/schemas/classify/1.0/stylesheets/NumericClassification.xsl"?>
+<NumericClassification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../NumericClassification.xsd">
+	<Title>Percent Classification #1</Title>
+	<Abstract>This classification ranks percentages into 3 classes.</Abstract>
+	<AttributeToRank>
+		<Title>Percent</Title>
+		<Abstract>Percent</Abstract>
+		<Values>
+			<Measure type="http://www.w3.org/TR/xmlschema-2/#float" length="3" decimals="0">
+				<UOM reference="http://unitsofmeasure.org/">
+					<ShortForm>%</ShortForm>
+					<LongForm>percent</LongForm>
+				</UOM>
+			</Measure>
+		</Values>
+	</AttributeToRank>
+	<ResultantValues>
+		<Ordinal type="http://www.w3.org/TR/xmlschema-2/#string" length="2" decimals="0">
+			<Classes>
+				<Title>Percent</Title>
+				<Abstract>Percent</Abstract>
+				<Documentation>Percentage classes consisting of three classes.</Documentation>
+			</Classes>
+		</Ordinal>
+	</ResultantValues>
+	<RankingScheme>
+		<HighestClass rank="1" minValue="66" includeMinValue="true" identifier="H" title="High" color="2424e2"/>
+		<MidClass rank="2" minValue="33" includeMinValue="true" identifier="M" title="Medium" color="414ace"/>
+		<LowestClass rank="3" identifier="L" title="Low" color="adadf4"/>
+		<MissingClass identifier="nil" title="Missing" color="E2E2E2"/>
+		<ExceptionClass identifier="n/a" originalValue="n/a" title="Not Available" color="CCCCCC"/>
+	</RankingScheme>
+</NumericClassification>

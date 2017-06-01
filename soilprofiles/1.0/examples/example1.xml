@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="../stylesheets/soilprofiles.xsl"?>
+<SoilProfiles helpURL="/SoilProfiles/Help" collectionsURL="/SoilProfiles/Collections" serviceURL="http://soil.landresources.ca/SoilProfiles/" version="0.1">
+  <Collection definitionsURL="/SoilProfiles/Collection/1/Definitions" soilsURL="/SoilProfiles/Collection/1/Soils" title="Ontario" collectionURL="/SoilProfiles/Collection/1" definitionBaseURL="/SoilProfiles/Collection/1/Definition/" id="1">
+    <SoilSet>
+      <Soil layersURL="" id="0000497">
+        <Property value="1972" title="Year" unit="" id="YEAR"/>
+        <Property value="08" title="Month" unit="" id="MONTH"/>
+        <Property value="20" title="Day" unit="" id="DAY"/>
+        <Property value="45" title="Latitude" unit="" id="GEO_LAT"/>
+        <Property value="-77" title="Longitude" unit="" id="GEO_LONG"/>
+        <LayerSet>
+          <Layer upperDepth="0" id="01" lowerDepth="15">
+            <Property value="A" title="tbd" id="HZN_MAS"/>
+            <Property value="p" title="tbd" id="HZN_SUF"/>
+            <Property value="1" title="tbd" id="HZN_MOD"/>
+            <Property value="1 " title="tbd" id="HZN_LIT"/>
+            <Property value="r_on_rpt.org_carbon" title="" unit="" id=".9"/>
+            <Property value="1.5" title="Organic Matter" unit="percent" id="R_ON_RPT.ORG_MATTER"/>
+            <Property value="0" title="Gravel Composition By Percent" unit="percent" id="R_ON_RPT.GRAVEL"/>
+            <Property value="1" title="Coarse Sand" unit="percent" id="R_ON_RPT.PS_SAND_C"/>
+            <Property value="66" title="Total Sand" unit="percent" id="R_ON_RPT.PS_SAND_T"/>
+            <Property value="0" title="Very Coarse Sand" unit="percent" id="R_ON_RPT.PS_SAND_VC"/>
+            <Property value="26" title="Fine Sand" unit="percent" id="R_ON_RPT.PS_SAND_F"/>
+            <Property value="15" title="Medium Sand" unit="percent" id="R_ON_RPT.PS_SAND_M"/>
+            <Property value="29" title="Total Silt" unit="percent" id="R_ON_RPT.PS_SILT_T"/>
+            <Property value=" " title="Coarse Silt" unit="percent" id="R_ON_RPT.PS_SILT_C"/>
+            <Property value="24" title="Very Fine Sand" unit="percent" id="R_ON_RPT.PS_SAND_VF"/>
+            <Property value=" " title="Coarse Clay" unit="percent" id="R_ON_RPT.PS_CLAY_C"/>
+            <Property value=" " title="Total Sand" unit="percent" id="R_ON_RPT.PS_SILT_F"/>
+            <Property value="5" title="Total Clay" unit="percent" id="R_ON_RPT.PS_CLAY_T"/>
+            <Property value=" " title="Acidity In Water" unit="ph" id="R_ON_RPT.PH_H2O"/>
+            <Property value=" " title="Fine Clay" unit="percent" id="R_ON_RPT.PS_CLAY_F"/>
+            <Property value="fsl" title="Textural Class" unit="percent" id="R_ON_RPT.TEXTURE"/>
+            <Property value=" " title="Calcium-Dolomite Ratio" unit="percent" id="R_ON_RPT.CA_DOL_RAT"/>
+            <Property value="6" title="Acidity In Calcium Chloride" unit="ph" id="R_ON_RPT.PH_CACL2"/>
+            <Property value="0" title="Calcium Carbonate Equivalent" unit="ph" id="R_ON_RPT.CACO3"/>
+            <Property value=" " title="Density" unit="-" id="R_ON_RPT.DENSITY"/>
+            <Property value=" " title="Void Space In The Soil Matrix By Volume" unit="-" id="R_ON_RPT.POROSITY"/>
+            <Property value=" " title="Cec - Naoac Extractant" unit="ph" id="R_ON_RPT.CEC_NAOAC"/>
+            <Property value=" " title="Electrical Conductivity" unit="mmhos/cm" id="R_ON_RPT.ELECT_COND"/>
+            <Property value=" " title="Cec - Bacl Extractant" unit="ph" id="R_ON_RPT.CEC_BACL"/>
+            <Property value=" " title="Exchangable Sodium" unit="meq/100g" id="R_ON_RPT.EXCHG_NA"/>
+            <Property value=" " title="Exchangable Calcium" unit="meq/100g" id="R_ON_RPT.EXCHG_CA"/>
+            <Property value=" " title="Base Saturation" unit="-" id="R_ON_RPT.BASE"/>
+            <Property value=" " title="Exchangable Magnesium" unit="meq/100g" id="R_ON_RPT.EXCHG_MG"/>
+            <Property value=" " title="Exchangable Sodium" unit="meq/100g" id="R_ON_RPT.EXCHG_K"/>
+            <Property value=" " title="Available Phosphorus" unit="meq/100g" id="R_ON_RPT.AVLBL_P"/>
+            <Property value=" " title="Oxalate Extractable Iron" unit="-" id="R_ON_RPT.EXT_FE_OXL"/>
+            <Property value=" " title="Oxalate Extractable Manganese" unit="-" id="R_ON_RPT.EXT_MN_OXL"/>
+            <Property value=" " title="Oxalate Extractable Aluminum" unit="-" id="R_ON_RPT.EXT_AL_OXL"/>
+            <Property value=" " title="Pyrophosphate Extractable Aluminum" unit="-" id="R_ON_RPT.EXT_AL_PYR"/>
+            <Property value=" " title="Pyrophosphate Extractable Iron" unit="-" id="R_ON_RPT.EXT_FE_PYR"/>
+            <Property value=" " title="Diothionite Extractable Aluminum" unit="-" id="R_ON_RPT.EXT_AL_DTH"/>
+            <Property value=" " title="Pyrophosphate Extractable Manganese" unit="-" id="R_ON_RPT.EXT_MN_PYR"/>
+            <Property value=" " title="Diothionite Extractable Iron" unit="-" id="R_ON_RPT.EXT_FE_DTH"/>
+            <Property value=" " title="Diothionite Extractable Manganese" unit="-" id="R_ON_RPT.EXT_MN_DTH"/>
+            <Property value=" " title="Soil Water Retention (0kpa)" unit="grams/gram" id="R_ON_RPT.WR_KP0"/>
+            <Property value=" " title="Soil Water Retention (5kpa)" unit="grams/gram" id="R_ON_RPT.WR_KP5"/>
+            <Property value=" " title="Soil Water Retention (35kpa)" unit="grams/gram" id="R_ON_RPT.WR_KP35"/>
+            <Property value=" " title="Soil Water Retention (10kpa)" unit="grams/gram" id="R_ON_RPT.WR_KP10"/>
+            <Property value=" " title="Soil Water Retention (33kpa)" unit="grams/gram" id="R_ON_RPT.WR_KP33"/>
+            <Property value=" " title="Soil Water Retention (100kpa)" unit="grams/gram" id="R_ON_RPT.WR_KP100"/>
+            <Property value=" " title="Hydraulic Conductivity - Range" unit="cm/hr" id="R_ON_RPT.W_KSAT_RNG"/>
+            <Property value=" " title="Soil Water Retention (1500kpa)" unit="grams/gram" id="R_ON_RPT.WR_KP1500"/>
+            <Property value=" " title="Saturated Hydraulic Conductivity - Mean" unit="cm/hr" id="R_ON_RPT.W_KSAT"/>
+          </Layer>
+          <Layer upperDepth="15" id="02" lowerDepth="45">
+            <Property value="B" title="tbd" id="HZN_MAS"/>
+            <Property value="m1" title="tbd" id="HZN_SUF"/>
+            <Property value="1" title="tbd" id="HZN_MOD"/>
+            <Property value="1 " title="tbd" id="HZN_LIT"/>
+            <Property value="r_on_rpt.org_carbon" title="" unit="" id=".2"/>
+            <Property value=".4" title="Organic Matter" unit="percent" id="R_ON_RPT.ORG_MATTER"/>
+            <Property value="1" title="Gravel Composition By Percent" unit="percent" id="R_ON_RPT.GRAVEL"/>
+            <Property value="1" title="Coarse Sand" unit="percent" id="R_ON_RPT.PS_SAND_C"/>
+            <Property value="74" title="Total Sand" unit="percent" id="R_ON_RPT.PS_SAND_T"/>
+            <Property value="0" title="Very Coarse Sand" unit="percent" id="R_ON_RPT.PS_SAND_VC"/>
+            <Property value="31" title="Fine Sand" unit="percent" id="R_ON_RPT.PS_SAND_F"/>
+            <Property value="21" title="Medium Sand" unit="percent" id="R_ON_RPT.PS_SAND_M"/>
+            <Property value="23" title="Total Silt" unit="percent" id="R_ON_RPT.PS_SILT_T"/>
+            <Property value=" " title="Coarse Silt" unit="percent" id="R_ON_RPT.PS_SILT_C"/>
+            <Property value="20" title="Very Fine Sand" unit="percent" id="R_ON_RPT.PS_SAND_VF"/>
+            <Property value=" " title="Coarse Clay" unit="percent" id="R_ON_RPT.PS_CLAY_C"/>
+            <Property value=" " title="Total Sand" unit="percent" id="R_ON_RPT.PS_SILT_F"/>
+            <Property value="3" title="Total Clay" unit="percent" id="R_ON_RPT.PS_CLAY_T"/>
+            <Property value=" " title="Acidity In Water" unit="ph" id="R_ON_RPT.PH_H2O"/>
+            <Property value=" " title="Fine Clay" unit="percent" id="R_ON_RPT.PS_CLAY_F"/>
+            <Property value="lfs" title="Textural Class" unit="percent" id="R_ON_RPT.TEXTURE"/>
+            <Property value=" " title="Calcium-Dolomite Ratio" unit="percent" id="R_ON_RPT.CA_DOL_RAT"/>
+            <Property value="6" title="Acidity In Calcium Chloride" unit="ph" id="R_ON_RPT.PH_CACL2"/>
+            <Property value="0" title="Calcium Carbonate Equivalent" unit="ph" id="R_ON_RPT.CACO3"/>
+            <Property value=" " title="Density" unit="-" id="R_ON_RPT.DENSITY"/>
+            <Property value=" " title="Void Space In The Soil Matrix By Volume" unit="-" id="R_ON_RPT.POROSITY"/>
+            <Property value=" " title="Cec - Naoac Extractant" unit="ph" id="R_ON_RPT.CEC_NAOAC"/>
+            <Property value=" " title="Electrical Conductivity" unit="mmhos/cm" id="R_ON_RPT.ELECT_COND"/>
+            <Property value=" " title="Cec - Bacl Extractant" unit="ph" id="R_ON_RPT.CEC_BACL"/>
+            <Property value=" " title="Exchangable Sodium" unit="meq/100g" id="R_ON_RPT.EXCHG_NA"/>
+            <Property value=" " title="Exchangable Calcium" unit="meq/100g" id="R_ON_RPT.EXCHG_CA"/>
+            <Property value=" " title="Base Saturation" unit="-" id="R_ON_RPT.BASE"/>
+            <Property value=" " title="Exchangable Magnesium" unit="meq/100g" id="R_ON_RPT.EXCHG_MG"/>
+            <Property value=" " title="Exchangable Sodium" unit="meq/100g" id="R_ON_RPT.EXCHG_K"/>
+            <Property value=" " title="Available Phosphorus" unit="meq/100g" id="R_ON_RPT.AVLBL_P"/>
+            <Property value=" " title="Oxalate Extractable Iron" unit="-" id="R_ON_RPT.EXT_FE_OXL"/>
+            <Property value=" " title="Oxalate Extractable Manganese" unit="-" id="R_ON_RPT.EXT_MN_OXL"/>
+            <Property value=" " title="Oxalate Extractable Aluminum" unit="-" id="R_ON_RPT.EXT_AL_OXL"/>
+            <Property value=" " title="Pyrophosphate Extractable Aluminum" unit="-" id="R_ON_RPT.EXT_AL_PYR"/>
+            <Property value=" " title="Pyrophosphate Extractable Iron" unit="-" id="R_ON_RPT.EXT_FE_PYR"/>
+            <Property value=" " title="Diothionite Extractable Aluminum" unit="-" id="R_ON_RPT.EXT_AL_DTH"/>
+            <Property value=" " title="Pyrophosphate Extractable Manganese" unit="-" id="R_ON_RPT.EXT_MN_PYR"/>
+            <Property value=" " title="Diothionite Extractable Iron" unit="-" id="R_ON_RPT.EXT_FE_DTH"/>
+            <Property value=" " title="Diothionite Extractable Manganese" unit="-" id="R_ON_RPT.EXT_MN_DTH"/>
+            <Property value=" " title="Soil Water Retention (0kpa)" unit="grams/gram" id="R_ON_RPT.WR_KP0"/>
+            <Property value=" " title="Soil Water Retention (5kpa)" unit="grams/gram" id="R_ON_RPT.WR_KP5"/>
+            <Property value=" " title="Soil Water Retention (35kpa)" unit="grams/gram" id="R_ON_RPT.WR_KP35"/>
+            <Property value=" " title="Soil Water Retention (10kpa)" unit="grams/gram" id="R_ON_RPT.WR_KP10"/>
+            <Property value=" " title="Soil Water Retention (33kpa)" unit="grams/gram" id="R_ON_RPT.WR_KP33"/>
+            <Property value=" " title="Soil Water Retention (100kpa)" unit="grams/gram" id="R_ON_RPT.WR_KP100"/>
+            <Property value=" " title="Hydraulic Conductivity - Range" unit="cm/hr" id="R_ON_RPT.W_KSAT_RNG"/>
+            <Property value=" " title="Soil Water Retention (1500kpa)" unit="grams/gram" id="R_ON_RPT.WR_KP1500"/>
+            <Property value=" " title="Saturated Hydraulic Conductivity - Mean" unit="cm/hr" id="R_ON_RPT.W_KSAT"/>
+          </Layer>
+          <Layer upperDepth="45" id="03" lowerDepth="85">
+            <Property value="B" title="tbd" id="HZN_MAS"/>
+            <Property value="m" title="tbd" id="HZN_SUF"/>
+            <Property value="2" title="tbd" id="HZN_MOD"/>
+            <Property value="1 " title="tbd" id="HZN_LIT"/>
+            <Property value="r_on_rpt.org_carbon" title="" unit="" id=".1"/>
+            <Property value=".2" title="Organic Matter" unit="percent" id="R_ON_RPT.ORG_MATTER"/>
+            <Property value="2" title="Gravel Composition By Percent" unit="percent" id="R_ON_RPT.GRAVEL"/>
+            <Property value="3" title="Coarse Sand" unit="percent" id="R_ON_RPT.PS_SAND_C"/>
+            <Property value="89" title="Total Sand" unit="percent" id="R_ON_RPT.PS_SAND_T"/>
+            <Property value="1" title="Very Coarse Sand" unit="percent" id="R_ON_RPT.PS_SAND_VC"/>
+            <Property value="33" title="Fine Sand" unit="percent" id="R_ON_RPT.PS_SAND_F"/>
+            <Property value="45" title="Medium Sand" unit="percent" id="R_ON_RPT.PS_SAND_M"/>
+            <Property value="9" title="Total Silt" unit="percent" id="R_ON_RPT.PS_SILT_T"/>
+            <Property value=" " title="Coarse Silt" unit="percent" id="R_ON_RPT.PS_SILT_C"/>
+            <Property value="7" title="Very Fine Sand" unit="percent" id="R_ON_RPT.PS_SAND_VF"/>
+            <Property value=" " title="Coarse Clay" unit="percent" id="R_ON_RPT.PS_CLAY_C"/>
+            <Property value=" " title="Total Sand" unit="percent" id="R_ON_RPT.PS_SILT_F"/>
+            <Property value="2" title="Total Clay" unit="percent" id="R_ON_RPT.PS_CLAY_T"/>
+            <Property value=" " title="Acidity In Water" unit="ph" id="R_ON_RPT.PH_H2O"/>
+            <Property value=" " title="Fine Clay" unit="percent" id="R_ON_RPT.PS_CLAY_F"/>
+            <Property value="ls" title="Textural Class" unit="percent" id="R_ON_RPT.TEXTURE"/>
+            <Property value=" " title="Calcium-Dolomite Ratio" unit="percent" id="R_ON_RPT.CA_DOL_RAT"/>
+            <Property value="7" title="Acidity In Calcium Chloride" unit="ph" id="R_ON_RPT.PH_CACL2"/>
+            <Property value="0" title="Calcium Carbonate Equivalent" unit="ph" id="R_ON_RPT.CACO3"/>
+            <Property value=" " title="Density" unit="-" id="R_ON_RPT.DENSITY"/>
+            <Property value=" " title="Void Space In The Soil Matrix By Volume" unit="-" id="R_ON_RPT.POROSITY"/>
+            <Property value=" " title="Cec - Naoac Extractant" unit="ph" id="R_ON_RPT.CEC_NAOAC"/>
+            <Property value=" " title="Electrical Conductivity" unit="mmhos/cm" id="R_ON_RPT.ELECT_COND"/>
+            <Property value=" " title="Cec - Bacl Extractant" unit="ph" id="R_ON_RPT.CEC_BACL"/>
+            <Property value=" " title="Exchangable Sodium" unit="meq/100g" id="R_ON_RPT.EXCHG_NA"/>
+            <Property value=" " title="Exchangable Calcium" unit="meq/100g" id="R_ON_RPT.EXCHG_CA"/>
+            <Property value=" " title="Base Saturation" unit="-" id="R_ON_RPT.BASE"/>
+            <Property value=" " title="Exchangable Magnesium" unit="meq/100g" id="R_ON_RPT.EXCHG_MG"/>
+            <Property value=" " title="Exchangable Sodium" unit="meq/100g" id="R_ON_RPT.EXCHG_K"/>
+            <Property value=" " title="Available Phosphorus" unit="meq/100g" id="R_ON_RPT.AVLBL_P"/>
+            <Property value=" " title="Oxalate Extractable Iron" unit="-" id="R_ON_RPT.EXT_FE_OXL"/>
+            <Property value=" " title="Oxalate Extractable Manganese" unit="-" id="R_ON_RPT.EXT_MN_OXL"/>
+            <Property value=" " title="Oxalate Extractable Aluminum" unit="-" id="R_ON_RPT.EXT_AL_OXL"/>
+            <Property value=" " title="Pyrophosphate Extractable Aluminum" unit="-" id="R_ON_RPT.EXT_AL_PYR"/>
+            <Property value=" " title="Pyrophosphate Extractable Iron" unit="-" id="R_ON_RPT.EXT_FE_PYR"/>
+            <Property value=" " title="Diothionite Extractable Aluminum" unit="-" id="R_ON_RPT.EXT_AL_DTH"/>
+            <Property value=" " title="Pyrophosphate Extractable Manganese" unit="-" id="R_ON_RPT.EXT_MN_PYR"/>
+            <Property value=" " title="Diothionite Extractable Iron" unit="-" id="R_ON_RPT.EXT_FE_DTH"/>
+            <Property value=" " title="Diothionite Extractable Manganese" unit="-" id="R_ON_RPT.EXT_MN_DTH"/>
+            <Property value=" " title="Soil Water Retention (0kpa)" unit="grams/gram" id="R_ON_RPT.WR_KP0"/>
+            <Property value=" " title="Soil Water Retention (5kpa)" unit="grams/gram" id="R_ON_RPT.WR_KP5"/>
+            <Property value=" " title="Soil Water Retention (35kpa)" unit="grams/gram" id="R_ON_RPT.WR_KP35"/>
+            <Property value=" " title="Soil Water Retention (10kpa)" unit="grams/gram" id="R_ON_RPT.WR_KP10"/>
+            <Property value=" " title="Soil Water Retention (33kpa)" unit="grams/gram" id="R_ON_RPT.WR_KP33"/>
+            <Property value=" " title="Soil Water Retention (100kpa)" unit="grams/gram" id="R_ON_RPT.WR_KP100"/>
+            <Property value=" " title="Hydraulic Conductivity - Range" unit="cm/hr" id="R_ON_RPT.W_KSAT_RNG"/>
+            <Property value=" " title="Soil Water Retention (1500kpa)" unit="grams/gram" id="R_ON_RPT.WR_KP1500"/>
+            <Property value=" " title="Saturated Hydraulic Conductivity - Mean" unit="cm/hr" id="R_ON_RPT.W_KSAT"/>
+          </Layer>
+          <Layer upperDepth="85" id="04" lowerDepth="90">
+            <Property value="B" title="tbd" id="HZN_MAS"/>
+            <Property value="t" title="tbd" id="HZN_SUF"/>
+            <Property value="1" title="tbd" id="HZN_MOD"/>
+            <Property value="2 " title="tbd" id="HZN_LIT"/>
+            <Property value="r_on_rpt.org_carbon" title="" unit="" id=".2"/>
+            <Property value=".4" title="Organic Matter" unit="percent" id="R_ON_RPT.ORG_MATTER"/>
+            <Property value="2" title="Gravel Composition By Percent" unit="percent" id="R_ON_RPT.GRAVEL"/>
+            <Property value="2" title="Coarse Sand" unit="percent" id="R_ON_RPT.PS_SAND_C"/>
+            <Property value="34" title="Total Sand" unit="percent" id="R_ON_RPT.PS_SAND_T"/>
+            <Property value="1" title="Very Coarse Sand" unit="percent" id="R_ON_RPT.PS_SAND_VC"/>
+            <Property value="10" title="Fine Sand" unit="percent" id="R_ON_RPT.PS_SAND_F"/>
+            <Property value="18" title="Medium Sand" unit="percent" id="R_ON_RPT.PS_SAND_M"/>
+            <Property value="27" title="Total Silt" unit="percent" id="R_ON_RPT.PS_SILT_T"/>
+            <Property value=" " title="Coarse Silt" unit="percent" id="R_ON_RPT.PS_SILT_C"/>
+            <Property value="3" title="Very Fine Sand" unit="percent" id="R_ON_RPT.PS_SAND_VF"/>
+            <Property value=" " title="Coarse Clay" unit="percent" id="R_ON_RPT.PS_CLAY_C"/>
+            <Property value=" " title="Total Sand" unit="percent" id="R_ON_RPT.PS_SILT_F"/>
+            <Property value="39" title="Total Clay" unit="percent" id="R_ON_RPT.PS_CLAY_T"/>
+            <Property value=" " title="Acidity In Water" unit="ph" id="R_ON_RPT.PH_H2O"/>
+            <Property value=" " title="Fine Clay" unit="percent" id="R_ON_RPT.PS_CLAY_F"/>
+            <Property value="cl" title="Textural Class" unit="percent" id="R_ON_RPT.TEXTURE"/>
+            <Property value=" " title="Calcium-Dolomite Ratio" unit="percent" id="R_ON_RPT.CA_DOL_RAT"/>
+            <Property value="7" title="Acidity In Calcium Chloride" unit="ph" id="R_ON_RPT.PH_CACL2"/>
+            <Property value="0" title="Calcium Carbonate Equivalent" unit="ph" id="R_ON_RPT.CACO3"/>
+            <Property value=" " title="Density" unit="-" id="R_ON_RPT.DENSITY"/>
+            <Property value=" " title="Void Space In The Soil Matrix By Volume" unit="-" id="R_ON_RPT.POROSITY"/>
+            <Property value=" " title="Cec - Naoac Extractant" unit="ph" id="R_ON_RPT.CEC_NAOAC"/>
+            <Property value=" " title="Electrical Conductivity" unit="mmhos/cm" id="R_ON_RPT.ELECT_COND"/>
+            <Property value=" " title="Cec - Bacl Extractant" unit="ph" id="R_ON_RPT.CEC_BACL"/>
+            <Property value=" " title="Exchangable Sodium" unit="meq/100g" id="R_ON_RPT.EXCHG_NA"/>
+            <Property value=" " title="Exchangable Calcium" unit="meq/100g" id="R_ON_RPT.EXCHG_CA"/>
+            <Property value=" " title="Base Saturation" unit="-" id="R_ON_RPT.BASE"/>
+            <Property value=" " title="Exchangable Magnesium" unit="meq/100g" id="R_ON_RPT.EXCHG_MG"/>
+            <Property value=" " title="Exchangable Sodium" unit="meq/100g" id="R_ON_RPT.EXCHG_K"/>
+            <Property value=" " title="Available Phosphorus" unit="meq/100g" id="R_ON_RPT.AVLBL_P"/>
+            <Property value=" " title="Oxalate Extractable Iron" unit="-" id="R_ON_RPT.EXT_FE_OXL"/>
+            <Property value=" " title="Oxalate Extractable Manganese" unit="-" id="R_ON_RPT.EXT_MN_OXL"/>
+            <Property value=" " title="Oxalate Extractable Aluminum" unit="-" id="R_ON_RPT.EXT_AL_OXL"/>
+            <Property value=" " title="Pyrophosphate Extractable Aluminum" unit="-" id="R_ON_RPT.EXT_AL_PYR"/>
+            <Property value=" " title="Pyrophosphate Extractable Iron" unit="-" id="R_ON_RPT.EXT_FE_PYR"/>
+            <Property value=" " title="Diothionite Extractable Aluminum" unit="-" id="R_ON_RPT.EXT_AL_DTH"/>
+            <Property value=" " title="Pyrophosphate Extractable Manganese" unit="-" id="R_ON_RPT.EXT_MN_PYR"/>
+            <Property value=" " title="Diothionite Extractable Iron" unit="-" id="R_ON_RPT.EXT_FE_DTH"/>
+            <Property value=" " title="Diothionite Extractable Manganese" unit="-" id="R_ON_RPT.EXT_MN_DTH"/>
+            <Property value=" " title="Soil Water Retention (0kpa)" unit="grams/gram" id="R_ON_RPT.WR_KP0"/>
+            <Property value=" " title="Soil Water Retention (5kpa)" unit="grams/gram" id="R_ON_RPT.WR_KP5"/>
+            <Property value=" " title="Soil Water Retention (35kpa)" unit="grams/gram" id="R_ON_RPT.WR_KP35"/>
+            <Property value=" " title="Soil Water Retention (10kpa)" unit="grams/gram" id="R_ON_RPT.WR_KP10"/>
+            <Property value=" " title="Soil Water Retention (33kpa)" unit="grams/gram" id="R_ON_RPT.WR_KP33"/>
+            <Property value=" " title="Soil Water Retention (100kpa)" unit="grams/gram" id="R_ON_RPT.WR_KP100"/>
+            <Property value=" " title="Hydraulic Conductivity - Range" unit="cm/hr" id="R_ON_RPT.W_KSAT_RNG"/>
+            <Property value=" " title="Soil Water Retention (1500kpa)" unit="grams/gram" id="R_ON_RPT.WR_KP1500"/>
+            <Property value=" " title="Saturated Hydraulic Conductivity - Mean" unit="cm/hr" id="R_ON_RPT.W_KSAT"/>
+          </Layer>
+          <Layer upperDepth="90" id="05" lowerDepth="105">
+            <Property value="C" title="tbd" id="HZN_MAS"/>
+            <Property value="k" title="tbd" id="HZN_SUF"/>
+            <Property value="1" title="tbd" id="HZN_MOD"/>
+            <Property value="2 " title="tbd" id="HZN_LIT"/>
+            <Property value="r_on_rpt.org_carbon" title="" unit="" id="0"/>
+            <Property value="0" title="Organic Matter" unit="percent" id="R_ON_RPT.ORG_MATTER"/>
+            <Property value="1" title="Gravel Composition By Percent" unit="percent" id="R_ON_RPT.GRAVEL"/>
+            <Property value="1" title="Coarse Sand" unit="percent" id="R_ON_RPT.PS_SAND_C"/>
+            <Property value="12" title="Total Sand" unit="percent" id="R_ON_RPT.PS_SAND_T"/>
+            <Property value="0" title="Very Coarse Sand" unit="percent" id="R_ON_RPT.PS_SAND_VC"/>
+            <Property value="3" title="Fine Sand" unit="percent" id="R_ON_RPT.PS_SAND_F"/>
+            <Property value="3" title="Medium Sand" unit="percent" id="R_ON_RPT.PS_SAND_M"/>
+            <Property value="43" title="Total Silt" unit="percent" id="R_ON_RPT.PS_SILT_T"/>
+            <Property value=" " title="Coarse Silt" unit="percent" id="R_ON_RPT.PS_SILT_C"/>
+            <Property value="5" title="Very Fine Sand" unit="percent" id="R_ON_RPT.PS_SAND_VF"/>
+            <Property value=" " title="Coarse Clay" unit="percent" id="R_ON_RPT.PS_CLAY_C"/>
+            <Property value=" " title="Total Sand" unit="percent" id="R_ON_RPT.PS_SILT_F"/>
+            <Property value="45" title="Total Clay" unit="percent" id="R_ON_RPT.PS_CLAY_T"/>
+            <Property value=" " title="Acidity In Water" unit="ph" id="R_ON_RPT.PH_H2O"/>
+            <Property value=" " title="Fine Clay" unit="percent" id="R_ON_RPT.PS_CLAY_F"/>
+            <Property value="sic" title="Textural Class" unit="percent" id="R_ON_RPT.TEXTURE"/>
+            <Property value=" " title="Calcium-Dolomite Ratio" unit="percent" id="R_ON_RPT.CA_DOL_RAT"/>
+            <Property value="7" title="Acidity In Calcium Chloride" unit="ph" id="R_ON_RPT.PH_CACL2"/>
+            <Property value="22" title="Calcium Carbonate Equivalent" unit="ph" id="R_ON_RPT.CACO3"/>
+            <Property value=" " title="Density" unit="-" id="R_ON_RPT.DENSITY"/>
+            <Property value=" " title="Void Space In The Soil Matrix By Volume" unit="-" id="R_ON_RPT.POROSITY"/>
+            <Property value=" " title="Cec - Naoac Extractant" unit="ph" id="R_ON_RPT.CEC_NAOAC"/>
+            <Property value=" " title="Electrical Conductivity" unit="mmhos/cm" id="R_ON_RPT.ELECT_COND"/>
+            <Property value=" " title="Cec - Bacl Extractant" unit="ph" id="R_ON_RPT.CEC_BACL"/>
+            <Property value=" " title="Exchangable Sodium" unit="meq/100g" id="R_ON_RPT.EXCHG_NA"/>
+            <Property value=" " title="Exchangable Calcium" unit="meq/100g" id="R_ON_RPT.EXCHG_CA"/>
+            <Property value=" " title="Base Saturation" unit="-" id="R_ON_RPT.BASE"/>
+            <Property value=" " title="Exchangable Magnesium" unit="meq/100g" id="R_ON_RPT.EXCHG_MG"/>
+            <Property value=" " title="Exchangable Sodium" unit="meq/100g" id="R_ON_RPT.EXCHG_K"/>
+            <Property value=" " title="Available Phosphorus" unit="meq/100g" id="R_ON_RPT.AVLBL_P"/>
+            <Property value=" " title="Oxalate Extractable Iron" unit="-" id="R_ON_RPT.EXT_FE_OXL"/>
+            <Property value=" " title="Oxalate Extractable Manganese" unit="-" id="R_ON_RPT.EXT_MN_OXL"/>
+            <Property value=" " title="Oxalate Extractable Aluminum" unit="-" id="R_ON_RPT.EXT_AL_OXL"/>
+            <Property value=" " title="Pyrophosphate Extractable Aluminum" unit="-" id="R_ON_RPT.EXT_AL_PYR"/>
+            <Property value=" " title="Pyrophosphate Extractable Iron" unit="-" id="R_ON_RPT.EXT_FE_PYR"/>
+            <Property value=" " title="Diothionite Extractable Aluminum" unit="-" id="R_ON_RPT.EXT_AL_DTH"/>
+            <Property value=" " title="Pyrophosphate Extractable Manganese" unit="-" id="R_ON_RPT.EXT_MN_PYR"/>
+            <Property value=" " title="Diothionite Extractable Iron" unit="-" id="R_ON_RPT.EXT_FE_DTH"/>
+            <Property value=" " title="Diothionite Extractable Manganese" unit="-" id="R_ON_RPT.EXT_MN_DTH"/>
+            <Property value=" " title="Soil Water Retention (0kpa)" unit="grams/gram" id="R_ON_RPT.WR_KP0"/>
+            <Property value=" " title="Soil Water Retention (5kpa)" unit="grams/gram" id="R_ON_RPT.WR_KP5"/>
+            <Property value=" " title="Soil Water Retention (35kpa)" unit="grams/gram" id="R_ON_RPT.WR_KP35"/>
+            <Property value=" " title="Soil Water Retention (10kpa)" unit="grams/gram" id="R_ON_RPT.WR_KP10"/>
+            <Property value=" " title="Soil Water Retention (33kpa)" unit="grams/gram" id="R_ON_RPT.WR_KP33"/>
+            <Property value=" " title="Soil Water Retention (100kpa)" unit="grams/gram" id="R_ON_RPT.WR_KP100"/>
+            <Property value=" " title="Hydraulic Conductivity - Range" unit="cm/hr" id="R_ON_RPT.W_KSAT_RNG"/>
+            <Property value=" " title="Soil Water Retention (1500kpa)" unit="grams/gram" id="R_ON_RPT.WR_KP1500"/>
+            <Property value=" " title="Saturated Hydraulic Conductivity - Mean" unit="cm/hr" id="R_ON_RPT.W_KSAT"/>
+          </Layer>
+        </LayerSet>
+      </Soil>
+    </SoilSet>
+  </Collection>
+</SoilProfiles>

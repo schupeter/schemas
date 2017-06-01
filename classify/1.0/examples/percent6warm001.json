@@ -1,0 +1,81 @@
+{
+    "NumericClassification": {
+        "Title": "Percent Classification #2",
+        "Abstract": "This classification ranks percentages into 6 classes.",
+        "AttributeToRank": {
+            "Title": "Percent",
+            "Abstract": "Percent",
+            "DataForm": "measure",
+            "DataType": "float",
+            "Length": 3,
+            "Decimals": 0,
+            "UOM": {
+                "Reference": "http://unitsofmeasure.org/",
+                "ShortForm": "%",
+                "LongForm": "percent"
+            }
+        },
+        "RankingResult": {
+            "Title": "Percent (6 classes)",
+            "Abstract": "Percentage classes consisting of six classes.",
+            "DataForm": "ordinal",
+            "DataType": "string",
+            "Length": 2,
+            "Decimals": 0
+        },
+        "RankingScheme": {
+            "DataClasses": [
+                {
+                    "Rank": 1,
+                    "MinValue": 81,
+                    "IncludeMinValue": "true",
+                    "Identifier": "P",
+                    "Title": "Pervasive (>80%)",
+                    "Color": "db310f"
+                },
+                {
+                    "Rank": 2,
+                    "MinValue": 61,
+                    "IncludeMinValue": "true",
+                    "Identifier": "E",
+                    "Title": "Extensive (>60%)",
+                    "Color": "ff5656"
+                },
+                {
+                    "Rank": 3,
+                    "MinValue": 41,
+                    "IncludeMinValue": "true",
+                    "Identifier": "F",
+                    "Title": "Frequent (>40%)",
+                    "Color": "ffaa56"
+                },
+                {
+                    "Rank": 4,
+                    "MinValue": 21,
+                    "IncludeMinValue": "true",
+                    "Identifier": "C",
+                    "Title": "Common (>20%)",
+                    "Color": "ffd4aa"
+                },
+                {
+                    "Rank": 5,
+                    "MinValue": 1,
+                    "IncludeMinValue": "true",
+                    "Identifier": "O",
+                    "Title": "Occasional (>0%)",
+                    "Color": "ffffaa"
+                },
+                {
+                    "Rank": 6,
+                    "Identifier": "N",
+                    "Title": "None (0%)",
+                    "Color": "d9e8f7"
+                }
+            ],
+            "MissingClasses": [
+            ],
+            "ExceptionClasses": [
+            ]
+        }
+    }
+}

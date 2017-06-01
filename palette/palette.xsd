@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="Palette">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Title"/>
+				<xs:element ref="Abstract"/>
+				<xs:element ref="ColorSet"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Title" type="xs:string"/>
+	<xs:element name="Abstract" type="xs:string"/>
+	<xs:element name="ColorSet">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Color" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="ramp"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Color">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute name="id" type="xs:integer" use="required"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

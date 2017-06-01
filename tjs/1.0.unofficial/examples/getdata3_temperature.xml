@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GDAS xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.opengis.net/tjs/1.0  ../schemas/tjs/1.0/tjsGetData_response.xsd" version="1.0" service="TJS" capabilities="http://zonbu/tjs/service?Service=TJS&amp;Version=1.0&amp;Request=GetCapabilities" xmlns="http://www.opengis.net/tjs/1.0" xml:lang="en">
+  <Framework>
+<FrameworkURI>http://sis.agr.gc.ca/cansis/nsdb/ecostrat/zone/v1</FrameworkURI>
+<Organization>Environment Canada</Organization>
+<Title>Ecozones of Canada</Title>
+<Abstract>Ecozones of Canada, forming part of the Terrestrial Ecological Stratification of Canada </Abstract>
+<ReferenceDate startDate="1995-01-01">1995-06-03</ReferenceDate>
+<Version>1</Version>
+<Documentation>http://sis.agr.gc.ca/cansis/nsdb/ecostrat/hierarchy.html</Documentation>
+<FrameworkKey>
+	<Column name="ecozone" type="http://www.w3.org/TR/xmlschema-2/#integer" decimals="0" length="2"/>
+</FrameworkKey>
+<BoundingCoordinates>
+  <North>90</North>
+  <South>43</South>
+  <East>-50</East>
+  <West>-145</West>
+</BoundingCoordinates>
+<DescribeDatasets xlink:href="http://zonbu/tjs/service?Service=TJS&amp;Version=1.0&amp;Request=DescribeDatasets&amp;FrameworkURI=http%3A%2F%2Fsis.agr.gc.ca%2Fcansis%2Fnsdb%2Fecostrat%2Fzone%2Fv1"/>
+    <Dataset>
+<DatasetURI>http://sis.agr.gc.ca/cansis/nsdb/ecostrat/zone/v1/temperature_1961-1990</DatasetURI>
+<Organization>Agriculture and Agri-Food Canada</Organization>
+<Title>Ecozones of Canada - Temperature Normals 1961-1990</Title>
+<Abstract>The 1961-1990 data for temperature and precipitation included only stations with averages based on more than 19 years of data (Appendix 1). Data from additional stations which had temperature and precipitation normals for the 1951-1980 period were also used to provide maximum station density, but these normals were first adjusted to the 1961-1990 period by comparison with nearby stations.  TMAX, TMIN, TMEAN, RAIN, SNOW and TOTALP were interpolated using the Thiessen polygon method. The Thiessen </Abstract>
+<ReferenceDate>1999-09-16</ReferenceDate>
+<Version></Version>
+<Documentation></Documentation>
+<DescribeData xlink:href="http://zonbu/tjs/service?Service=TJS&amp;Version=1.0&amp;Request=DescribeData&amp;FrameworkURI=http%3A%2F%2Fsis.agr.gc.ca%2Fcansis%2Fnsdb%2Fecostrat%2Fzone%2Fv1&amp;DatasetURI=http%3A%2F%2Fsis.agr.gc.ca%2Fcansis%2Fnsdb%2Fecostrat%2Fzone%2Fv1%2Ftemperature_1961-1990"/>
+<Columnset>
+	<FrameworkKey complete="true" relationship="one">
+		<Column type="http://www.w3.org/TR/xmlschema-2/#integer" name="zone" decimals="0" length="2"/>
+	</FrameworkKey>
+	<Attributes>
+		<Column type="http://www.w3.org/TR/xmlschema-2/#decimal" name="tmin_may" decimals="5" length="10" purpose="Attribute">
+			<Title>May Minimum Air Temperature</Title>
+			<Abstract>Average Daily Minimum Air Temperature</Abstract>
+			<Documentation>http://sis.agr.gc.ca/cansis/nsdb/ecostrat/climate_normals_1961-90.html#temperature</Documentation>
+			<Values>
+				<Measure>
+					<UOM>
+						<ShortForm>&#176;C</ShortForm>
+						<LongForm>degrees centigrade</LongForm>
+					</UOM>
+				</Measure>
+			</Values>
+			<GetData xlink:href="http://zonbu/tjs/service?Service=TJS&amp;Version=1.0&amp;Request=GetData&amp;FrameworkURI=http%3A%2F%2Fsis.agr.gc.ca%2Fcansis%2Fnsdb%2Fecostrat%2Fzone%2Fv1&amp;DatasetURI=http%3A%2F%2Fsis.agr.gc.ca%2Fcansis%2Fnsdb%2Fecostrat%2Fzone%2Fv1%2Ftemperature_1961-1990&amp;Attributes=tmin_may"/>
+		</Column>
+	</Attributes>
+</Columnset>
+<Rowset>
+<Row>
+  <K>1</K>
+  <V>-14.5</V>
+</Row>
+<Row>
+  <K>2</K>
+  <V>-14.7</V>
+</Row>
+<Row>
+  <K>3</K>
+  <V>-13.8</V>
+</Row>
+<Row>
+  <K>4</K>
+  <V>-11.3</V>
+</Row>
+<Row>
+  <K>5</K>
+  <V>-9.6</V>
+</Row>
+<Row>
+  <K>6</K>
+  <V>-2.0</V>
+</Row>
+<Row>
+  <K>7</K>
+  <V>1.9</V>
+</Row>
+<Row>
+  <K>8</K>
+  <V>4.5</V>
+</Row>
+<Row>
+  <K>9</K>
+  <V>-0.9</V>
+</Row>
+<Row>
+  <K>10</K>
+  <V>2.5</V>
+</Row>
+<Row>
+  <K>11</K>
+  <V>-8.7</V>
+</Row>
+<Row>
+  <K>12</K>
+  <V>-1.8</V>
+</Row>
+<Row>
+  <K>13</K>
+  <V>-1.5</V>
+</Row>
+<Row>
+  <K>14</K>
+  <V>0.2</V>
+</Row>
+<Row>
+  <K>15</K>
+  <V>-5.0</V>
+</Row>
+      </Rowset>
+    </Dataset>
+  </Framework>
+</GDAS>

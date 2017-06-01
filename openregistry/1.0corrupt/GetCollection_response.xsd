@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ors="http://openregistry.info/schemas/openregistry/1.0" targetNamespace="http://openregistry.info/schemas/openregistry/1.0" elementFormDefault="qualified" version="1.0" xml:lang="en">
+	<xs:annotation>
+		<xs:appinfo>$Id: orsGetCollection_response.xsd 2011-01-05 $</xs:appinfo>
+		<xs:documentation>
+			<xs:description>Response to an OpenRegistry GetCollection request.</xs:description>
+			<xs:copyright>Copyright (c) 2011 Government of Canada, All Rights Reserved. </xs:copyright>
+		</xs:documentation>
+	</xs:annotation>
+	<!-- ==============================================================-->
+	<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="../../xlink/1.0.0/xlinks.xsd"/>
+	<xs:include schemaLocation="common/orsSimpleElements.xsd"/>
+	<xs:include schemaLocation="common/orsCollectionType.xsd"/>
+	<xs:include schemaLocation="common/orsRootAttributeGroup.xsd"/>
+	<!-- ==============================================================-->
+	<xs:element name="Collection">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="ors:CollectionType">
+					<xs:sequence>
+						<xs:element ref="ors:RegisteredURLs">
+							<xs:annotation>
+								<xs:documentation>The set of URLs that were harvested to create this collection.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+					<xs:attributeGroup ref="ors:RootAttributeGroup"/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="RegisteredURLs">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ors:URL" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

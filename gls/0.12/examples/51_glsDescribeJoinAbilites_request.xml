@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- DescribeJoinAbilities operation.-->
+<!-- Equivalent GET request is http://foo.bar/foo?Service=GLS&Version=0.12&Language=en-CA&Request=DescribeJoinAbilities -->
+<DescribeJoinAbilities service="GLS" version="0.12" language="en-CA" xmlns="http://www.opengis.net/gls/0.12" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/gls/0.12  ..\glsDescribeJoinAbilities_request.xsd"/>

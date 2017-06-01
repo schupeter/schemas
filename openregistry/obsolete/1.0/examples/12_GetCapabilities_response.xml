@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Capabilities service="XRS" version="1.0" serviceURL="http://foo.bar/foo">
+	<ServiceProvider>
+		<ProviderName>Agriculture and Agri-Food Canada</ProviderName>
+		<ProviderSite href="http://gis.agr.gc.ca/"/>
+		<ServiceContact>
+			<IndividualName>Peter Schut</IndividualName>
+			<PositionName>Information System Scientist</PositionName>
+			<ContactInfo>
+				<Phone>
+					<Voice>+1-613-759-1874</Voice>
+					<Facsimile>+1-613-759-1937</Facsimile>
+				</Phone>
+				<Address>
+					<DeliveryPoint>Room 1135, Neatby Building, 960 Carling Avenue</DeliveryPoint>
+					<City>Ottawa</City>
+					<AdministrativeArea>ON</AdministrativeArea>
+					<PostalCode>K1AOC6</PostalCode>
+					<Country>Canada</Country>
+				</Address>
+				<Email>peter.schut@agr.gc.ca</Email>
+			</ContactInfo>
+		</ServiceContact>
+	</ServiceProvider>
+	<ResourceCollections>
+		<Collection>
+			<Identifier>GDAS:0.12</Identifier>
+			<Title>GDAS XML files version 0.12.0</Title>
+			<URI>OGC:…</URI>
+			<SchemaURL>http://foo.bar/foo.xsd</SchemaURL>
+		</Collection>
+		<Collection>
+			<Identifier>GDAS:1.0</Identifier>
+			<Title>GDAS XML files version 1.0</Title>
+			<URI>OGC:…</URI>
+			<SchemaURL>http://foo.bar/foo.xsd</SchemaURL>
+		</Collection>
+	</ResourceCollections>
+</Capabilities>

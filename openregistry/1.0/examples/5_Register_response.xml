@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Registration service="OpenRegistry" version="1.0" serviceURL="http://foo.bar/foo" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openregistry.info/schemas/openregistry/1.0 ..\orsRegister_response.xsd" xmlns="http://openregistry.info/schemas/openregistry/1.0" xml:lang="en">
+	<Request request="Register" collection="GDAS:1.0" object="http://foo.bar/foo" />
+	<Response success="true">
+		<Collection identifier="GDAS:1.0" uri="http://foo.bar/foo" schema="http://foo.bar/foo.xsd">
+			<Title>GDAS XML files version 1.0</Title>
+		</Collection>
+		<Message>Object registered successfully.</Message>
+	</Response>
+</Registration>

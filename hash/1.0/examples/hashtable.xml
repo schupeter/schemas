@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Hash>
+	<Pair>
+		<Key>IC</Key>
+		<Value>WATER</Value>
+	</Pair>
+	<Pair>
+		<Key>OR</Key>
+		<Value>LAND</Value>
+	</Pair>
+	<Pair>
+		<Key>R1</Key>
+		<Value>LAND</Value>
+	</Pair>
+	<Pair>
+		<Key>R2</Key>
+		<Value>LAND</Value>
+	</Pair>
+	<Pair>
+		<Key>R3</Key>
+		<Value>LAND</Value>
+	</Pair>
+	<Pair>
+		<Key>R4</Key>
+		<Value>LAND</Value>
+	</Pair>
+	<Pair>
+		<Key>SO</Key>
+		<Value>LAND</Value>
+	</Pair>
+	<Pair>
+		<Key>WA</Key>
+		<Value>WATER</Value>
+	</Pair>
+	<Pair>
+		<Key>UR</Key>
+		<Value>LAND</Value>
+	</Pair>
+	<Pair>
+		<Key>F</Key>
+		<Value>LAND</Value>
+	</Pair>
+</Hash>

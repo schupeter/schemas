@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Capabilities service="OpenRegistry" version="1.0" serviceURL="http://foo.bar/foo" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openregistry.info/schemas/openregistry/1.0 ..\orsGetCapabilities_response.xsd" xmlns="http://openregistry.info/schemas/openregistry/1.0" xml:lang="en">
+	<ServiceProvider>
+		<ProviderName>Agriculture and Agri-Food Canada</ProviderName>
+		<ProviderURL>http://sis.agr.gc.ca</ProviderURL>
+		<ContactInfo>
+			<IndividualName>Peter Schut</IndividualName>
+			<PositionName>Head, Canadian Soil Information System</PositionName>
+			<Phone>
+				<Voice>+1-613-759-1874</Voice>
+				<Facsimile>+1-613-759-1937</Facsimile>
+			</Phone>
+			<Address>
+				<DeliveryPoint>Room 1135, Neatby Building, 960 Carling Avenue</DeliveryPoint>
+				<City>Ottawa</City>
+				<AdministrativeArea>ON</AdministrativeArea>
+				<PostalCode>K1AOC6</PostalCode>
+				<Country>Canada</Country>
+			</Address>
+			<Email>peter.schut@agr.gc.ca</Email>
+		</ContactInfo>
+	</ServiceProvider>
+	<ResourceCollections>
+		<Collection identifier="GDAS:0.12" uri="http://foo.bar/foo" schema="http://foo.bar/foo.xsd" objectCount="27">
+			<Title>GDAS XML files version 0.12.0</Title>
+			<QueryOptions>
+				<Text supported="true">Dataset Title and Description.</Text>
+				<LatLong supported="false"></LatLong>
+				<MinMax supported="false"></MinMax>
+				<Time supported="false"></Time>
+			</QueryOptions>
+		</Collection>
+		<Collection identifier="GDAS:1.0" uri="http://foo.bar/foo" schema="http://foo.bar/foo.xsd" objectCount="421">
+			<Title>GDAS XML files version 1.0</Title>
+			<QueryOptions>
+				<Text supported="true">Dataset Title and Description</Text>
+				<LatLong supported="true">Framework BoundingCoordinates</LatLong>
+				<MinMax supported="false"></MinMax>
+				<Time supported="false"></Time>
+			</QueryOptions>
+		</Collection>
+	</ResourceCollections>
+</Capabilities>

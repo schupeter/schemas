@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../stylesheets/legend2html.xsl"?>
+<Legend version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../legend.xsd">
+	<Title>Kind of Material</Title>
+	<Abstract>Classes used to map SLC v3.2 Kind of Material (KINDMAT).</Abstract>
+	<Classes type="Nominal">
+		<Class identifier="M" color="A87000" title="Mineral"/>
+		<Class identifier="O" color="98DB40" title="Organic"/>
+		<Class identifier="R" color="B2B2B2" title="Rock"/>
+	</Classes>
+	<Exceptions>
+		<Class identifier="IC" color="FFFFFF" title="Ice and snow"/>
+	</Exceptions>
+</Legend>

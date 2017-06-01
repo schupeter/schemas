@@ -1,0 +1,75 @@
+{
+    "NumericClassification": {
+        "Title": "Percent Classification #1",
+        "Abstract": "This classification ranks percentages into 3 classes.",
+        "AttributeToRank": {
+            "Title": "Percent",
+            "Abstract": "Percent",
+            "Values": {
+                "Measure": {
+                    "type": "http://www.w3.org/TR/xmlschema-2/#float",
+                    "length": 3,
+                    "decimals": 0,
+                    "UOM": {
+                        "reference": "http://unitsofmeasure.org/",
+                        "ShortForm": "%",
+                        "LongForm": "percent"
+                    }
+                }
+            }
+        },
+        "ResultantValues": {
+            "Ordinal": {
+                "type": "http://www.w3.org/TR/xmlschema-2/#string",
+                "length": 2,
+                "decimals": 0,
+                "Classes": {
+                    "Title": "Percent",
+                    "Abstract": "Percent",
+                    "Documentation": "Percentage classes consisting of three classes."
+                }
+            }
+        },
+        "RankingScheme": {
+            "HighestClass": {
+                "rank": 1,
+                "minValue": 66,
+                "includeMinValue": "true",
+                "identifier": "H",
+                "title": "High",
+                "color": "db310f"
+            },
+            "MidClasses": [
+                {
+                    "rank": 2,
+                    "minValue": 33,
+                    "includeMinValue": "true",
+                    "identifier": "M",
+                    "title": "Medium",
+                    "color": "da7878"
+                }
+            ],
+            "LowestClass": {
+                "rank": 3,
+                "identifier": "L",
+                "title": "Low",
+                "color": "f8c8c8"
+            },
+            "MissingClasses": [
+                {
+                    "identifier": "nil",
+                    "title": "Missing",
+                    "color": "E2E2E2"
+                }
+            ],
+            "ExceptionClasses": [
+                {
+                    "identifier": "n/a",
+                    "originalValue": "n/a",
+                    "title": "Not Available",
+                    "color": "CCCCCC"
+                }
+            ]
+        }
+    }
+}

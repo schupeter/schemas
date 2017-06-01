@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataDescriptions service="GLS" version="0.12" xml:lang="en-CA" xmlns="http://www.opengis.net/gls/0.12" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/gls/0.12  ../glsDescribeData_response.xsd">
+	<Framework>
+		<FrameworkURI>http://ec.gc.ca/ecoprovince/1995</FrameworkURI>
+		<Organization>Environment Canada</Organization>
+		<Title>Ecoprovinces of Canada</Title>
+		<Abstract>Ecoprovinces are the second highest level of the Terrestrial Ecostratification of Canada. </Abstract>
+		<ReleaseDate>1995-09-03</ReleaseDate>
+		<Documentation>http://sis.agr.gc.ca/cansis/nsdb/ecostrat/intro.html#ecological%20framework</Documentation>
+		<FrameworkKey>prov</FrameworkKey>
+		<BoundingBox>
+			<Minimum>
+				<Latitude>40</Latitude>
+				<Longitude>-138</Longitude>
+			</Minimum>
+			<Maximum>
+				<Latitude>90</Latitude>
+				<Longitude>-47</Longitude>
+			</Maximum>
+		</BoundingBox>
+		<Dataset>
+			<DatasetURI>http://agr.gc.ca/ecoprovince/drainage/1999</DatasetURI>
+			<Organization>Agriculture Canada</Organization>
+			<Title>Soil Drainage</Title>
+			<Abstract>Soil drainage described by a set of components within each polygon.  This information was summarized from SLC version 2.2.</Abstract>
+			<ReleaseDate>1999-01-01</ReleaseDate>
+			<Documentation>http://sis.agr.gc.ca/cansis/nsdb/ecostrat/drain.html</Documentation>
+			<DatasetKey type="http://www.w3.org/TR/xmlschema-2/#integer" length="2">ecozone</DatasetKey>
+			<KeyRelationship>many</KeyRelationship>
+			<KeyComplete>true</KeyComplete>
+			<Attribute>
+				<AttributeName>drain</AttributeName>
+				<Title>Drainage</Title>
+				<Abstract>Soil drainage ability.</Abstract>
+				<Documentation>http://sis.agr.gc.ca/cansis/nsdb/ecostrat/drain.html</Documentation>
+				<Values>
+					<Ordinal type="http://www.w3.org/TR/xmlschema-2/#string" length="1">
+						<Classes>
+							<Title>SLC drainage classes</Title>
+							<Abstract>Drainange classes suited to the SLC level of abstraction.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v2.0/component/drain.html</Documentation>
+							<Value rank="1">
+								<Identifier>E</Identifier>
+								<Title>Excessive</Title>
+								<Abstract>Water is removed from the soil very rapidly in relation to supply; excess water flows downward very rapidly if underlying material is pervious; subsurface flow may be very rapid during heavy rainfall provided the gradient is steep; source of water is precipitation.</Abstract>
+							</Value>
+							<Value rank="2">
+								<Identifier>R</Identifier>
+								<Title>Rapid</Title>
+								<Abstract>Water is removed from the soil rapidly in relation to supply; excess water flows downward if underlying material is pervious; subsurface flow may occur on steep gradients during heavy rainfall; source of water is precipitation.</Abstract>
+							</Value>
+							<Value rank="3">
+								<Identifier>W</Identifier>
+								<Title>Well</Title>
+								<Abstract>Water is removed from the soil readily but not rapidly; excess water flows downward into underlying pervious material or laterally as subsurface flow. These soils commonly retain optimum amounts of moisture for plant growth after rains or addition of irrigation water.</Abstract>
+							</Value>
+							<Value rank="4">
+								<Identifier>M</Identifier>
+								<Title>Moderately well</Title>
+								<Abstract>Water is removed from the soil somewhat slowly in relation to supply due to low perviousness, a shallow water table, lack of gradient, or a combination of these factors; precipitation is the dominant source of water in medium to fine textured soils; precipitation and significant additions by subsurface flow are necessary in coarse-textured soils.</Abstract>
+							</Value>
+							<Value rank="5">
+								<Identifier>I</Identifier>
+								<Title>Imperfect</Title>
+								<Abstract>Water is removed from the soil sufficiently slowly in relation to supply leaving the soil wet for a significant part of the growing season; excess water moves slowly downward if precipitation is the major supply; if subsurface water, groundwater, or both are the main source the flow rate may vary.</Abstract>
+							</Value>
+							<Value rank="6">
+								<Identifier>P</Identifier>
+								<Title>Poor</Title>
+								<Abstract>Water is removed so slowly in relation to supply that the soil remains wet for a comparatively large part of the time that the soil is not frozen; excess water is evident in the soil for much of the time; subsurface flow, groundwater flow, or both, in addition to precipitation, are the main sources of water; a perched water table may also be present.</Abstract>
+							</Value>
+							<Value rank="7">
+								<Identifier>V</Identifier>
+								<Title>Very poor</Title>
+								<Abstract>Water is removed from the soil so slowly that the water table remains at or on the surface for a majority of the time the soil is not frozen; groundwater flow and subsurface flow are the major sources of water; precipitation is less important except where there is a perched water table.</Abstract>
+							</Value>
+						</Classes>
+						<Exceptions>
+							<Null>
+								<Identifier>#</Identifier>
+								<Title>Non-applicable</Title>
+								<Abstract>Perennial surface water or ice, or rock.</Abstract>
+							</Null>
+						</Exceptions>
+					</Ordinal>
+				</Values>
+			</Attribute>
+		</Dataset>
+	</Framework>
+</DataDescriptions>

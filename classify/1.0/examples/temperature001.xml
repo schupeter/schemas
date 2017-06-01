@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/schemas/classify/1.0/stylesheets/NumericClassification.xsl"?>
+<NumericClassification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../NumericClassification.xsd">
+	<Title>Temperature Classification #2</Title>
+	<Abstract>This classification ranks temperature data into 5 classes.</Abstract>
+	<AttributeToRank>
+		<Title>Temperature</Title>
+		<Abstract>Temperature</Abstract>
+		<Values>
+			<Measure type="http://www.w3.org/TR/xmlschema-2/#float" length="3" decimals="0">
+				<UOM reference="http://unitsofmeasure.org/">
+					<ShortForm>°C</ShortForm>
+					<LongForm>degrees centigrade</LongForm>
+				</UOM>
+			</Measure>
+		</Values>
+	</AttributeToRank>
+	<ResultantValues>
+		<Ordinal type="http://www.w3.org/TR/xmlschema-2/#string" length="2" decimals="0">
+			<Classes>
+				<Title>Canadian Temperature Guide</Title>
+				<Abstract>Monthly normals temperature classes for Canada</Abstract>
+				<Documentation>Monthly normals temperature classes for Canada consisting of eight common classes, ten degrees each.</Documentation>
+			</Classes>
+		</Ordinal>
+	</ResultantValues>
+	<RankingScheme>
+		<HighestClass rank="1" minValue="30" includeMinValue="true" identifier="H" title="Hot" color="F8764A"/>
+		<MidClass rank="2" minValue="15" includeMinValue="true" identifier="W" title="Warm" color="F5E110"/>
+		<MidClass rank="3" minValue="0" includeMinValue="true" identifier="L" title="Cool" color="0FEADB"/>
+		<MidClass rank="4" minValue="-15" includeMinValue="true" identifier="C" title="Cold" color="0FB7EA"/>
+		<LowestClass rank="5" identifier="VC" title="Very Cold" color="5462EB"/>
+		<MissingClass identifier="nil" title="Missing" color="E2E2E2"/>
+		<ExceptionClass identifier="n/a" originalValue="n/a" title="Not Available" color="CCCCCC"/>
+	</RankingScheme>
+</NumericClassification>

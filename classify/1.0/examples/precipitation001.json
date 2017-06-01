@@ -1,0 +1,83 @@
+{
+    "NumericClassification": {
+        "Title": "Annual Precipitation Classification #1",
+        "Abstract": "This classification ranks annual precipitation data (millimeters) into 5 classes.",
+        "AttributeToRank": {
+            "Title": "Precipitation",
+            "Abstract": "Total Precipitation",
+            "DataForm": "measure",
+            "DataType": "float",
+            "Length": 3,
+            "Decimals": 0,
+            "UOM": {
+                "Reference": "http://unitsofmeasure.org/",
+                "ShortForm": "mm",
+                "LongForm": "millimeters"
+            }
+        },
+        "RankingResult": {
+            "Title": "Annual total precipitation classes for Canada",
+            "Abstract": "Annual total precipitation classes for Canada consisting of five classes.",
+            "DataForm": "ordinal",
+            "DataType": "string",
+            "Length": 2,
+            "Decimals": 0
+        },
+        "RankingScheme": {
+            "DataClasses": [
+                {
+                    "Rank": 1,
+                    "MinValue": 1200,
+                    "IncludeMinValue": "true",
+                    "Identifier": "EW",
+                    "Title": "Extremely Wet",
+                    "Color": "467894"
+                },
+                {
+                    "Rank": 2,
+                    "MinValue": 500,
+                    "IncludeMinValue": "true",
+                    "Identifier": "W",
+                    "Title": "Wet",
+                    "Color": "4A876D"
+                },
+                {
+                    "Rank": 3,
+                    "MinValue": 250,
+                    "IncludeMinValue": "true",
+                    "Identifier": "M",
+                    "Title": "Moist",
+                    "Color": "55AB00"
+                },
+                {
+                    "Rank": 4,
+                    "MinValue": 100,
+                    "IncludeMinValue": "true",
+                    "Identifier": "D",
+                    "Title": "Dry",
+                    "Color": "9FAD00"
+                },
+                {
+                    "Rank": 5,
+                    "Identifier": "ED",
+                    "Title": "Extremely Dry",
+                    "Color": "FFDD57"
+                }
+            ],
+            "MissingClasses": [
+                {
+                    "Identifier": "nil",
+                    "Title": "Missing data",
+                    "Color": "E2E2E2"
+                }
+            ],
+            "ExceptionClasses": [
+                {
+                    "Identifier": "n/a",
+                    "Title": "Not Available",
+                    "Color": "CCCCCC"
+                }
+            ]
+        }
+    }
+}

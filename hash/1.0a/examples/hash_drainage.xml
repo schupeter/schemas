@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../xsl/hash2html2.xsl"?>
+<Hash xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../hash_nominal_ordinal.xsd">
+	<Title>SLC Drainage Generalization</Title>
+	<Abstract>This transformation will generalize the Soil Name Table Drainage field into five new classes that describe potential for commercial crop growth.</Abstract>
+	<KeyDescriptions>
+		<Column name="drainage" type="http://www.w3.org/TR/xmlschema-2/#string" length="2" decimals="0" purpose="Attribute">
+			<Title>Soil Drainage Class </Title>
+			<Abstract>
+				<p>Indicates the type of drainage found within a soil profile. First used in SNT 1.0. Identical classes to drainage in SLC 1.0, but codes differ.</p>
+			</Abstract>
+			<Documentation>n/a</Documentation>
+			<Values>
+				<Ordinal>
+					<Classes>
+						<Title>Soil Drainage (SNT 1.0)</Title>
+						<Abstract>Soil drainage.  8 classes. First used in SNT 1.0.  Identical classes to drainage in SLC 1.0, but codes differ.</Abstract>
+						<Documentation/>
+						<Value color="FFFF99" rank="1">
+							<Identifier>VR</Identifier>
+							<Title>Very rapidly drained</Title>
+							<Abstract>Water is removed from the soil very rapidly in relation to supply. Excess water flows downward very rapidly if underlying material is pervious. There may be very rapid subsurface flow during heavy rainfall provided there is a steep gradient. Soils have very low available water storage capacity (usually less than 2.5 cm) within the control section and are usually coarse textured, or shallow, or both. Water source is precipitation.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v3.0/component/drainage.html</Documentation>
+						</Value>
+						<Value color="CCFF99" rank="2">
+							<Identifier>R</Identifier>
+							<Title>Rapidly drained</Title>
+							<Abstract>Water is removed from the soil rapidly in relation to supply. Excess water flows downward if underlying material is pervious. Subsurface flow may occur on steep gradients during heavy rainfall. Soils have low available water storage capacity (2.5-4 cm) within the control section, and are usually coarse textured, or shallow, or both. Water source is precipitation.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v3.0/component/drainage.html</Documentation>
+						</Value>
+						<Value color="33CC33" rank="3">
+							<Identifier>W</Identifier>
+							<Title>Well drained</Title>
+							<Abstract>Water is removed from the soil readily but not rapidly. Excess water flows downward readily into underlying pervious material or laterally as subsurface flow. Soils have intermediate available water storage capacity (4-5 cm) within the control section, and are generally intermediate in texture and depth. Water source is precipitation. On slopes subsurface flow may occur for short durations but additions are, equaled by losses.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v3.0/component/drainage.html</Documentation>
+						</Value>
+						<Value color="33CC99" rank="4">
+							<Identifier>MW</Identifier>
+							<Title>Moderately well drained</Title>
+							<Abstract>Water is removed from the soil somewhat slowly in relation to supply. Excess water is removed somewhat slowly due to low perviousness, shallow water table, lack of gradient, or some combination of these. Soils have intermediate to high water storage capacity (5-6 cm) within the control section and are usually medium to fined textured. Precipitation is the dominant water source in medium to fine textured soils; precipitation and significant additions by subsurface flow are necessary in coarse textured soils.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v3.0/component/drainage.html</Documentation>
+						</Value>
+						<Value color="33CCCC" rank="5">
+							<Identifier>I</Identifier>
+							<Title>Imperfectly drained</Title>
+							<Abstract>Water is removed from the soil sufficiently slowly in relation to supply, to keep the soil wet for a significant part of the growing season. Excess water moves slowly downward if precipitation is the major supply. If subsurface water or groundwater, or both, is the main source, the flow rate may vary but the soil remains wet for a significant part of the growing season. Precipitation is the main source if available water storage capacity is high; contribution by subsurface flow or groundwater flow, or both, increases as available water storage capacity decreases. Soils have a wide range in available water supply, texture, and depth, and are gleyed phases of well drained subgroups.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v3.0/component/drainage.html</Documentation>
+						</Value>
+						<Value color="336699" rank="6">
+							<Identifier>P</Identifier>
+							<Title>Poorly drained</Title>
+							<Abstract>Water is removed so slowly in relation to supply that the soil remains wet for a comparatively large part of the time the soil is not frozen. Excess water is evident in the soil for a large part of the time. Subsurface flow or groundwater flow, or both, in addition to precipitation are the main water sources; there may also be a perched water table, with precipitation exceeding evapotranspiration. Soils have a wide range in available water storage capacity, texture, and depth, and are gleyed subgroups, Gleysols, and Organic soils.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v3.0/component/drainage.html</Documentation>
+						</Value>
+						<Value color="9966FF" rank="7">
+							<Identifier>VP</Identifier>
+							<Title>Very poorly drained</Title>
+							<Abstract>Water is removed from the soil so slowly that the water table remains at or on the surface for the greater part of the time the soil is not frozen. Excess water is present in the soil for the greater part of the time. Groundwater flow and subsurface flow are the major water sources. Precipitation is less important except where there is a perched water table with precipitation exceeding evapotranspiration. Soils have a wide range in available water storage capacity, texture, and depth, and are either Gleysolic or Organic.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v3.0/component/drainage.html</Documentation>
+						</Value>
+					</Classes>
+					<Exceptions>
+						<Value color="CCCCCC">
+							<Identifier>-</Identifier>
+							<Title>Not applicable</Title>
+							<Abstract>Drainage not applicable (rock, ice, etc)</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v3.0/component/drainage.html</Documentation>
+						</Value>
+					</Exceptions>
+				</Ordinal>
+			</Values>
+		</Column>
+	</KeyDescriptions>
+	<ValueDescription>
+		<Column name="drainage" type="http://www.w3.org/TR/xmlschema-2/#string" length="1" decimals="0" purpose="Attribute">
+			<Title>Drainage</Title>
+			<Abstract>Drainage of water through the soil.  Classes including excessive, adequate, and inadequate.</Abstract>
+			<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v2.0/component/drain.html</Documentation>
+			<Values>
+				<Ordinal>
+					<Classes>
+						<Title>Soil Drainage</Title>
+						<Abstract>Soil drainage.  5 classes. First used in AgAtlas 1.0.</Abstract>
+						<Documentation/>
+						<Value color="FFFF99" rank="1">
+							<Identifier>R</Identifier>
+							<Title>Very Rapid and Rapid</Title>
+							<Abstract>Water is removed from the soil at an excessive rate.  Inadequate moisture remains for growth.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v2.0/component/drain.html</Documentation>
+						</Value>
+						<Value color="33CC33" rank="2">
+							<Identifier>W</Identifier>
+							<Title>Well and Moderately Well</Title>
+							<Abstract>Water is removed from the soil at a rate adequate to support healthy plant growth.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v2.0/component/drain.html</Documentation>
+						</Value>
+						<Value color="33CCCC" rank="3">
+							<Identifier>I</Identifier>
+							<Title>Imperfect</Title>
+							<Abstract>Water is removed from the soil too slowly, resulting in poor growth.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v2.0/component/drain.html</Documentation>
+						</Value>
+						<Value color="336699" rank="4">
+							<Identifier>P</Identifier>
+							<Title>Poor and Very Poor</Title>
+							<Abstract>Water is removed from the soil too slowly, resulting in poor growth.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v2.0/component/drain.html</Documentation>
+						</Value>
+					</Classes>
+					<Exceptions>
+						<Value color="B2B2B2">
+							<Identifier>#</Identifier>
+							<Title>Non-applicable</Title>
+							<Abstract>Unclassified: Undifferentiated, Ice, Bedrock, Rock land, Urban</Abstract>
+							<Documentation />
+						</Value>
+					</Exceptions>
+				</Ordinal>
+			</Values>
+		</Column>
+	</ValueDescription>
+	<Table>
+		<Pair key="VR" value="R"/>
+		<Pair key="R" value="R"/>
+		<Pair key="W" value="W"/>
+		<Pair key="M" value="W"/>
+		<Pair key="I" value="I"/>
+		<Pair key="P" value="P"/>
+		<Pair key="VP" value="P"/>
+		<Pair key="#" value="#"/>
+	</Table>
+</Hash>

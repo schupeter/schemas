@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QueryHits service="XRS" version="1.0" serviceURL="http://foo.bar/foo">
+	<Find>
+		<Request>
+			<ResourceType>GDAS0.12</ResourceType>
+			<Query>ecozones</Query>
+			<Start>1</Start>
+			<Hits>10</Hits>
+		</Find>
+	</Request>
+	<Collection>
+		<ResourceType>GDAS0.12</ResourceType>
+		<Title>GDAS XML files</Title>
+		<URI>OGC:…</URI>
+		<SchemaURL>http://foo.bar/foo.xsd</SchemaURL>
+		<Hits count="2">
+			<Hit>
+				<Title>Title from the first hit</Title>
+				<Description>Description from the first hit</Description>
+				<URL>http://foo.bar/foo1</URL>
+			</Hit>
+			<Hit>
+				<Title>Title from the second hit</Title>
+				<Description>Description from the second hit</Description>
+				<URL>http://foo.bar/foo2</URL>
+			</Hit>
+		</Hits>
+	</Collection>
+</QueryHits>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../stylesheets/legend2html.xsl"?>
+<Legend xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../legend.xsd">
+	<Title>Kind of Material</Title>
+	<Abstract>Classes used to map SLC v2.2 Kind of Material (KINDMAT).</Abstract>
+	<Classes type="Nominal">
+		<Class id="SO" value="A87000" title="Soil"/>
+		<Class id="OR" value="FF99EB" title="Organic"/>
+		<Class id="R1" value="F9957E" title="Soft rock"/>
+		<Class id="R2" value="E77B62" title="Hard rock, acidic"/>
+		<Class id="R3" value="D55E43" title="Hard rock, basic"/>
+		<Class id="R4" value="C33819" title="Hard rock"/>
+		<Class id="F" value="C33819" title="Rock field"/>
+	</Classes>
+	<Exceptions>
+		<Class id="UR" value="EFEF0E" title="Urban"/>
+		<Class id="IC" value="FFFFFF" title="Ice and snow"/>
+		<Class id="WA" value="002AFF" title="Water"/>
+	<Exceptions>
+</Legend>

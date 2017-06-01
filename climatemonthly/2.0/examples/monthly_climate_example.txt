@@ -1,0 +1,14 @@
+--- #YAML
+Title: "1961 - 1990 Climate Normals test data"
+Geography: "polygons"
+Framework: "dss_v3_yt"
+Timeframe: "1961x90"
+Origin: "Observations"
+Description: "Environment Canada's climate normals from station data observed during the period 1961-1990 interpolated to the detailed soil survey polygons of the Yukon.  Note: this test data and geography was actually contrived and is not representative of real observed conditions or geography."
+--- #TSV
+id	long	lat	elev	tmax01	tmax02	tmax03	tmax04	tmax05	tmax06	tmax07	tmax08	tmax09	tmax10	tmax11	tmax12	tmin01	tmin02	tmin03	tmin04	tmin05	tmin06	tmin07	tmin08	tmin09	tmin10	tmin11	tmin12	ptot01	ptot02	ptot03	ptot04	ptot05	ptot06	ptot07	ptot08	ptot09	ptot10	ptot11	ptot12
+ytc001	-122.39	49.03	54.0	5.72	8.34	11.14	14.41	17.65	20.13	23.22	23.57	20.73	14.77	8.93	5.78	-0.11	1.16	2.60	4.64	7.56	10.13	11.83	11.91	9.53	6.09	2.73	0.25	183.95	140.63	131.98	107.55	92.03	74.34	51.35	48.53	68.28	134.88	213.72	200.15
+ytc002	-121.79	49.27	112.0	4.52	7.31	10.63	14.36	17.80	20.27	23.60	23.92	20.81	14.33	7.85	4.59	-1.05	0.42	2.22	4.54	7.66	10.35	12.29	12.38	9.79	6.06	2.25	-0.53	235.04	179.04	163.06	128.61	104.96	94.03	65.83	58.15	88.87	176.25	276.11	246.10
+ytc003	-122.59	58.83	309.0	-16.19	-9.87	-0.62	9.86	17.03	21.60	23.34	21.56	15.72	5.98	-8.12	-14.97	-25.00	-21.22	-13.89	-3.54	3.17	8.36	10.41	8.50	3.14	-3.73	-16.38	-23.23	22.49	17.55	15.93	17.79	44.59	64.05	81.68	65.18	39.38	30.07	24.64	20.09
+ytc004	-120.68	56.24	703.0	-10.13	-6.00	0.43	9.36	15.88	19.34	21.30	20.31	15.09	8.12	-3.11	-8.20	-19.25	-15.84	-10.05	-2.22	3.11	7.31	9.31	7.96	3.67	-1.33	-11.14	-16.94	27.80	23.04	21.81	18.15	39.46	70.65	79.52	57.15	43.84	25.96	28.36	27.72
+ytc005	-119.38	49.43	1516.0	-3.46	-0.74	2.58	7.21	12.11	15.91	20.04	20.22	15.50	8.30	-0.21	-3.86	-11.13	-9.33	-6.80	-3.35	0.58	3.71	6.37	6.38	2.63	-1.90	-7.14	-11.09	76.71	61.45	55.90	44.67	60.35	63.18	46.23	43.71	37.11	38.68	72.59	85.95

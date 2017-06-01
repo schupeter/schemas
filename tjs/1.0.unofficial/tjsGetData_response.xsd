@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 (http://www.altova.com) by Peter Schut (Agriculture Canada) -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:tjs="http://www.opengis.net/tjs/1.0" xmlns:xml="http://www.w3.org/XML/1998/namespace" targetNamespace="http://www.opengis.net/tjs/1.0" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" xml:lang="en">
+	<annotation>
+		<appinfo>$Id: tjsGetData_response.xsd 2009-06-01 $</appinfo>
+		<documentation>
+			<description>This XML Schema encodes the TJS GetData response.</description>
+			<copyright>Copyright (c) 2009 OpenGIS, All Rights Reserved. </copyright>
+		</documentation>
+	</annotation>
+	<!-- ========= includes and imports ================================ -->
+	<import namespace="http://www.opengis.net/ows/1.1" schemaLocation="../../ows/1.1.0/owsAll.xsd"/>
+	<import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+	<!-- ========= top level element =================================== -->
+	<element name="GDAS">
+		<annotation>
+			<documentation>Geospatial Data Attribute Set</documentation>
+		</annotation>
+		<complexType>
+			<sequence>
+				<element ref="tjs:Framework"/>
+			</sequence>
+			<attribute name="service" use="required"/>
+			<attribute name="version" use="required"/>
+			<attribute ref="xml:lang" use="required">
+				<annotation>
+					<documentation>RFC 4646 language code of the human-readable text (e.g. "en-CA")</documentation>
+				</annotation>
+			</attribute>
+		</complexType>
+		<key name="attributeNameKey">
+			<annotation>
+				<documentation>The value of the 'Dataset/Attribute/Name' element is referenced by the 'aid' attribute of the 'Rowset/Row/V' element.</documentation>
+			</annotation>
+			<selector xpath="./tjs:Dataset/tjs:Attribute"/>
+			<field xpath="tjs:Name"/>
+		</key>
+		<keyref name="attributeKeyRef" refer="tjs:attributeNameKey">
+			<annotation>
+				<documentation>The value for the 'aid' attribute  must be a value present in the  'Dataset/Attribute/Name' element.</documentation>
+			</annotation>
+			<selector xpath="./tjs:Rowset/tjs:Row/tjs:V"/>
+			<field xpath="@aid"/>
+		</keyref>
+	</element>
+	<!-- ========= other elements ==================================== -->
+	<element name="Abstract" type="string">
+		<annotation>
+			<documentation>One or more paragraphs of human-readable relevant text suitable for display in a pop-up window.</documentation>
+		</annotation>
+	</element>
+	<element name="Attribute">
+		<annotation>
+			<documentation>Attribute descriptions.  The order of these is determined by the order of the attributes listed in the request.</documentation>
+		</annotation>
+		<complexType>
+			<sequence>
+				<element ref="tjs:AttributeName"/>
+				<element ref="tjs:Title"/>
+				<element ref="tjs:Abstract">
+					<annotation>
+						<documentation>One or more paragraphs of human-readable text describing the attribute and suitable for display in a pop-up window.</documentation>
+					</annotation>
+				</element>
+				<element ref="tjs:Documentation" minOccurs="0"/>
+				<element ref="tjs:Values">
+					<annotation>
+						<documentation>Valid values.</documentation>
+					</annotation>
+				</element>
+			</sequence>
+			<attribute name="purpose" use="required">
+				<annotation>
+					<documentation>Primary purpose of the attribute, indicating whether the attribute contains data, a linkage key, or other content.</documentation>
+				</annotation>
+				<simpleType>
+					<restriction base="string">
+						<enumeration value="SpatialIdentifier">
+							<annotation>
+								<documentation>Attribute is a spatial identifier - i.e. a relate key used to perform a table join to a table containing spatial geometery.  Often but not always the primary key of the dataset.</documentation>
+							</annotation>
+						</enumeration>
+						<enumeration value="SpatialComponentIdentifier">
+							<annotation>
+								<documentation>Attribute is a number which identifies a component that applies to a spatial feature.  This value is for use when KeyRelationship = "many", and indicates that this field is a non-specific spatial component of the primary key.</documentation>
+							</annotation>
+						</enumeration>
+						<enumeration value="SpatialComponentProportion">
+							<annotation>
+								<documentation>Similar to SpatialComponentPercentage.  Attribute identifies the decimal proportion (from zero to one) of the spatial feature to which the component applies.  For use when KeyRelationship = "many".</documentation>
+							</annotation>
+						</enumeration>
+						<enumeration value="SpatialComponentPercentage">
+							<annotation>
+								<documentation>Similar to SpatialComponentProportion.  Attribute identifies the percentage (from zero to one hundred) of the spatial feature to which the component applies.  For use when KeyRelationship = "many".</documentation>
+							</annotation>
+						</enumeration>
+						<enumeration value="TemporalIdentifier ">
+							<annotation>
+								<documentation>Attribute is a temporal component of the primary key.  For use when KeyRelationship = "many".</documentation>
+							</annotation>
+						</enumeration>
+						<enumeration value="OtherSpatialIdentifier ">
+							<annotation>
+								<documentation>Attribute is a spatial identifier for another spatial framework (i.e. not the requested framework), as may be the case for datasets which apply to multiple levels of a spatial hierarchy.</documentation>
+							</annotation>
+						</enumeration>
+						<enumeration value="NonSpatialIdentifier">
+							<annotation>
+								<documentation>Attribute is a nonspatial identifier - i.e. a relate key used to perform a table join to a table which does not contain spatial geometery.</documentation>
+							</annotation>
+						</enumeration>
+						<enumeration value="Data">
+							<annotation>
+								<documentation>Attribute consists of data (suitable for mapping).</documentation>
+							</annotation>
+						</enumeration>
+					</restriction>
+				</simpleType>
+			</attribute>
+		</complexType>
+	</element>
+	<element name="AttributeName" type="string">
+		<annotation>
+			<documentation>Name of the attribute field in the database.</documentation>
+		</annotation>
+	</element>
+	<element name="BoundingBox">
+		<annotation>
+			<documentation>Identifies the bounding box of the spatial framework using the WGS84 CRS.</documentation>
+		</annotation>
+		<complexType>
+			<sequence>
+				<element name="Minimum">
+					<complexType>
+						<sequence>
+							<element name="Latitude">
+								<annotation>
+									<documentation>Minimum latitude (WGS84) of the spatial framework.</documentation>
+								</annotation>
+							</element>
+							<element name="Longitude">
+								<annotation>
+									<documentation>Minimum longitude (WGS84) of the spatial framework.</documentation>
+								</annotation>
+							</element>
+						</sequence>
+					</complexType>
+				</element>
+				<element name="Maximum">
+					<complexType>
+						<sequence>
+							<element name="Latitude" type="decimal">
+								<annotation>
+									<documentation>Minimum latitude (WGS84) of the spatial framework.</documentation>
+								</annotation>
+							</element>
+							<element name="Longitude" type="decimal">
+								<annotation>
+									<documentation>Minimum longitude (WGS84) of the spatial framework.</documentation>
+								</annotation>
+							</element>
+						</sequence>
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+	<element name="Count">
+		<annotation>
+			<documentation>Data consists of the number of some observable elements present in the spatial features</documentation>
+		</annotation>
+		<complexType>
+			<sequence>
+				<element ref="tjs:UOM"/>
+				<element ref="tjs:Uncertainty" minOccurs="0"/>
+				<element ref="tjs:Exceptions" minOccurs="0"/>
+			</sequence>
+			<attribute name="type" use="required">
+				<annotation>
+					<documentation>Datatype, as defined by XML schema.</documentation>
+				</annotation>
+				<simpleType>
+					<restriction base="string">
+						<enumeration value="http://www.w3.org/TR/xmlschema-2/#integer"/>
+						<enumeration value="http://www.w3.org/TR/xmlschema-2/#decimal"/>
+						<enumeration value="http://www.w3.org/TR/xmlschema-2/#float"/>
+						<enumeration value="http://www.w3.org/TR/xmlschema-2/#double"/>
+					</restriction>
+				</simpleType>
+			</attribute>
+			<attribute name="length" type="nonNegativeInteger" use="required">
+				<annotation>
+					<documentation>Length of the field, in characters.</documentation>
+				</annotation>
+			</attribute>
+			<attribute name="decimals" type="nonNegativeInteger" use="required">
+				<annotation>
+					<documentation>Number of digits after the decimal, for decimal numbers with a fixed number of digits after the decimal.</documentation>
+				</annotation>
+			</attribute>
+		</complexType>
+	</element>
+	<element name="DataClass">
+		<simpleType>
+			<restriction base="string">
+				<enumeration value="nominal"/>
+				<enumeration value="ordinal"/>
+				<enumeration value="measure"/>
+				<enumeration value="count"/>
+			</restriction>
+		</simpleType>
+	</element>
+	<element name="Dataset">
+		<complexType>
+			<sequence>
+				<element ref="tjs:DatasetURI"/>
+				<element ref="tjs:Organization"/>
+				<element ref="tjs:Title"/>
+				<element ref="tjs:Abstract"/>
+				<element ref="tjs:ReferenceDate"/>
+				<element ref="tjs:Version"/>
+				<element ref="tjs:Documentation" minOccurs="0"/>
+				<element ref="tjs:DatasetKey"/>
+				<element ref="tjs:KeyRelationship"/>
+				<element ref="tjs:KeyComplete"/>
+				<element ref="tjs:Attribute" maxOccurs="unbounded"/>
+				<element ref="tjs:Rowset">
+					<annotation>
+						<documentation>Dataset Rows.  Ordered list of all the requested dataset table rows for the identified framework.  Row elements are in ascending order based on the contents of the Spatial Key (K).</documentation>
+					</annotation>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+	<element name="DatasetURI" type="string">
+		<annotation>
+			<documentation>URI of the attribute dataset.  Normally a resolvable URL or a URN.</documentation>
+		</annotation>
+	</element>
+	<element name="DatasetKey">
+		<annotation>
+			<documentation>Name of the common key field found in the attribute dataset whose contents match those of the foreign key found in the spatial framework.  These values populate the 'Rowset/Row/K' elements.</documentation>
+		</annotation>
+		<complexType>
+			<simpleContent>
+				<extension base="string">
+					<attribute name="type" use="required">
+						<annotation>
+							<documentation>Datatype, as defined by XML schema.</documentation>
+						</annotation>
+						<simpleType>
+							<restriction base="string">
+								<enumeration value="http://www.w3.org/TR/xmlschema-2/#string"/>
+								<enumeration value="http://www.w3.org/TR/xmlschema-2/#integer"/>
+								<enumeration value="http://www.w3.org/TR/xmlschema-2/#decimal"/>
+								<enumeration value="http://www.w3.org/TR/xmlschema-2/#float"/>
+								<enumeration value="http://www.w3.org/TR/xmlschema-2/#double"/>
+							</restriction>
+						</simpleType>
+					</attribute>
+					<attribute name="length" type="nonNegativeInteger" use="required">
+						<annotation>
+							<documentation>Length of the field, in characters.</documentation>
+						</annotation>
+					</attribute>
+					<attribute name="decimals">
+						<annotation>
+							<documentation>Number of digits after the decimal, for decimal numbers with a fixed number of digits after the decimal.</documentation>
+						</annotation>
+					</attribute>
+				</extension>
+			</simpleContent>
+		</complexType>
+	</element>
+	<element name="Documentation" type="anyURI">
+		<annotation>
+			<documentation>URL reference to a web-accessible resource which contains further information describing this object.</documentation>
+		</annotation>
+	</element>
+	<element name="Exceptions">
+		<annotation>
+			<documentation>Valid exception classes for this attribute.</documentation>
+		</annotation>
+		<complexType>
+			<sequence>
+				<element name="Null" maxOccurs="unbounded">
+					<annotation>
+						<documentation>Valid null values.</documentation>
+					</annotation>
+					<complexType>
+						<sequence>
+							<element ref="tjs:Identifier">
+								<annotation>
+									<documentation>Text string representing a null value, found in the V elements of this attribute</documentation>
+								</annotation>
+							</element>
+							<element ref="tjs:Title"/>
+							<element ref="tjs:Abstract"/>
+							<element ref="tjs:Documentation" minOccurs="0"/>
+						</sequence>
+						<attribute name="color">
+							<annotation>
+								<documentation>Hex code for a color that is suggested for cartographic portrayal of this null value.  E.g."CCFFCC"</documentation>
+							</annotation>
+						</attribute>
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+	<element name="Framework">
+		<annotation>
+			<documentation>Spatial framework description and attribute data which applies to that framework.</documentation>
+		</annotation>
+		<complexType>
+			<sequence>
+				<element ref="tjs:FrameworkURI"/>
+				<element ref="tjs:Organization"/>
+				<element ref="tjs:Title"/>
+				<element ref="tjs:Abstract"/>
+				<element ref="tjs:ReferenceDate"/>
+				<element ref="tjs:Version"/>
+				<element ref="tjs:Documentation" minOccurs="0"/>
+				<element ref="tjs:FrameworkKey"/>
+				<element ref="tjs:BoundingBox">
+					<annotation>
+						<documentation>Identifies the bounding box of the spatial framework using the WGS84 coordinate reference system.</documentation>
+					</annotation>
+				</element>
+				<element ref="tjs:Dataset">
+					<annotation>
+						<documentation>Description of the dataset which contains attribute data that applies to the spatial framework, and the requested attribute data.</documentation>
+					</annotation>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+	<element name="FrameworkKey" type="string">
+		<annotation>
+			<documentation>Name of the common key field in the spatial framework dataset through which data can be joined.  The values of this key populate the 'Rowset/Row/K' elements in the GetData response.</documentation>
+		</annotation>
+	</element>
+	<element name="FrameworkURI" type="string">
+		<annotation>
+			<documentation>URI of the spatial framework.  Normally a resolvable URL or a URN.</documentation>
+		</annotation>
+	</element>
+	<element name="K" type="string">
+		<annotation>
+			<documentation>Spatial Key</documentation>
+		</annotation>
+	</element>
+	<element name="Identifier" type="string"/>
+	<element name="KeyComplete" type="boolean">
+		<annotation>
+			<documentation>Identifies if there is at least one record in the Attribute dataset for every record in the Framework dataset.  “true” indicates that this is the case. “false” indicates that some Keys in the Framework dataset cannot be found in the Attribute dataset.</documentation>
+		</annotation>
+	</element>
+	<element name="KeyRelationship">
+		<annotation>
+			<documentation>Identifies if the relationship between the Framework and the Attribute datasets are 1:1 or 1:many.  “one” indicates that there is at most one record in the Attribute dataset for every key in the Framework dataset.  “many” indicates that there may be more than one record in the Attribute dataset for every key in the Framework dataset.</documentation>
+		</annotation>
+		<simpleType>
+			<restriction base="string">
+				<enumeration value="one"/>
+				<enumeration value="many"/>
+			</restriction>
+		</simpleType>
+	</element>
+	<element name="Measure">
+		<annotation>
+			<documentation>Data consists of measurements of some characteristic attributable to the spatial features</documentation>
+		</annotation>
+		<complexType>
+			<sequence>
+				<element ref="tjs:UOM"/>
+				<element ref="tjs:Uncertainty" minOccurs="0"/>
+				<element ref="tjs:Exceptions" minOccurs="0"/>
+			</sequence>
+			<attribute name="type" use="required">
+				<annotation>
+					<documentation>Datatype, as defined by XML schema.</documentation>
+				</annotation>
+				<simpleType>
+					<restriction base="string">
+						<enumeration value="http://www.w3.org/TR/xmlschema-2/#integer"/>
+						<enumeration value="http://www.w3.org/TR/xmlschema-2/#decimal"/>
+						<enumeration value="http://www.w3.org/TR/xmlschema-2/#float"/>
+						<enumeration value="http://www.w3.org/TR/xmlschema-2/#double"/>
+					</restriction>
+				</simpleType>
+			</attribute>
+			<attribute name="length" type="nonNegativeInteger" use="required">
+				<annotation>
+					<documentation>Length of the field, in characters.</documentation>
+				</annotation>
+			</attribute>
+			<attribute name="decimals" type="nonNegativeInteger" use="required">
+				<annotation>
+					<documentation>Number of digits after the decimal, for decimal numbers with a fixed number of digits after the decimal.</documentation>
+				</annotation>
+			</attribute>
+		</complexType>
+	</element>
+	<element name="Nominal">
+		<annotation>
+			<documentation>Data consists of unique names for spatial features</documentation>
+		</annotation>
+		<complexType>
+			<sequence>
+				<element name="Classes" minOccurs="0">
+					<annotation>
+						<documentation>Valid nominal classes for this attribute.</documentation>
+					</annotation>
+					<complexType>
+						<sequence>
+							<element ref="tjs:Title"/>
+							<element ref="tjs:Abstract"/>
+							<element ref="tjs:Documentation" minOccurs="0"/>
+							<element name="Value" maxOccurs="unbounded">
+								<annotation>
+									<documentation>Valid (non-null) values.</documentation>
+								</annotation>
+								<complexType>
+									<sequence>
+										<element ref="tjs:Identifier">
+											<annotation>
+												<documentation>Text string found in the V elements of this attribute</documentation>
+											</annotation>
+										</element>
+										<element ref="tjs:Title"/>
+										<element ref="tjs:Abstract"/>
+										<element ref="tjs:Documentation" minOccurs="0"/>
+									</sequence>
+									<attribute name="color">
+										<annotation>
+											<documentation>Hex code for a color that is suggested for cartographic portrayal of this value.  E.g."CCFFCC"</documentation>
+										</annotation>
+									</attribute>
+								</complexType>
+							</element>
+						</sequence>
+					</complexType>
+				</element>
+				<element ref="tjs:Exceptions" minOccurs="0"/>
+			</sequence>
+			<attribute name="type" use="required">
+				<annotation>
+					<documentation>Datatype, as defined by XML schema.</documentation>
+				</annotation>
+				<simpleType>
+					<restriction base="string">
+						<enumeration value="http://www.w3.org/TR/xmlschema-2/#string"/>
+						<enumeration value="http://www.w3.org/TR/xmlschema-2/#boolean"/>
+						<enumeration value="http://www.w3.org/TR/xmlschema-2/#integer"/>
+						<enumeration value="http://www.w3.org/TR/xmlschema-2/#decimal"/>
+						<enumeration value="http://www.w3.org/TR/xmlschema-2/#float"/>
+						<enumeration value="http://www.w3.org/TR/xmlschema-2/#double"/>
+						<enumeration value="http://www.w3.org/TR/xmlschema-2/#datetime"/>
+					</restriction>
+				</simpleType>
+			</attribute>
+			<attribute name="length" type="nonNegativeInteger" use="required">
+				<annotation>
+					<documentation>Length of the field, in characters.</documentation>
+				</annotation>
+			</attribute>
+		</complexType>
+	</element>
+	<element name="Ordinal">
+		<annotation>
+			<documentation>Ordered classifications data</documentation>
+		</annotation>
+		<complexType>
+			<sequence>
+				<element name="Classes">
+					<annotation>
+						<documentation>Valid ordinal classes for this attribute.</documentation>
+					</annotation>
+					<complexType>
+						<sequence>
+							<element ref="tjs:Title"/>
+							<element ref="tjs:Abstract"/>
+							<element ref="tjs:Documentation" minOccurs="0"/>
+							<element name="Value" maxOccurs="unbounded">
+								<annotation>
+									<documentation>Valid (non-null) values.</documentation>
+								</annotation>
+								<complexType>
+									<sequence>
+										<element ref="tjs:Identifier">
+											<annotation>
+												<documentation>Text string found in the V elements of this attribute</documentation>
+											</annotation>
+										</element>
+										<element ref="tjs:Title"/>
+										<element ref="tjs:Abstract"/>
+										<element ref="tjs:Documentation" minOccurs="0"/>
+									</sequence>
+									<attribute name="rank" type="nonNegativeInteger" use="required">
+										<annotation>
+											<documentation>Rank order of this value, from lowest = 1 to highest.</documentation>
+										</annotation>
+									</attribute>
+									<attribute name="color">
+										<annotation>
+											<documentation>Hex code for a color that is suggested for cartographic portrayal of this value.  E.g."CCFFCC"</documentation>
+										</annotation>
+									</attribute>
+								</complexType>
+							</element>
+						</sequence>
+					</complexType>
+				</element>
+				<element ref="tjs:Exceptions" minOccurs="0"/>
+			</sequence>
+			<attribute name="type" use="required">
+				<annotation>
+					<documentation>Datatype, as defined by XML schema.</documentation>
+				</annotation>
+				<simpleType>
+					<restriction base="string">
+						<enumeration value="http://www.w3.org/TR/xmlschema-2/#string"/>
+						<enumeration value="http://www.w3.org/TR/xmlschema-2/#integer"/>
+						<enumeration value="http://www.w3.org/TR/xmlschema-2/#decimal"/>
+						<enumeration value="http://www.w3.org/TR/xmlschema-2/#float"/>
+						<enumeration value="http://www.w3.org/TR/xmlschema-2/#double"/>
+						<enumeration value="http://www.w3.org/TR/xmlschema-2/#datetime"/>
+					</restriction>
+				</simpleType>
+			</attribute>
+			<attribute name="length" type="nonNegativeInteger" use="required">
+				<annotation>
+					<documentation>Length of the field, in characters.</documentation>
+				</annotation>
+			</attribute>
+			<attribute name="decimals" type="nonNegativeInteger" use="required">
+				<annotation>
+					<documentation>Number of digits after the decimal, for decimal numbers with a fixed number of digits after the decimal.</documentation>
+				</annotation>
+			</attribute>
+		</complexType>
+	</element>
+	<element name="Organization" type="string">
+		<annotation>
+			<documentation>Human-readable name of the organization responsible for maintaining this object.</documentation>
+		</annotation>
+	</element>
+	<element name="ReferenceDate">
+		<annotation>
+			<documentation>Point in time to which the Framework/Dataset applies.  If the startDate attribute is included then the contents of this element describes a range of time (from "startDate" to "ReferenceDate") to which the framework/dataset applies.  Valid content is a date field of the form http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#gYear, gYearMonth, date, or dateTime.</documentation>
+		</annotation>
+		<complexType>
+			<simpleContent>
+				<extension base="string">
+					<attribute name="startDate" type="string">
+						<annotation>
+							<documentation>Start date of a range of time to which the framework/dataset applies.  Valid content is a date field of the form http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/#gYear, gYearMonth, date, or dateTime.</documentation>
+						</annotation>
+					</attribute>
+				</extension>
+			</simpleContent>
+		</complexType>
+	</element>
+	<element name="Row">
+		<complexType>
+			<sequence>
+				<element ref="tjs:K"/>
+				<element ref="tjs:V" maxOccurs="unbounded">
+					<annotation>
+						<documentation>Values that apply to this spatial key identified for this row, in the same sequence as the attribute descriptions above.</documentation>
+					</annotation>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+	<element name="Rowset">
+		<complexType>
+			<annotation>
+				<documentation>Rowset type defines a section for a dataset. Rowset can be presented more than once. However the efficient use of Rowset will be once per GetData response </documentation>
+			</annotation>
+			<sequence>
+				<element ref="tjs:Row" maxOccurs="unbounded">
+					<annotation>
+						<documentation>Dataset Row</documentation>
+					</annotation>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+	<element name="Title" type="string">
+		<annotation>
+			<documentation>Human-readable short description suitable to display on a pick list, legend, and/or on mouseover.  Note that for attributes the unit of measure should not appear in the Title. Instead, it should appear in the UOM element.</documentation>
+		</annotation>
+	</element>
+	<element name="UOM">
+		<annotation>
+			<documentation>Unit of Measure</documentation>
+		</annotation>
+		<complexType>
+			<sequence>
+				<element name="ShortForm">
+					<annotation>
+						<documentation>Short form of the unit of measure, suitable for charts or legends (e.g. "°C").</documentation>
+					</annotation>
+				</element>
+				<element name="LongForm">
+					<annotation>
+						<documentation>Long form of the unit of measure, suitable for complete text descriptions (e.g. "degrees centigrade").</documentation>
+					</annotation>
+				</element>
+			</sequence>
+			<attribute ref="ows:reference"/>
+		</complexType>
+	</element>
+	<element name="Uncertainty">
+		<annotation>
+			<documentation>Standard Uncertainty, according to the generally agreed upon definition described at sites like http://physics.nist.gov/cuu/Uncertainty/index.html</documentation>
+		</annotation>
+		<complexType>
+			<simpleContent>
+				<extension base="string">
+					<attribute name="gaussian" use="required">
+						<annotation>
+							<documentation>Uncertainty is of a Gaussian form, and Independent and Identically Distributed (IID).</documentation>
+						</annotation>
+						<simpleType>
+							<restriction base="string">
+								<enumeration value="true"/>
+								<enumeration value="false"/>
+								<enumeration value="unknown"/>
+							</restriction>
+						</simpleType>
+					</attribute>
+				</extension>
+			</simpleContent>
+		</complexType>
+	</element>
+	<element name="Version" type="string">
+		<annotation>
+			<documentation>Version identifier for this Framework / Dataset.</documentation>
+		</annotation>
+	</element>
+	<element name="V">
+		<annotation>
+			<documentation>Value of a specified attribute for the geospatial identifier for this Row.  When this value is null (indicated with the null attribute) an identification of the reason may be included in the content of this element.</documentation>
+		</annotation>
+		<complexType>
+			<simpleContent>
+				<extension base="string">
+					<attribute name="aid" type="string" use="optional">
+						<annotation>
+							<documentation>Attribute identifier, namely the corresponding AttributeName </documentation>
+						</annotation>
+					</attribute>
+					<attribute name="null" type="boolean" default="false">
+						<annotation>
+							<documentation>Boolean value, when present and "true" indicates that this particular value is missing for some reason, and the contents of the element must be processed accordingly.  </documentation>
+						</annotation>
+					</attribute>
+				</extension>
+			</simpleContent>
+		</complexType>
+	</element>
+	<element name="Values">
+		<complexType>
+			<choice>
+				<element ref="tjs:Nominal"/>
+				<element ref="tjs:Ordinal"/>
+				<element ref="tjs:Count"/>
+				<element ref="tjs:Measure"/>
+			</choice>
+		</complexType>
+	</element>
+</schema>

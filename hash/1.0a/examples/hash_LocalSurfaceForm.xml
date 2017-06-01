@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../xsl/hash2html2.xsl"?>
+<Hash xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../hash_nominal_ordinal.xsd">
+	<Title>SLC Local Surface Form Generalization</Title>
+	<Abstract>This transformation will generalize the SLC Component Table Local Surface Form (LOCSF) field into thirteen new classes.  This generalization was used to generate the AgAtlas map.</Abstract>
+	<KeyDescriptions>
+		<Column name="locsf" type="http://www.w3.org/TR/xmlschema-2/#string" length="3" decimals="0" purpose="Attribute">
+			<Title>Local Surface Form</Title>
+			<Abstract>
+				<p>Identifies the local surface form of a polygon component. Descriptions define classes of local physical surface forms (assemblage of slopes) or recurring patterns of forms which occur at the earth's surface. When applied to consolidated materials, form refers to the product of their modification by geological processes. (ref: ECSS, 1987; NWWG, 1987).</p>
+			</Abstract>
+			<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v3.1.1/component/locsf.html</Documentation>
+			<Values>
+				<Nominal>
+					<Classes>
+						<Title>Local Surface Form (SLC 1.0)</Title>
+						<Abstract>Local surface form: 30 classes.  First used in SLC 1.0.</Abstract>
+						<Documentation/>
+						<Value color="">
+							<Identifier>D</Identifier>
+							<Title>Dissected</Title>
+							<Abstract>A dissected (or gullied) pattern providing external drainage for an area.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v1.0/component/locsf.html</Documentation>
+						</Value>
+						<Value color="">
+							<Identifier>H</Identifier>
+							<Title>Hummocky (or irregular)</Title>
+							<Abstract>A very complex sequence of slopes extending from somewhat rounded concavities (or swales) of various sizes to irregular conical knolls (or knobs) and short discontinuous ridges; there is a general lack of concordance between knolls and swales. Slopes are generally 4-70%. Examples are hummocky moraines and hummocky fluvioglacial landforms.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v1.0/component/locsf.html</Documentation>
+						</Value>
+						<Value color="">
+							<Identifier>I</Identifier>
+							<Title>Inclined</Title>
+							<Abstract>A sloping, unidirectional surface with a generally constant slope unbroken by marked irregularity or gullies; a weakly developed dissected pattern provides external drainage for the local area. Slopes are 2-70%; the form of inclined slopes is not related to the initial mode of origin of the underlying material.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v1.0/component/locsf.html</Documentation>
+						</Value>
+						<Value color="">
+							<Identifier>K</Identifier>
+							<Title>Knoll and kettle</Title>
+							<Abstract>A chaotic sequence of knolls and kettles (or sloughs), which occupies 15-20% of an area and has no external drainage. Slopes are generally &gt;3%. Examples are morainal plains and hill lands.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v1.0/component/locsf.html</Documentation>
+						</Value>
+						<Value color="">
+							<Identifier>L</Identifier>
+							<Title>Level</Title>
+							<Abstract>A flat or very gently sloping, unidirectional surface with a generally constant slope unbroken by marked elevations and depressions. Slopes are generally &lt;2%. Examples are floodplains and lake plains.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v1.0/component/locsf.html</Documentation>
+						</Value>
+						<Value color="">
+							<Identifier>M</Identifier>
+							<Title>Rolling</Title>
+							<Abstract>A very regular sequence of moderate slopes extending from rounded and, in some places, confined concave depressions to broad, rounded convexities producing a wavelike pattern of moderate relief. Slope gradients are generally &gt;5% but may be less. This surface form is usually controlled by the underlying bedrock.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v1.0/component/locsf.html</Documentation>
+						</Value>
+						<Value color="">
+							<Identifier>R</Identifier>
+							<Title>Ridged</Title>
+							<Abstract>A long, narrow elevation of the surface, usually sharp crested with steep sides; ridges may be parallel, subparallel, or intersecting. Examples are eskers, crevasse fillings, washboard moraines and some drumlins.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v1.0/component/locsf.html</Documentation>
+						</Value>
+						<Value color="">
+							<Identifier>S</Identifier>
+							<Title>Steep </Title>
+							<Abstract>Erosional slopes of greater than 70% (35°), present on both consolidated and unconsolidated materials.  The form of a steep erosional slope on unconsolidated materials is not related to the initial mode of origin of the underlying material.  An example is an escarpment.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v1.0/component/locsf.html</Documentation>
+						</Value>
+						<Value color="">
+							<Identifier>T</Identifier>
+							<Title>Terraced</Title>
+							<Abstract>Scarp face and the horizontal or gently inclined surface (or tread) above it. An example is an alluvial terrace.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v1.0/component/locsf.html</Documentation>
+						</Value>
+						<Value color="">
+							<Identifier>U</Identifier>
+							<Title>Undulating</Title>
+							<Abstract>A very regular sequence of gentle slopes that extends from rounded and, in some places, confined concavities to broad, rounded convexities producing a wavelike pattern of low local relief. Slope length is generally less than 0.8 km and the dominant gradient of slopes is usually 2-5%. The terrain lacks an external drainage pattern. Examples are some ground moraines and lacustrine material of varying textures.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v1.0/component/locsf.html</Documentation>
+						</Value>
+						<Value color="">
+							<Identifier>B04</Identifier>
+							<Title>Domed bog</Title>
+							<Abstract>A large bog (diameter usually &gt;500 m) with a convex surface rising several metres above the surrounding terrain. The centre usually drains in all directions; small crescentic pools commonly form around the highest point; a concentric pattern is formed if the highest point is in the centre, while an eccentric pattern is formed if the highest point is off-centre. Peat development is usually &gt;3 m.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v1.0/component/locsf.html</Documentation>
+						</Value>
+						<Value color="">
+							<Identifier>B05</Identifier>
+							<Title>Polygonal peat plateau bog </Title>
+							<Abstract>A perennially frozen bog rising approximately 1 m above the surrounding fen. The surface is relatively flat, scored by a polygonal pattern of trenches that developed over ice wedges. The permafrost and ice wedges developed in peat originally deposited in a nonpermafrost environment.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v1.0/component/locsf.html</Documentation>
+						</Value>
+						<Value color="">
+							<Identifier>B07</Identifier>
+							<Title>Peat plateau bog</Title>
+							<Abstract>A bog composed of perennially frozen peat rising abruptly about 1 m from the surrounding unfrozen fen. The surface is relatively flat and even, and commonly covers large areas. The peat was originally deposited in a nonpermafrost environment and is associated in many places with collapse scar bogs or fens.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v1.0/component/locsf.html</Documentation>
+						</Value>
+						<Value color="">
+							<Identifier>B09</Identifier>
+							<Title>Atlantic plateau bog</Title>
+							<Abstract>A bog with a flat to undulating surface raised above the surrounding terrain. The bog edges commonly slope steeply downwards to the mineral soil terrain. Large pools scattered on the bog reach depths of 2-4 m.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v1.0/component/locsf.html</Documentation>
+						</Value>
+						<Value color="">
+							<Identifier>B13</Identifier>
+							<Title>Basin bog</Title>
+							<Abstract>A bog situated in a basin with essentially closed drainage which receives water from precipitation and runoff from the immediate surroundings. The surface of the bog is flat with peat generally deepest at the centre.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v1.0/component/locsf.html</Documentation>
+						</Value>
+						<Value color="">
+							<Identifier>B14</Identifier>
+							<Title>Flat bog</Title>
+							<Abstract>A bog having a flat, featureless surface and occurring in broad, poorly defined depressions. The depth of peat is generally uniform.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v1.0/component/locsf.html</Documentation>
+						</Value>
+						<Value color="">
+							<Identifier>B15</Identifier>
+							<Title>String bog</Title>
+							<Abstract>A pattern of narrow (2-3 m wide), low (&lt;1 m high) ridges oriented at right angles to the direction of drainage; wet depressions or pools occur between the ridges. The water and peat are very low in nutrients because the water has been derived from other ombrotrophic wetlands. The peat thickness is &gt;1 m.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v1.0/component/locsf.html</Documentation>
+						</Value>
+						<Value color="">
+							<Identifier>B16</Identifier>
+							<Title>Blanket bog</Title>
+							<Abstract>A bog consisting of extensive peat deposits that occur more or less uniformly over gently sloping hills and valleys. The peat thickness is usually &lt; 2 m.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v1.0/component/locsf.html</Documentation>
+						</Value>
+						<Value color="">
+							<Identifier>B18</Identifier>
+							<Title>Slope bog</Title>
+							<Abstract>A bog occurring in areas of high rainfall on appreciably sloping land surfaces. The bog is fed by rainwater and by water draining from other nutrient-poor peatlands. The peat may exceed 1 m in thickness.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v1.0/component/locsf.html</Documentation>
+						</Value>
+						<Value color="">
+							<Identifier>B19</Identifier>
+							<Title>Veneer bog</Title>
+							<Abstract>A bog occurring on gently sloping terrain underlain by generally discontinuous permafrost. Although drainage is predominantly below the surface, overland flow occurs in poorly defined drainways during peak runoff. Peat thickness is usually &lt;1.5 m.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v1.0/component/locsf.html</Documentation>
+						</Value>
+						<Value color="">
+							<Identifier>B20</Identifier>
+							<Title>Lowland polygon bog</Title>
+							<Abstract>A bog with flat-topped or convex peat surfaces (often referred to as 'high-centre polygons') separated by trenches over ice wedges that form a polygonal pattern when viewed from above. The peat was deposited in a permafrost environment as shown by internal structures.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v1.0/component/locsf.html</Documentation>
+						</Value>
+						<Value color="">
+							<Identifier>F01</Identifier>
+							<Title>Northern ribbed fen</Title>
+							<Abstract>A fen with parallel, low peat ridges ('strings') alternating with wet hollows or shallow pools, oriented across the major slope at right angles to water movement. The depth of peat is &gt;1 m.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v1.0/component/locsf.html</Documentation>
+						</Value>
+						<Value color="">
+							<Identifier>F07</Identifier>
+							<Title>Shore fen</Title>
+							<Abstract>A fen with an anchored surface mat that forms the shore of a pond or lake. The rooting zone is affected by the water of the lake at both normal and flood levels.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v1.0/component/locsf.html</Documentation>
+						</Value>
+						<Value color="">
+							<Identifier>F11</Identifier>
+							<Title>Slope fen</Title>
+							<Abstract>A fen occurring mainly on slow-draining, nutrient-enriched seepage slopes. Pools are usually absent, but wet seepage tracks may occur. Peat thickness is usually &lt;2 m.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v1.0/component/locsf.html</Documentation>
+						</Value>
+						<Value color="">
+							<Identifier>F13</Identifier>
+							<Title>Horizontal fen</Title>
+							<Abstract>A fen with a gently sloping, featureless surface. This fen occupies broad, often ill-defined depressions and may interconnect with other fens. Peat accumulation is generally uniform.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v1.0/component/locsf.html</Documentation>
+						</Value>
+						<Value color="">
+							<Identifier>S01</Identifier>
+							<Title>Stream swamp</Title>
+							<Abstract>A swamp occurring along the banks of permanent or semipermanent streams. The high water table is maintained by the level of water in the stream. The swamp is seasonally inundated with subsequent sediment deposition.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v1.0/component/locsf.html</Documentation>
+						</Value>
+						<Value color="">
+							<Identifier>S04</Identifier>
+							<Title>Basin swamp</Title>
+							<Abstract>A swamp developed in a topographically defined basin where water derived locally may be augmented by drainage from other parts of the watershed. Accumulation of well-decomposed peat is shallow (&lt; 0.5 m) at the edge but may reach 2 m at the centre.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v1.0/component/locsf.html</Documentation>
+						</Value>
+						<Value color="">
+							<Identifier>M06</Identifier>
+							<Title>Stream marsh</Title>
+							<Abstract>A marsh occupying shorelines, bars, stream beds, or islands in continuously flowing watercourses. The marsh is subject to prolonged annual flooding and is commonly covered by thick layers of sediments.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v1.0/component/locsf.html</Documentation>
+						</Value>
+						<Value color="">
+							<Identifier>M11</Identifier>
+							<Title>Shallow basin marsh</Title>
+							<Abstract>A marsh occurring in a uniformly shallow marsh depression or swale, having a gradual gradient from the edge to the deepest portion; the marsh edge may be poorly defined. Water levels fluctuate rapidly.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v1.0/component/locsf.html</Documentation>
+						</Value>
+						<Value color="">
+							<Identifier>M14</Identifier>
+							<Title>Shore marsh</Title>
+							<Abstract>A marsh occupying the contact zone between high and low water marks bordering semipermanent or permanent lakes. The marsh, usually found along protected shorelines, behind barrier beaches in lagoons, on islands, or in embayments, is subject to flooding by a rise in lake levels, wind waves, or surface runoff.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v1.0/component/locsf.html</Documentation>
+						</Value>
+					</Classes>
+				</Nominal>
+			</Values>
+		</Column>
+	</KeyDescriptions>
+	<ValueDescription>
+		<Column name="locsf" type="http://www.w3.org/TR/xmlschema-2/#string" length="3" decimals="0" purpose="Attribute">
+			<Title>Local Surface Form</Title>
+			<Abstract>
+				<p>Identifies the local surface form of a polygon component. Descriptions define classes of local physical surface forms (assemblage of slopes) or recurring patterns of forms which occur at the earth's surface. When applied to consolidated materials, form refers to the product of their modification by geological processes.</p>
+			</Abstract>
+			<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v3.1.1/component/locsf.html</Documentation>
+			<Values>
+				<Nominal>
+					<Classes>
+						<Title>Local Surface Form (SLC 1.0)</Title>
+						<Abstract>Local surface form: 13 classes.  First used in AgAtlas 1.0.</Abstract>
+						<Documentation/>
+						<Value color="">
+							<Identifier>1</Identifier>
+							<Title>Level</Title>
+							<Abstract>A flat or very gently sloping, unidirectional surface with a generally constant slope unbroken by marked elevations and depressions. Slopes are generally &lt;2%. Examples are floodplains and lake plains.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v1.0/component/locsf.html</Documentation>
+						</Value>
+						<Value color="">
+							<Identifier>2</Identifier>
+							<Title>Undulating</Title>
+							<Abstract>A very regular sequence of gentle slopes that extends from rounded and, in some places, confined concavities to broad, rounded convexities producing a wavelike pattern of low local relief. Slope length is generally less than 0.8 km and the dominant gradient of slopes is usually 2-5%. The terrain lacks an external drainage pattern. Examples are some ground moraines and lacustrine material of varying textures.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v1.0/component/locsf.html</Documentation>
+						</Value>
+						<Value color="">
+							<Identifier>3</Identifier>
+							<Title>Hummocky, Knoll and Kettle</Title>
+							<Abstract>Includes Hummocky, and Knoll and Kettle.  Hummocky: A very complex sequence of slopes extending from somewhat rounded concavities (or swales) of various sizes to irregular conical knolls (or knobs) and short discontinuous ridges; there is a general lack of concordance between knolls and swales. Slopes are generally 4-70%. Examples are hummocky moraines and hummocky fluvioglacial landforms.  Knoll and kettle: A chaotic sequence of knolls and kettles (or sloughs), which occupies 15-20% of an area and has no external drainage. Slopes are generally &gt;3%. Examples are morainal plains and hill lands.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v1.0/component/locsf.html</Documentation>
+						</Value>
+						<Value color="">
+							<Identifier>4</Identifier>
+							<Title>Dissected</Title>
+							<Abstract>A dissected (or gullied) pattern providing external drainage for an area.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v1.0/component/locsf.html</Documentation>
+						</Value>
+						<Value color="">
+							<Identifier>5</Identifier>
+							<Title>Inclined</Title>
+							<Abstract>A sloping, unidirectional surface with a generally constant slope unbroken by marked irregularity or gullies; a weakly developed dissected pattern provides external drainage for the local area. Slopes are 2-70%; the form of inclined slopes is not related to the initial mode of origin of the underlying material.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v1.0/component/locsf.html</Documentation>
+						</Value>
+						<Value color="">
+							<Identifier>6</Identifier>
+							<Title>Terraced</Title>
+							<Abstract>Scarp face and the horizontal or gently inclined surface (or tread) above it. An example is an alluvial terrace.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v1.0/component/locsf.html</Documentation>
+						</Value>
+						<Value color="">
+							<Identifier>7</Identifier>
+							<Title>Rolling</Title>
+							<Abstract>A very regular sequence of moderate slopes extending from rounded and, in some places, confined concave depressions to broad, rounded convexities producing a wavelike pattern of moderate relief. Slope gradients are generally &gt;5% but may be less. This surface form is usually controlled by the underlying bedrock.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v1.0/component/locsf.html</Documentation>
+						</Value>
+						<Value color="">
+							<Identifier>8</Identifier>
+							<Title>Ridged</Title>
+							<Abstract>A long, narrow elevation of the surface, usually sharp crested with steep sides; ridges may be parallel, subparallel, or intersecting. Examples are eskers, crevasse fillings, washboard moraines and some drumlins.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v1.0/component/locsf.html</Documentation>
+						</Value>
+						<Value color="">
+							<Identifier>9</Identifier>
+							<Title>Steep </Title>
+							<Abstract>Erosional slopes of greater than 70% (35°), present on both consolidated and unconsolidated materials.  The form of a steep erosional slope on unconsolidated materials is not related to the initial mode of origin of the underlying material.  An example is an escarpment.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v1.0/component/locsf.html</Documentation>
+						</Value>
+						<Value color="">
+							<Identifier>11</Identifier>
+							<Title>Level Wetland</Title>
+							<Abstract>Includes all level bogs and fens, marshes, and swamps.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v1.0/component/locsf.html</Documentation>
+						</Value>
+						<Value color="">
+							<Identifier>12</Identifier>
+							<Title>Domed Wetland</Title>
+							<Abstract>Includes Domed and Atlantic Plateau Bogs.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v1.0/component/locsf.html</Documentation>
+						</Value>
+						<Value color="">
+							<Identifier>13</Identifier>
+							<Title>Sloped Wetland</Title>
+							<Abstract>Includes Sloped Bogs and Fens.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v1.0/component/locsf.html</Documentation>
+						</Value>
+					</Classes>
+					<Exceptions>
+						<Value color="">
+							<Identifier>10</Identifier>
+							<Title>Unclassified</Title>
+							<Abstract>Includes Ice and Urban.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v1.0/component/locsf.html</Documentation>
+						</Value>
+					</Exceptions>
+				</Nominal>
+			</Values>
+		</Column>
+	</ValueDescription>
+	<Table>
+		<Pair key="L" value="1"/>
+		<Pair key="U" value="2"/>
+		<Pair key="H" value="3"/>
+		<Pair key="K" value="3"/>
+		<Pair key="D" value="4"/>
+		<Pair key="I" value="5"/>
+		<Pair key="T" value="6"/>
+		<Pair key="M" value="7"/>
+		<Pair key="R" value="8"/>
+		<Pair key="S" value="9"/>
+		<Pair key="B04" value="12"/>
+		<Pair key="B05" value="12"/>
+		<Pair key="B07" value="12"/>
+		<Pair key="B09" value="12"/>
+		<Pair key="B13" value="11"/>
+		<Pair key="B14" value="11"/>
+		<Pair key="B15" value="13"/>
+		<Pair key="B16" value="13"/>
+		<Pair key="B18" value="13"/>
+		<Pair key="B19" value="13"/>
+		<Pair key="B20" value="11"/>
+		<Pair key="F01" value="13"/>
+		<Pair key="F07" value="11"/>
+		<Pair key="F11" value="13"/>
+		<Pair key="F13" value="13"/>
+		<Pair key="S01" value="13"/>
+		<Pair key="S04" value="11"/>
+		<Pair key="M06" value="13"/>
+		<Pair key="M11" value="11"/>
+		<Pair key="M14" value="11"/>
+	</Table>
+</Hash>

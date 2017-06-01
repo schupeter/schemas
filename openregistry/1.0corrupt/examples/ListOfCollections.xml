@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListOfCollections service="OpenRegistry" version="1.0" serviceURL="http://foo.bar/foo" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openregistry.info/schemas/openregistry/1.0 ..\orsListOfCollections.xsd" xmlns="http://openregistry.info/schemas/openregistry/1.0" xml:lang="en">
+	<Collection identifier="GDAS:1.0" uri="http://foo.bar/foo" schemaURL="http://foo.bar/foo.xsd">
+		<Title>GDAS XML files version 1.0</Title>
+	</Collection>
+	<Collection identifier="GDAS:0.9.1" uri="http://foo.bar/foo" schemaURL="http://foo.bar/foo.xsd">
+		<Title>GDAS XML files version 0.9.1</Title>
+	</Collection>
+</ListOfCollections>

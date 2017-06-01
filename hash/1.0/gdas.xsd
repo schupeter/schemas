@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by Peter Schut (Agriculture & Agri-Food Canada) -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:ows="http://www.opengeospatial.net/ows" xmlns:gls="http://www.opengeospatial.net/gls" targetNamespace="http://www.opengeospatial.net/gls" elementFormDefault="qualified" version="0.10.1" xml:lang="en">
+	<annotation>
+		<documentation>
+			<description>This XML Schema encodes common descriptions for GLS GetData (GDAS) request and responses.</description>
+			<copyright>Copyright (c) 2006 OpenGIS, All Rights Reserved. </copyright>
+		</documentation>
+	</annotation>
+	<!-- =============================================================
+		includes and imports
+	============================================================== -->
+	<import namespace="http://www.opengeospatial.net/ows" schemaLocation="../../ows/1.0.0/owsCommon.xsd"/>
+	<import namespace="http://www.opengeospatial.net/ows" schemaLocation="../../ows/1.0.0/owsDataIdentification.xsd"/>
+	<!-- =============================================================
+		elements and types
+	============================================================== -->
+	<!-- =============================================================
+		simple elements 
+	============================================================== -->
+	<element name="Abstract" type="string"/>
+	<element name="AttributeName" type="string"/>
+	<element name="AttributeVersion" type="ows:VersionType"/>
+	<element name="DatasetDomain" type="string"/>
+	<element name="DatasetName" type="string"/>
+	<element name="DatasetVersion" type="ows:VersionType"/>
+	<element name="Description" type="string"/>
+	<element name="Documentation" type="string"/>
+	<element name="FrameworkDomain" type="string"/>
+	<element name="FrameworkName" type="string"/>
+	<element name="FrameworkVersion" type="ows:VersionType"/>
+	<element name="GeolinkageField" type="string"/>
+	<element name="GeolinkageComplete" type="boolean"/>
+	<element name="I" type="string"/>
+	<element name="Identifier" type="string"/>
+	<element name="Organization" type="string"/>
+	<element name="Title" type="string"/>
+	<element name="ReleaseDate" type="date"/>
+	<element name="Units" type="string"/>
+	<!-- =============================================================
+		simple base types
+	============================================================== -->
+	<complexType name="AttributeType">
+		<sequence>
+			<element ref="gls:AttributeName"/>
+			<element ref="gls:Title"/>
+			<element ref="gls:Description"/>
+			<element ref="gls:Documentation"/>
+			<element ref="gls:Values"/>
+		</sequence>
+	</complexType>
+	<!-- =========================================================== -->
+	<element name="DataClass">
+		<simpleType>
+			<restriction base="string">
+				<enumeration value="nominal"/>
+				<enumeration value="ordinal"/>
+				<enumeration value="measure"/>
+				<enumeration value="count"/>
+			</restriction>
+		</simpleType>
+	</element>
+	<!-- =========================================================== -->
+	<complexType name="DatasetType">
+		<sequence>
+			<element ref="gls:DatasetDomain"/>
+			<element ref="gls:DatasetName"/>
+			<element ref="gls:DatasetVersion"/>
+			<element ref="gls:Organization"/>
+			<element ref="gls:Title"/>
+			<element ref="gls:Description"/>
+			<element ref="gls:ReleaseDate"/>
+			<element ref="gls:Documentation"/>
+			<element ref="gls:GeolinkageField"/>
+			<element ref="gls:GeolinkageRelationship"/>
+			<element ref="gls:GeolinkageComplete"/>
+		</sequence>
+	</complexType>
+	<!-- =========================================================== -->
+	<element name="GeolinkageRelationship">
+		<simpleType>
+			<restriction base="string">
+				<enumeration value="one"/>
+				<enumeration value="many"/>
+			</restriction>
+		</simpleType>
+	</element>
+	<!-- =========================================================== -->
+	<complexType name="ValueNominalType">
+		<sequence>
+			<element ref="gls:Identifier"/>
+			<element ref="gls:Title"/>
+			<element ref="gls:Abstract"/>
+			<element ref="gls:Documentation"/>
+		</sequence>
+	</complexType>
+	<!-- =============================================================
+		extended types
+	============================================================== -->
+	<complexType name="DatasetAttributeType">
+		<complexContent>
+			<extension base="gls:DatasetType">
+				<sequence>
+					<element name="Attribute" type="gls:AttributeType" maxOccurs="unbounded"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- =========================================================== -->
+	<complexType name="ValueOrdinalType">
+		<complexContent>
+			<extension base="gls:ValueNominalType">
+				<attribute name="rank" type="nonNegativeInteger"/>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- =========================================================== -->
+	<element name="GDAS">
+		<complexType>
+			<sequence>
+				<element name="Framework" type="gls:GDASDataType"/>
+			</sequence>
+			<attribute name="version" fixed="0.10.1"/>
+		</complexType>
+		<key name="attributeKey">
+			<annotation>
+				<documentation>The value of the 'Attribute' element's 'Name' element is referenced by the 'V' elements attribute named 'attributeRef'.</documentation>
+			</annotation>
+			<selector xpath="./gls:Dataset/gls:Attribute"/>
+			<field xpath="gls:Name"/>
+		</key>
+		<keyref name="attributeKeyRef" refer="gls:attributeKey">
+			<annotation>
+				<documentation>The value for the 'V' element's attribute named 'attributeName' must be a value from the associated 'Dataset' elements 'Attribute/Name' element.</documentation>
+			</annotation>
+			<selector xpath="./gls:Rowset/gls:Row/gls:V"/>
+			<field xpath="@aid"/>
+		</keyref>
+	</element>
+	<!-- =========================================================== -->
+	<complexType name="GDASDataType">
+		<complexContent>
+			<extension base="gls:FrameworkType">
+				<sequence>
+					<element name="Dataset" type="gls:DatasetAttributeRowsetType" maxOccurs="unbounded"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- =========================================================== -->
+	<complexType name="FrameworkType">
+		<sequence>
+			<element ref="gls:FrameworkDomain"/>
+			<element ref="gls:FrameworkName"/>
+			<element ref="gls:FrameworkVersion"/>
+			<element ref="gls:Organization"/>
+			<element ref="gls:Title"/>
+			<element ref="gls:Description"/>
+			<element ref="gls:ReleaseDate"/>
+			<element ref="gls:Documentation"/>
+			<element ref="gls:GeolinkageField"/>
+		</sequence>
+	</complexType>
+	<!-- =========================================================== -->
+	<complexType name="DatasetAttributeRowsetType">
+		<complexContent>
+			<extension base="gls:DatasetAttributeType">
+				<sequence>
+					<element name="Rowset" type="gls:RowsetType"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<!-- =========================================================== -->
+	<complexType name="RowsetType">
+		<annotation>
+			<documentation>Rowset type defines a section for a dataset. Rowset can be presented more than once. However the efficient use of Rowset will be once per GetData response </documentation>
+		</annotation>
+		<sequence>
+			<element name="Row" type="gls:RowType" maxOccurs="unbounded"/>
+		</sequence>
+	</complexType>
+	<!-- =========================================================== -->
+	<complexType name="RowType">
+		<sequence>
+			<element ref="gls:I"/>
+			<element ref="gls:V" maxOccurs="unbounded"/>
+		</sequence>
+	</complexType>
+	<!-- =========================================================== -->
+	<element name="V">
+		<complexType>
+			<simpleContent>
+				<extension base="string">
+					<attribute name="aid" type="string" use="optional"/>
+				</extension>
+			</simpleContent>
+		</complexType>
+	</element>
+	<!-- =========================================================== -->
+	<element name="Values">
+		<complexType>
+			<choice>
+				<element name="Nominal">
+					<complexType>
+						<sequence>
+							<element name="Classes">
+								<complexType>
+									<sequence>
+										<element name="Value" type="gls:ValueNominalType" maxOccurs="unbounded"/>
+									</sequence>
+								</complexType>
+							</element>
+						</sequence>
+						<attribute name="type" use="required">
+							<simpleType>
+								<restriction base="string">
+									<enumeration value="http://www.w3.org/TR/xmlschema-2/#string"/>
+								</restriction>
+							</simpleType>
+						</attribute>
+						<attribute name="length" type="nonNegativeInteger" use="required"/>
+					</complexType>
+				</element>
+				<element name="Ordinal">
+					<complexType>
+						<sequence>
+							<element name="Classes">
+								<complexType>
+									<sequence>
+										<element name="Value" type="gls:ValueOrdinalType" maxOccurs="unbounded"/>
+									</sequence>
+								</complexType>
+							</element>
+						</sequence>
+						<attribute name="type" use="required">
+							<simpleType>
+								<restriction base="string">
+									<enumeration value="http://www.w3.org/TR/xmlschema-2/#string"/>
+								</restriction>
+							</simpleType>
+						</attribute>
+						<attribute name="length" type="nonNegativeInteger" use="required"/>
+					</complexType>
+				</element>
+				<element name="Count">
+					<complexType>
+						<attribute name="type" use="required">
+							<simpleType>
+								<restriction base="string">
+									<enumeration value="http://www.w3.org/TR/xmlschema-2/#integer"/>
+								</restriction>
+							</simpleType>
+						</attribute>
+						<attribute name="digits" type="nonNegativeInteger" use="required"/>
+					</complexType>
+				</element>
+				<element name="Measure">
+					<complexType>
+						<attribute name="type" use="required">
+							<simpleType>
+								<restriction base="string">
+									<enumeration value="http://www.w3.org/TR/xmlschema-2/#float"/>
+								</restriction>
+							</simpleType>
+						</attribute>
+						<attribute name="digits" type="nonNegativeInteger" use="required"/>
+					</complexType>
+				</element>
+			</choice>
+		</complexType>
+	</element>
+</schema>

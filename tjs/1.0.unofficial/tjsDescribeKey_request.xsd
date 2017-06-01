@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:tjs="http://www.opengis.net/tjs/1.0" targetNamespace="http://www.opengis.net/tjs/1.0" elementFormDefault="qualified" version="1.0" xml:lang="en">
+	<annotation>
+		<appinfo>$Id: tjsDescribeKey_request.xsd 2009-06-01 $</appinfo>
+		<documentation>
+			<description>This XML Schema specifies the content of the TJS DescribeKey request.</description>
+			<copyright>Copyright (c) 2009 OpenGIS, All Rights Reserved. </copyright>
+		</documentation>
+	</annotation>
+	<!-- ========= includes and imports ================================ -->
+	<include schemaLocation="tjsAll.xsd"/>
+	<!-- ========= top level element =================================== -->
+	<element name="DescribeKey">
+		<annotation>
+			<documentation>Request to describe the contents of the FrameworkKey field for a spatial framework housed on this server.</documentation>
+		</annotation>
+		<complexType>
+			<complexContent>
+				<extension base="tjs:RequestBaseType">
+					<sequence>
+						<element ref="tjs:FrameworkURI">
+							<annotation>
+								<documentation>URI of the spatial framework to which the attribute data must apply.</documentation>
+							</annotation>
+						</element>
+					</sequence>
+				</extension>
+			</complexContent>
+		</complexType>
+	</element>
+</schema>

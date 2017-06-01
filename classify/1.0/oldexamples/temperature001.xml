@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NumericClassification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="/schemas/classify/1.0/NumericClassification.xsd">
+	<Title>Temperature Classification #1</Title>
+	<Abstract>This transformation will rank temperature data into 7 classes.</Abstract>
+	<AttributeToRank>
+		<Title>Temperature</Title>
+		<Abstract>Temperature</Abstract>
+		<Measure type="http://www.w3.org/TR/xmlschema-2/#float" length="3">
+			<UOM reference="http://unitsofmeasure.org/">C</UOM>
+		</Measure>
+	</AttributeToRank>
+	<RankingScheme>
+		<FirstRange rank="1">
+			<Identifier>EC</Identifier>
+			<Title>Extremely Cold</Title>
+		</FirstRange>
+		<Range rank="2">
+			<StartPoint include="true">-30</StartPoint>
+			<Identifier>VC</Identifier>
+			<Title>Very Cold</Title>
+		</Range>
+		<Range rank="3">
+			<StartPoint include="true">-20</StartPoint>
+			<Identifier>C</Identifier>
+			<Title>Cold</Title>
+		</Range>
+		<Range rank="4">
+			<StartPoint include="true">-10</StartPoint>
+			<Identifier>L</Identifier>
+			<Title>Cool</Title>
+		</Range>
+		<Range rank="5">
+			<StartPoint include="true">0</StartPoint>
+			<Identifier>M</Identifier>
+			<Title>Mild</Title>
+		</Range>
+		<Range rank="6">
+			<StartPoint include="true">10</StartPoint>
+			<Identifier>W</Identifier>
+			<Title>Warm</Title>
+		</Range>
+		<Range rank="7">
+			<StartPoint include="true">20</StartPoint>
+			<Identifier>H</Identifier>
+			<Title>Hot</Title>
+		</Range>
+    <Missing>
+			<Identifier>nil</Identifier>
+			<Title>Missing</Title>
+    </Missing>
+    <Exception>
+      <OriginalValue>n/a</OriginalValue>
+			<Identifier>n/a</Identifier>
+			<Title>Not Available</Title>
+    </Exception>
+	</RankingScheme>
+</NumericClassification>

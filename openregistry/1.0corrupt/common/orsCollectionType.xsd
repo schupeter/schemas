@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ors="http://geoprocessing.info/openregistry/1.0" targetNamespace="http://geoprocessing.info/openregistry/1.0" elementFormDefault="qualified" version="1.0" xml:lang="en">
+	<xs:annotation>
+		<xs:appinfo>$Id: orsCollectionType.xsd 2011-01-01 $</xs:appinfo>
+		<xs:documentation>
+			<xs:description>OpenRegistry Collection.</xs:description>
+			<xs:copyright>Copyright (c) 2011 Government of Canada, All Rights Reserved. </xs:copyright>
+		</xs:documentation>
+	</xs:annotation>
+	<!-- ==============================================================-->
+	<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="../../../xlink/1.0.0/xlinks.xsd"/>
+	<xs:include schemaLocation="orsSimpleElements.xsd"/>
+	<!-- ==============================================================-->
+	<xs:complexType name="CollectionType">
+		<xs:sequence>
+			<xs:element ref="ors:Identifier"/>
+			<xs:element ref="ors:Title"/>
+			<xs:element ref="ors:URI"/>
+			<xs:element ref="ors:SchemaURL"/>
+			<xs:element ref="ors:QueryOptions"/>
+				
+			</xs:element>
+		</xs:sequence>
+							<xs:attribute name="supported" use="required">
+								<xs:annotation>
+									<xs:documentation>Indicates if Text queries are supported by the server.  Must be "true" or "false" where "true" means the Text parameter is supported in the Find operation.</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+
+		<xs:attribute name="queryLatLong" use="required">
+			<xs:annotation>
+				<xs:documentation>Indicates if LatLong queries are supported by the server.  Must be "true" or "false" where "true" means the LatLong parameter is supported in the Find operation.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="queryScale" use="required">
+			<xs:annotation>
+				<xs:documentation>Indicates if Scale queries are supported by the server.  Must be "true" or "false" where "true" means the Scale parameter is supported in the Find operation. </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="queryTime" use="required">
+			<xs:annotation>
+				<xs:documentation>Indicates if Time queries are supported by the server.  Must be "true" or "false" where "true" means the Time parameter is supported in the Find operation. </xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+</xs:schema>

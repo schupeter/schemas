@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataDescriptions service="GLS" version="0.12" xml:lang="en-CA" xmlns="http://www.opengis.net/gls/0.12" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/gls/0.12  ../glsDescribeData_response.xsd">
+	<Framework>
+		<FrameworkURI>http://ec.gc.ca/ecoprovince/1995</FrameworkURI>
+		<Organization>Environment Canada</Organization>
+		<Title>Ecoprovinces of Canada</Title>
+		<Abstract>Ecoprovinces are the second highest level of the Terrestrial Ecostratification of Canada. </Abstract>
+		<ReleaseDate>1995-09-03</ReleaseDate>
+		<Documentation>http://sis.agr.gc.ca/cansis/nsdb/ecostrat/intro.html#ecological%20framework</Documentation>
+		<FrameworkKey>prov</FrameworkKey>
+		<BoundingBox>
+			<Minimum>
+				<Latitude>40</Latitude>
+				<Longitude>-138</Longitude>
+			</Minimum>
+			<Maximum>
+				<Latitude>90</Latitude>
+				<Longitude>-47</Longitude>
+			</Maximum>
+		</BoundingBox>
+		<Dataset>
+			<DatasetURI>http://agr.gc.ca/ecoprovince/material/1999</DatasetURI>
+			<Organization>Agriculture Canada</Organization>
+			<Title>Surface Material</Title>
+			<Abstract>Surface material presented as a set of components within each polygon.  This information was summarized from SLC version 2.2.</Abstract>
+			<ReleaseDate>1999-01-01</ReleaseDate>
+			<Documentation>http://sis.agr.gc.ca/cansis/nsdb/ecostrat/surface_material.html</Documentation>
+			<DatasetKey type="http://www.w3.org/TR/xmlschema-2/#integer" length="2">ecozone</DatasetKey>
+			<KeyRelationship>many</KeyRelationship>
+			<KeyComplete>true</KeyComplete>
+			<Attribute>
+				<AttributeName>material</AttributeName>
+				<Title>Surface Material</Title>
+				<Abstract>Material found at the earth's surface.  Five classes, including soil, organic, rock, ice, urban.</Abstract>
+				<Documentation>http://sis.agr.gc.ca/cansis/nsdb/ecostrat/surface_material.html</Documentation>
+				<Values>
+					<Nominal type="http://www.w3.org/TR/xmlschema-2/#string" length="2">
+						<Classes>
+							<Title>SLC Surface Material classes</Title>
+							<Abstract>Five classes that differentiate the principle kinds of surfaces mapped at the SLC level of abstraction.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/ecostrat/surface_material.html</Documentation>
+							<Value>
+								<Identifier>IC</Identifier>
+								<Title>Ice and Snow</Title>
+								<Abstract>Glacial ice and permanent snow</Abstract>
+							</Value>
+							<Value>
+								<Identifier>OR</Identifier>
+								<Title>Organic soil</Title>
+								<Abstract>Contains > 30% organic matter as measured by weight</Abstract>
+							</Value>
+							<Value>
+								<Identifier>RK</Identifier>
+								<Title>Rock</Title>
+								<Abstract>Rock undifferentiated</Abstract>
+							</Value>
+							<Value>
+								<Identifier>SO</Identifier>
+								<Title>Mineral soil</Title>
+								<Abstract>Predominantly mineral particles: contains less than 30% organic matter as measured by weight</Abstract>
+							</Value>
+							<Value>
+								<Identifier>UR</Identifier>
+								<Title>Urban</Title>
+								<Abstract>Urban areas. Note that only a few major urban area polygons are included on SLC source maps, therefore, do not use for tabulating total urban coverage</Abstract>
+							</Value>
+						</Classes>
+					</Nominal>
+				</Values>
+			</Attribute>
+		</Dataset>
+	</Framework>
+</DataDescriptions>

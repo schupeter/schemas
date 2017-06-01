@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<DatasetDescriptions service="GLS" version="0.12" xml:lang="en-CA" xmlns="http://www.opengis.net/gls/0.12" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/gls/0.12  ../glsDescribeDatasets_response.xsd">
+	<Framework>
+		<FrameworkURI>http://www.statcan.ca/provinces/2001</FrameworkURI>
+		<Organization>Statistics Canada</Organization>
+		<Title>Provinces and Territories of Canada</Title>
+		<Abstract>Provincial and Territorial boundaries used for the 2001 Census of Canada. </Abstract>
+		<ReleaseDate>2001-06-03</ReleaseDate>
+		<Documentation>http://geodepot.statcan.ca/Diss/Data/Geography/n_cd_e.cfm</Documentation>
+		<FrameworkKey>pr</FrameworkKey>
+		<BoundingBox>
+			<MinLat>40</MinLat>
+			<MinLong>-138</MinLong>
+			<MaxLat>90</MaxLat>
+			<MaxLong>-47</MaxLong>
+		</BoundingBox>
+		<Dataset>
+			<DatasetURI>http://www.statcan.ca/2001AgCensus</DatasetURI>
+			<Organization>Statistics Canada</Organization>
+			<Title>2001 Census of Agriculture</Title>
+			<Abstract>2001 Census of Agriculture</Abstract>
+			<ReleaseDate>2003-06-12</ReleaseDate>
+			<Documentation>http://www.statcan.ca/english/agcensus2001/about.htm</Documentation>
+			<DatasetKey type="http://www.w3.org/TR/xmlschema-2/#integer" length="2">province</DatasetKey>
+			<KeyRelationship>one</KeyRelationship>
+			<KeyComplete>true</KeyComplete>
+		</Dataset>
+	</Framework>
+	<Framework>
+		<FrameworkURI>http://www.statcan.ca/cd/2001</FrameworkURI>
+		<Organization>Statistics Canada</Organization>
+		<Title>Census Divisions</Title>
+		<Abstract>Census divisions defined for the 2001 Census of Canada. </Abstract>
+		<ReleaseDate>2001-06-03</ReleaseDate>
+		<Documentation>http://geodepot.statcan.ca/Diss/Data/Geography/n_cd_e.cfm</Documentation>
+		<FrameworkKey>cd</FrameworkKey>
+		<BoundingBox>
+			<MinLat>40</MinLat>
+			<MinLong>-138</MinLong>
+			<MaxLat>90</MaxLat>
+			<MaxLong>-47</MaxLong>
+		</BoundingBox>
+		<Dataset>
+			<DatasetURI>http://www.statcan.ca/2001AgCensus</DatasetURI>
+			<Organization>Statistics Canada</Organization>
+			<Title>2001 Census of Agriculture</Title>
+			<Abstract>2001 Census of Agriculture</Abstract>
+			<ReleaseDate>2003-06-12</ReleaseDate>
+			<Documentation>http://www.statcan.ca/english/agcensus2001/about.htm</Documentation>
+			<DatasetKey type="http://www.w3.org/TR/xmlschema-2/#integer" length="3">CensusDivision</DatasetKey>
+			<KeyRelationship>one</KeyRelationship>
+			<KeyComplete>true</KeyComplete>
+		</Dataset>
+	</Framework>
+	<Framework>
+		<FrameworkURI>http://www.statcan.ca/csd/2001</FrameworkURI>
+		<Organization>Statistics Canada</Organization>
+		<Title>Census Subdivisions</Title>
+		<Abstract>Census subdivisions defined for the 2001 Census of Canada. </Abstract>
+		<ReleaseDate>2001-06-03</ReleaseDate>
+		<Documentation>http://geodepot.statcan.ca/Diss/Data/Geography/n_cd_e.cfm</Documentation>
+		<FrameworkKey>csd</FrameworkKey>
+		<BoundingBox>
+			<MinLat>40</MinLat>
+			<MinLong>-138</MinLong>
+			<MaxLat>90</MaxLat>
+			<MaxLong>-47</MaxLong>
+		</BoundingBox>
+		<Dataset>
+			<DatasetURI>http://www.statcan.ca/2001AgCensus</DatasetURI>
+			<Organization>Statistics Canada</Organization>
+			<Title>2001 Census of Agriculture</Title>
+			<Abstract>2001 Census of Agriculture</Abstract>
+			<ReleaseDate>2003-06-12</ReleaseDate>
+			<Documentation>http://www.statcan.ca/english/agcensus2001/about.htm</Documentation>
+			<DatasetKey type="http://www.w3.org/TR/xmlschema-2/#integer" length="3">CensusSubdivision</DatasetKey>
+			<KeyRelationship>one</KeyRelationship>
+			<KeyComplete>true</KeyComplete>
+		</Dataset>
+	</Framework>
+</DatasetDescriptions>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:part="http://schemas.agr.gc.ca/part/1.1" xmlns:tjs="http://www.opengis.net/tjs/1.0" targetNamespace="http://schemas.agr.gc.ca/part/1.1" elementFormDefault="unqualified" version="1.1.0" xml:lang="en">
+	<annotation>
+		<appinfo>$Id: part.xsd 2010-03-30 $</appinfo>
+		<documentation>
+			<description>This XML Schema encodes a Polygon Attribute Reallocation Table (PART).</description>
+			<copyright>Copyright (c) 2010 Agriculture and Agri-Food Canada, All Rights Reserved. </copyright>
+		</documentation>
+	</annotation>
+	<!-- =============================================================
+		includes and imports
+	============================================================== -->
+	<import namespace="http://www.opengis.net/tjs/1.0" schemaLocation="/schemas/tjs/1.0/tjsJoinData_response.xsd"/>
+	<!-- =============================================================
+		simple elements 
+	============================================================== -->
+	<element name="PART">
+		<annotation>
+			<documentation>Polygon Attribute Reallocation Table</documentation>
+		</annotation>
+		<complexType>
+			<sequence>
+				<element ref="part:Source">
+					<annotation>
+						<documentation>Source polygon spatial database </documentation>
+					</annotation>
+				</element>
+				<element ref="part:Target">
+					<annotation>
+						<documentation>Target polygon spatial database</documentation>
+					</annotation>
+				</element>
+				<element ref="part:Rowset">
+					<annotation>
+						<documentation>Reallocation table</documentation>
+					</annotation>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+	<!-- =========================================================== -->
+	<element name="Source">
+		<complexType>
+			<sequence>
+				<element name="Framework" type="tjs:FrameworkType">
+					<annotation>
+						<documentation>Spatial database identification</documentation>
+					</annotation>
+				</element>
+				<element ref="part:Filter">
+					<annotation>
+						<documentation>Description of the spatial filter which was applied to the source dataset.</documentation>
+					</annotation>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+	<!-- =========================================================== -->
+	<element name="Target">
+		<complexType>
+			<sequence>
+				<element name="Framework" type="tjs:FrameworkType">
+					<annotation>
+						<documentation>Spatial database identification</documentation>
+					</annotation>
+				</element>
+				<element ref="part:Filter">
+					<annotation>
+						<documentation>Description of the spatial filter which was applied to the target dataset.</documentation>
+					</annotation>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+	<!-- =========================================================== -->
+	<element name="Filter">
+		<complexType>
+			<sequence>
+				<element name="Title" type="string">
+					<annotation>
+						<documentation>Title of the spatial filter.</documentation>
+					</annotation>
+				</element>
+				<element name="Abstract" type="string">
+					<annotation>
+						<documentation>Abstract of the spatial filter.</documentation>
+					</annotation>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+	<!-- =========================================================== -->
+	<element name="Rowset">
+		<complexType>
+			<sequence>
+				<element ref="part:Row" maxOccurs="unbounded">
+					<annotation>
+						<documentation>Table row</documentation>
+					</annotation>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+	<element name="Row">
+		<complexType>
+			<sequence>
+				<element ref="part:S"/>
+				<element ref="part:T"/>
+				<element ref="part:P"/>
+			</sequence>
+		</complexType>
+	</element>
+	<!-- =========================================================== -->
+	<element name="S" type="string">
+		<annotation>
+			<documentation>Source polygon identifier from the Source Framework GeolinkageField</documentation>
+		</annotation>
+	</element>
+	<element name="T" type="string">
+		<annotation>
+			<documentation>Target polygon identifier from the Target Framework GeolinkageField</documentation>
+		</annotation>
+	</element>
+	<element name="P">
+		<annotation>
+			<documentation>Portion of the source polygon information which shall be allocated to the target polygon </documentation>
+		</annotation>
+		<simpleType>
+			<restriction base="decimal">
+				<minInclusive value="0"/>
+				<maxInclusive value="1"/>
+			</restriction>
+		</simpleType>
+	</element>
+</schema>

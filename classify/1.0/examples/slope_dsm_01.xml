@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/schemas/classify/1.0/stylesheets/NumericClassification.xsl"?>
+<NumericClassification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../NumericClassification.xsd">
+	<Title>Slope Classification #1</Title>
+	<Abstract>This classification ranks DSM slope data into 7 classes.</Abstract>
+	<AttributeToRank>
+		<Title>Slope</Title>
+		<Abstract>Slope</Abstract>
+		<Values>
+			<Measure type="http://www.w3.org/TR/xmlschema-2/#float" length="4" decimals="1">
+				<UOM reference="http://unitsofmeasure.org/">
+					<ShortForm>%</ShortForm>
+					<LongForm>percent</LongForm>
+				</UOM>
+			</Measure>
+		</Values>
+	</AttributeToRank>
+	<ResultantValues>
+		<Ordinal type="http://www.w3.org/TR/xmlschema-2/#string" length="2" decimals="0">
+			<Classes>
+				<Title>Slope class</Title>
+				<Abstract></Abstract>
+				<Documentation></Documentation>
+			</Classes>
+		</Ordinal>
+	</ResultantValues>
+	<RankingScheme>
+		<HighestClass rank="1" minValue="60" includeMinValue="false" identifier="X" title="more than 60%" color="FE0000"/>
+		<MidClass rank="2" minValue="30" includeMinValue="false" identifier="S" title="31 - 60%" color="FFAC01"/>
+		<MidClass rank="3" minValue="15" includeMinValue="false" identifier="R" title="16 - 30%" color="FFFE00"/>
+		<MidClass rank="4" minValue="9" includeMinValue="false" identifier="M" title="10 - 15%" color="94FF95"/>
+		<MidClass rank="5" minValue="3" includeMinValue="false" identifier="G" title="4 - 9%" color="00FF01"/>
+		<LowestClass rank="6" identifier="L" title="0 - 3%" color="005F03"/>
+		<ExceptionClass identifier="-" originalValue="-" title="n/a" color="00FFFD"/>
+	</RankingScheme>
+</NumericClassification>

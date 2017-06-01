@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ors="http://geoprocessing.info/openregistry/1.0" targetNamespace="http://geoprocessing.info/openregistry/1.0" elementFormDefault="qualified" version="1.0" xml:lang="en">
+	<xs:annotation>
+		<xs:appinfo>$Id: orsGetCapabilitiesResponse.xsd 2011-01-01 $</xs:appinfo>
+		<xs:documentation>
+			<xs:description>Response to an ors GetCapabilities Request.</xs:description>
+			<xs:copyright>Copyright (c) 2011 Government of Canada, All Rights Reserved. </xs:copyright>
+		</xs:documentation>
+	</xs:annotation>
+	<!-- ==============================================================-->
+	<xs:element name="Identifier" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>The identifier of this collection that is used in OpenRegistry operations to select this collection.  Normally the identifier is a single word that identifies the resource type found in this collection.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="Title" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>A human readable title that describes the type of resource found in this collection.  Normally the title is used for display to a human.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="URI" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>The URI of the type of resource found in this collection.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="SchemaURL" type="xs:anyURI">
+		<xs:annotation>
+			<xs:documentation>The URL of the XML Schema that can be used to validate the resource found in this collection.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="URL" type="xs:anyURI">
+		<xs:annotation>
+			<xs:documentation>The URL of a resource that should be / is included in a collection in this registry.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>

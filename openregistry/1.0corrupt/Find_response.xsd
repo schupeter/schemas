@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ors="http://openregistry.info/schemas/openregistry/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" targetNamespace="http://openregistry.info/schemas/openregistry/1.0" elementFormDefault="qualified">
+	<xs:annotation>
+		<xs:appinfo>$Id: orsFind_response.xsd 2011-01-01 $</xs:appinfo>
+		<xs:documentation>
+			<xs:description>Response to an OpenRegistry Find request.</xs:description>
+			<xs:copyright>Copyright (c) 2011 Government of Canada, All Rights Reserved. </xs:copyright>
+		</xs:documentation>
+	</xs:annotation>
+	<!-- ==============================================================-->
+	<xs:include schemaLocation="orsRegister_request.xsd"/>
+	<xs:include schemaLocation="common/orsCollectionType.xsd"/>
+	<xs:include schemaLocation="common/orsRootAttributeGroup.xsd"/>
+	<!-- ==============================================================-->
+	<xs:element name="QueryHits">
+		<xs:annotation>
+			<xs:documentation>Response to a Register request.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="OriginalRequest">
+					<xs:annotation>
+						<xs:documentation>The contents of the request that generated this response.</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Find">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="ors:Collection"/>
+										<xs:element name="Text" minOccurs="0"/>
+										<xs:element name="LatLong" minOccurs="0"/>
+										<xs:element name="Scale" minOccurs="0"/>
+										<xs:element name="Time" minOccurs="0"/>
+										<xs:element name="FirstHit" minOccurs="0"/>
+										<xs:element name="ShowHits" minOccurs="0"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Collection">
+					<xs:annotation>
+						<xs:documentation>A set of resources which match the Find request and metadata about this type of resource.</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="ors:Title"/>
+							<xs:element ref="ors:QueryOptions"/>
+							<xs:element name="Hits">
+								<xs:annotation>
+									<xs:documentation>The set of objects which match the Find request..</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="ors:Hit" minOccurs="0" maxOccurs="unbounded">
+											<xs:annotation>
+												<xs:documentation>Information describing each matching object found among the collection of objects.  Include one "Hit" for each match  found.  Limit the number of "Hits" included in the response to the "hits" parameter in the search request.</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="start" use="required">
+										<xs:annotation>
+											<xs:documentation>The number of the first hit returned in this response.</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="end" use="required">
+										<xs:annotation>
+											<xs:documentation>The number of the last hit returned in this response.</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="totalHits" use="required">
+										<xs:annotation>
+											<xs:documentation>The total number of matching objects (hits) found for this query.</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="identifier" use="required"/>
+						<xs:attribute name="uri" use="required"/>
+						<xs:attribute name="schema" use="required"/>
+						<xs:attribute name="objects" use="required">
+							<xs:annotation>
+								<xs:documentation>The total number of objects registered in this collection</xs:documentation>
+							</xs:annotation>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attributeGroup ref="ors:RootAttributeGroup"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Hit">
+		<xs:complexType mixed="true">
+			<xs:sequence>
+				<xs:element ref="ors:Object">
+					<xs:annotation>
+						<xs:documentation>The object (if plain text) or URL (if XML, image, or other web object) at which the object whose contents match the query can be found.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="ors:Title">
+					<xs:annotation>
+						<xs:documentation>A human readable title for the object whose contents match the query.  This element is populated from the contents of an appropriate metadata embedded in the object.  The choice of which metadata is used to populate this element for any particular collection is an implementation decision for the service instance.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Description">
+					<xs:annotation>
+						<xs:documentation>A human readable description for this object.  This element is populated from the contents of an appropriate metadata embedded in the object.  The choice of which metadata is used to populate this element for any particular collection is an implementation decision for the service instance.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

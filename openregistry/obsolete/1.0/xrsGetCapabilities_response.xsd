@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xrs="http://www.opengis.net/xrs/1.0.0" targetNamespace="http://www.opengis.net/xrs/1.0.0" elementFormDefault="qualified" version="1.0.0" xml:lang="en">
+	<annotation>
+		<appinfo>$Id: xrsGetCapabilitiesResponse.xsd 2007-05-31 $</appinfo>
+		<documentation>
+			<description>Response to an XRS GetCapabilities Request.</description>
+			<copyright>Copyright (c) 2007 Government of Canada, All Rights Reserved. </copyright>
+		</documentation>
+	</annotation>
+	<!-- ==============================================================-->
+	<import namespace="http://www.w3.org/1999/xlink" schemaLocation="../../xlink/1.0.0/xlinks.xsd"/>
+	<include schemaLocation="common/xrsSimpleElements.xsd"/>
+	<include schemaLocation="common/xrsCollectionType.xsd"/>
+	<include schemaLocation="common/xrsRootAttributeGroup.xsd"/>
+	<import namespace="http://www.opengis.net/ows/1.1" schemaLocation="../../ows/1.1.0/owsServiceIdentification.xsd"/>
+	<import namespace="http://www.opengis.net/ows/1.1" schemaLocation="../../ows/1.1.0/owsServiceProvider.xsd"/>
+	<import namespace="http://www.opengis.net/ows/1.1" schemaLocation="../../ows/1.1.0/owsOperationsMetadata.xsd"/>
+	<!-- ==============================================================-->
+	<element name="Capabilities">
+		<annotation>
+			<documentation>The description of the capabilities of this registry instance.</documentation>
+		</annotation>
+		<complexType>
+			<sequence>
+				<element ref="ows:ServiceProvider"/>
+				<element ref="ows:OperationsMetadata"/>
+				<element ref="xrs:Collections">
+					<annotation>
+						<documentation>The set of collections of XML documents that are housed and searchable via this registry.</documentation>
+					</annotation>
+				</element>
+				<element ref="xrs:Languages"/>
+			</sequence>
+			<attributeGroup ref="xrs:RootAttributeGroup"/>
+		</complexType>
+	</element>
+	<!-- ==============================================================-->
+	<element name="Collections">
+		<annotation>
+			<documentation>The set of collections that are housed and searchable via this registry.</documentation>
+		</annotation>
+		<complexType>
+			<sequence>
+				<element name="Collection" type="xrs:CollectionType" maxOccurs="unbounded">
+					<annotation>
+						<documentation>A collection of XML documents that is housed and searchable via this registry.</documentation>
+					</annotation>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

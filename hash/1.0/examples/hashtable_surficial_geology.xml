@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="hash2html2.xsl"?>
+<Hash xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="hashtable_nominal_ordinal.xsd">
+	<Title>SLC Surface Material Generalization #1</Title>
+	<Description>This transformation will generalize the SLC Surface Material field into five new classes.</Description>
+	<KeyDescriptions>
+		<Attribute>
+			<AttributeName>material</AttributeName>
+			<Title>Surface Material</Title>
+			<Description>Surface material includes the abiotic material at the earth's surface.</Description>
+			<Documentation>http://sis.agr.gc.ca/cansis/nsdb/ecostrat/surface_material.html</Documentation>
+			<Values>
+				<Nominal type="http://www.w3.org/TR/xmlschema-2/#string" length="3">
+					<Classes>
+						<Value>
+							<Identifier></Identifier>
+							<Title></Title>
+							<Abstract></Abstract>
+							<Documentation></Documentation>
+						</Value>
+						<Value>
+							<Identifier>OR</Identifier>
+							<Title>Organic Soil</Title>
+							<Abstract>Contains &gt; 30% organic matter as measured by weight</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/ecostrat/surface_material.html</Documentation>
+						</Value>
+						<Value>
+							<Identifier>R1</Identifier>
+							<Title>Soft rock</Title>
+							<Abstract>Rock that can be dug with a shovel (i.e. undifferentiated shales, upper Cretaceous and Tertiary materials).</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/ecostrat/surface_material.html</Documentation>
+						</Value>
+						<Value>
+							<Identifier>R2</Identifier>
+							<Title>Hard rock, acidic</Title>
+							<Abstract>Granite.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/ecostrat/surface_material.html</Documentation>
+						</Value>
+						<Value>
+							<Identifier>R3</Identifier>
+							<Title>Hard rock, basic</Title>
+							<Abstract>Limestone.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/ecostrat/surface_material.html</Documentation>
+						</Value>
+						<Value>
+							<Identifier>R4</Identifier>
+							<Title>Hard rock</Title>
+							<Abstract>Hard rock of unspecified origin and undifferentiated properties.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/ecostrat/surface_material.html</Documentation>
+						</Value>
+						<Value>
+							<Identifier>F</Identifier>
+							<Title>Rock field</Title>
+							<Abstract>Frost-heaved bedrock, rock slides and talus material.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/ecostrat/surface_material.html</Documentation>
+						</Value>
+						<Value>
+							<Identifier>SO</Identifier>
+							<Title>Mineral Soil</Title>
+							<Abstract>Predominantly mineral particles: contains &lt; 30% organic matter as measured by weight</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/ecostrat/surface_material.html</Documentation>
+						</Value>
+						<Value>
+							<Identifier>UR</Identifier>
+							<Title>Urban</Title>
+							<Abstract>Urban areas. Note that only a few major urban area polygons are included on SLC source maps, therefore, do not use for tabulating total urban coverage</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/ecostrat/surface_material.html</Documentation>
+						</Value>
+					</Classes>
+				</Nominal>
+			</Values>
+		</Attribute>
+	</KeyDescriptions>
+	<ValueDescription>
+		<Attribute>
+			<AttributeName>sfgeologygroup</AttributeName>
+			<Title>Surfacial Geology Group</Title>
+			<Description>Major groupings of surficial geology classes</Description>
+			<Documentation>http://sis.agr.gc.ca/cansis/nsdb/ecostrat/surficial_geology.html</Documentation>
+			<Values>
+				<Nominal type="http://www.w3.org/TR/xmlschema-2/#string" length="3">
+					<Classes>
+						<Value>
+							<Identifier>
+							</Identifier>
+							<Title>
+							</Title>
+							<Abstract>
+							</Abstract>
+							<Documentation>
+							</Documentation>
+						</Value>
+						<Value>
+							<Identifier>
+							</Identifier>
+							<Title>
+							</Title>
+							<Abstract>
+							</Abstract>
+							<Documentation>
+							</Documentation>
+						</Value>
+						<Value>
+							<Identifier>
+							</Identifier>
+							<Title>
+							</Title>
+							<Abstract>
+							</Abstract>
+							<Documentation>
+							</Documentation>
+						</Value>
+					</Classes>
+					<Exceptions>
+						<Value>
+							<Identifier></Identifier>
+							<Title>Not Applicable</Title>
+							<Abstract></Abstract>
+							<Documentation></Documentation>
+						</Value>
+					</Exceptions>
+				</Nominal>
+			</Values>
+		</Attribute>
+	</ValueDescription>
+	<Table>
+		<Pair>
+			<Key>I</Key>
+			<Value>I</Value>
+		</Pair>
+		<Pair>
+			<Key>A</Key>
+			<Value>A</Value>
+		</Pair>
+		<Pair>
+			<Key>mM</Key>
+			<Value>M</Value>
+		</Pair>
+		<Pair>
+			<Key>sM</Key>
+			<Value>M</Value>
+		</Pair>
+		<Pair>
+			<Key>mL</Key>
+			<Value>L</Value>
+		</Pair>
+		<Pair>
+			<Key>sL</Key>
+			<Value>L</Value>
+		</Pair>
+		<Pair>
+			<Key>E</Key>
+			<Value>E</Value>
+		</Pair>
+		<Pair>
+			<Key>O</Key>
+			<Value>O</Value>
+		</Pair>
+		<Pair>
+			<Key>bC</Key>
+			<Value>C</Value>
+		</Pair>
+		<Pair>
+			<Key>rC</Key>
+			<Value>C</Value>
+		</Pair>
+		<Pair>
+			<Key>fC</Key>
+			<Value>C</Value>
+		</Pair>
+		<Pair>
+			<Key>sC</Key>
+			<Value>C</Value>
+		</Pair>
+		<Pair>
+			<Key>fL</Key>
+			<Value>GL</Value>
+		</Pair>
+		<Pair>
+			<Key>cL</Key>
+			<Value>GL</Value>
+		</Pair>
+		<Pair>
+			<Key>fM</Key>
+			<Value>M</Value>
+		</Pair>
+		<Pair>
+			<Key>cM</Key>
+			<Value>M</Value>
+		</Pair>
+		<Pair>
+			<Key>Mv</Key>
+			<Value>M</Value>
+		</Pair>
+		<Pair>
+			<Key>Gp</Key>
+			<Value>G</Value>
+		</Pair>
+		<Pair>
+			<Key>Gx</Key>
+			<Value>G</Value>
+		</Pair>
+		<Pair>
+			<Key>Tb</Key>
+			<Value>T</Value>
+		</Pair>
+		<Pair>
+			<Key>Tv</Key>
+			<Value>T</Value>
+		</Pair>
+		<Pair>
+			<Key>V</Key>
+			<Value>V</Value>
+		</Pair>
+		<Pair>
+			<Key>Ra</Key>
+			<Value>R</Value>
+		</Pair>
+		<Pair>
+			<Key>R</Key>
+			<Value>R</Value>
+		</Pair>
+	</Table>
+</Hash>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Palette>
+	<Title>Textural class</Title>
+	<Abstract>Textural class from EUSOILS</Abstract>
+	<ColorSet ramp="true">
+		<Color id="1" value="B4B4B4" tip="No information"/>
+		<Color id="2" value="000000" tip="No mineral texture (organic soils)"/>
+		<Color id="3" value="FFFF00" tip="Coarse (clay &lt;18% and sand &gt; 65%"/>
+		<Color id="4" value="B3FF00" tip="Medium (18% - 35% clay and sand &gt; 15%)"/>
+		<Color id="5" value="00FF00" tip="Medium fine (clay &lt; 35% and sand &lt; 15%)"/>
+		<Color id="6" value="B3FFED" tip="Fine (35% - 60% clay)"/>
+		<Color id="7" value="00FFED" tip="Very fine (clay &gt; 60%)"/>
+	</ColorSet>
+</Palette>

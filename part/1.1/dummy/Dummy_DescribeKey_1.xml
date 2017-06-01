@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<FrameworkKeyDescription xml:lang="en" service="TJS" xmlns:ows="http://www.opengis.net/ows/1.1" version="1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.opengis.net/tjs/1.0" xsi:schemaLocation="http://www.opengis.net/tjs/1.0  ../schemas/tjs/1.0/tjsDescribeKey_response.xsd">
+  <Framework>
+<FrameworkURI>http://sis.agr.gc.ca/cansis/nsdb/ecostrat/zone/v1</FrameworkURI>
+<Organization>Environment Canada</Organization>
+<Title>Ecozones of Canada</Title>
+<Abstract>Ecozones of Canada, forming part of the Terrestrial Ecological Stratification of Canada </Abstract>
+<ReferenceDate startDate="1995-01-01">1995-06-03</ReferenceDate>
+<Version>1</Version>
+<Documentation>http://sis.agr.gc.ca/cansis/nsdb/ecostrat/hierarchy.html</Documentation>
+<FrameworkKey type="http://www.w3.org/TR/xmlschema-2/#integer" length="2" decimals="0">ecozone</FrameworkKey>
+<BoundingBox>
+  <Minimum>
+    <Latitude>43</Latitude>
+    <Longitude>-145</Longitude>
+  </Minimum>
+  <Maximum>
+    <Latitude>90</Latitude>
+    <Longitude>-50</Longitude>
+  </Maximum>
+</BoundingBox>
+    <Rowset>
+      <Row>
+        <K>1</K>
+        <Title>Arctic Cordillera</Title>
+      </Row>
+      <Row>
+        <K>2</K>
+        <Title>Northern Arctic</Title>
+      </Row>
+      <Row>
+        <K>3</K>
+        <Title>Southern Arctic</Title>
+      </Row>
+      <Row>
+        <K>4</K>
+        <Title>Taiga Plains</Title>
+      </Row>
+      <Row>
+        <K>5</K>
+        <Title>Taiga Shield</Title>
+      </Row>
+      <Row>
+        <K>6</K>
+        <Title>Boreal Shield</Title>
+      </Row>
+      <Row>
+        <K>7</K>
+        <Title>Atlantic Maritime</Title>
+      </Row>
+      <Row>
+        <K>8</K>
+        <Title>Mixedwood Plains</Title>
+      </Row>
+      <Row>
+        <K>9</K>
+        <Title>Boreal Plains</Title>
+      </Row>
+      <Row>
+        <K>10</K>
+        <Title>Prairies</Title>
+      </Row>
+      <Row>
+        <K>11</K>
+        <Title>Taiga Cordillera</Title>
+      </Row>
+      <Row>
+        <K>12</K>
+        <Title>Boreal Cordillera</Title>
+      </Row>
+      <Row>
+        <K>13</K>
+        <Title>Pacific Maritime</Title>
+      </Row>
+      <Row>
+        <K>14</K>
+        <Title>Montane Cordillera</Title>
+      </Row>
+      <Row>
+        <K>15</K>
+        <Title>Hudson Plains</Title>
+      </Row>
+    </Rowset>
+  </Framework>
+</FrameworkKeyDescription>

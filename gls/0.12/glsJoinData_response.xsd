@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:wps="http://www.opengis.net/wps/1.0.0" xmlns:gls="http://www.opengis.net/gls/0.12" targetNamespace="http://www.opengis.net/gls/0.12" elementFormDefault="qualified" version="0.12" xml:lang="en">
+	<annotation>
+		<appinfo>$Id: glsJoinData_response.xsd 2008-09-26 $</appinfo>
+		<documentation>
+			<description>This XML Schema specifies the content of the GLS JoinData response.</description>
+			<copyright>Copyright (c) 2008 OpenGIS, All Rights Reserved. </copyright>
+		</documentation>
+	</annotation>
+	<!-- ========= includes and imports ================================ -->
+	<include schemaLocation="glsAll.xsd"/>
+	<import namespace="http://www.opengis.net/ows/1.1" schemaLocation="../../ows/1.1.0/owsAll.xsd"/>
+	<!-- ========= top level element =================================== -->
+	<element name="JoinDataResponse">
+		<annotation>
+			<documentation>Response to a GLS JoinData request.  Includes the original JoinData request.</documentation>
+		</annotation>
+		<complexType>
+			<complexContent>
+				<extension base="gls:ResponseBaseType">
+					<sequence>
+						<element name="ServiceInstance" type="anyURI">
+							<annotation>
+								<documentation>The GetCapabilities URL of the GLS service which was invoked.</documentation>
+							</annotation>
+						</element>
+						<element name="StatusLocation" type="anyURI">
+							<annotation>
+								<documentation>The URL referencing the location from which the JoinDataResponse can be retrieved.  The JoinDataResponse should be found at this URL as soon as the process returns the initial response to the client.  It should persist at this location for as long as the outputs are accessible from the server. The outputs may be stored for as long as the implementer of the server decides. If the JoinData operation takes a long time, this URL can be repopulated on an ongoing basis in order to keep the client updated on progress. Before the operation has completerd (or failed), the JoinDataResponse contains information about the status of the operation. It may also optionally contain any output results. When the JoinData operation has completed, the JoinDataResponse found at this URL shall contain information for all of the outputs. </documentation>
+							</annotation>
+						</element>
+						<element name="Status">
+							<annotation>
+								<documentation>Execution status of the JoinData request.  </documentation>
+							</annotation>
+							<complexType>
+								<choice>
+									<element name="Accepted">
+										<annotation>
+											<documentation>Indicates that this request has been accepted by the server, but has not yet completed. The contents of this human-readable text string is left open to definition by each server implementation, but is expected to include any messages the server may wish to let the clients know. Such information could include when completion is expected, or any warning conditions that may have been encountered. The client may display this text to a human user. </documentation>
+										</annotation>
+									</element>
+									<element name="Completed">
+										<annotation>
+											<documentation>Indicates that this request has completed execution with at lease partial success. The contents of this human-readable text string is left open to definition by each server, but is expected to include any messages the server may wish to let the client know, such as how long the operation took to execute, or any warning conditions that may have been encountered. The client may display this text string to a human user. The client should make use of the presence of this element to trigger automated or manual access to the results of the operation.  If manual access is intended, the client should use the presence of this element to present the results as downloadable links to the user. </documentation>
+										</annotation>
+									</element>
+									<element name="Failed">
+										<annotation>
+											<documentation>Indicates that execution of the JoinData operation failed, and includes error information.  The client may display this text string to a human user.  The presence of this element indicates that the operation completely failed and no Outputs were produced.</documentation>
+										</annotation>
+										<complexType/>
+									</element>
+								</choice>
+								<attribute name="creationTime" use="required">
+									<annotation>
+										<documentation>The time (UTC) that the JoinData operation finished.  If the operation is still in progress, this element shall contain the creation time of this document.</documentation>
+									</annotation>
+								</attribute>
+							</complexType>
+						</element>
+						<element name="JoinedOutputs">
+							<annotation>
+								<documentation>List of outputs resulting from the JoinData operation. There must be at least one output when the operation has completed successfully.   Each output mechanism advertised for this framework in the DescribeJoinAbiities response shall be represented here.</documentation>
+							</annotation>
+							<complexType>
+								<sequence>
+									<element name="Output" maxOccurs="unbounded">
+										<annotation>
+											<documentation>Unordered list of all the outputs that have been or will be produced by this operation.  </documentation>
+										</annotation>
+										<complexType>
+											<sequence>
+												<element ref="gls:Mechanism">
+													<annotation>
+														<documentation>The access mechanism by which the joined data has been made available.  </documentation>
+													</annotation>
+												</element>
+												<element ref="gls:Title">
+													<annotation>
+														<documentation>A human readable sentence fragment that could form a title if the joined dataset were displayed in map form.  Normally the text is taken from the 'Dataset/Title' or the 'Dataset/Attribute/Title' of the attributes identified in the JoinData request.</documentation>
+													</annotation>
+												</element>
+												<element ref="gls:Abstract">
+													<annotation>
+														<documentation>An abstract that describes the joined dataset.  Normally the text is taken from the Dataset/Abstract or Dataset/Attribute/Abstract of the attributes identified in the JoinData request.</documentation>
+													</annotation>
+												</element>
+												<choice>
+													<element name="Reference" type="anyURI">
+														<annotation>
+															<documentation>Reference to a web-accessible resource that was created by the JoinData operation, in the form of a URL from which this resource can be electronically retrieved.  This element is populated when the output was successfully produced.</documentation>
+														</annotation>
+													</element>
+													<element name="ExceptionReport">
+														<annotation>
+															<documentation>Unordered list of one or more errors encountered during the JoinData operation for this output.  These Exception elements shall be interpreted by clients as being independent of one another (not hierarchical).  This element is populated when the production of this output did not succeed.</documentation>
+														</annotation>
+														<complexType>
+															<sequence>
+																<element ref="ows:Exception">
+																	<annotation>
+																		<documentation>Error encountered during processing that prevented successful production of this output.</documentation>
+																	</annotation>
+																</element>
+															</sequence>
+														</complexType>
+													</element>
+												</choice>
+											</sequence>
+										</complexType>
+									</element>
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</extension>
+			</complexContent>
+		</complexType>
+	</element>
+</schema>

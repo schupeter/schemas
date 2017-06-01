@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ObjectDescription service="OpenRegistry" version="1.0" serviceURL="http://foo.bar/foo" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openregistry.info/schemas/openregistry/1.0 ..\orsDescribe_response.xsd" xmlns="http://openregistry.info/schemas/openregistry/1.0" xml:lang="en">
+	<Collection identifier="GDAS:0.12" uri="http://foo.bar/foo" schema="http://foo.bar/foo.xsd">
+		<Title>GDAS XML files version 1.0</Title>
+		<Object identifier="meters">
+			<Title>Meters</Title>
+			<Description>The metre (or meter), symbol m, is the base unit of length in the International System of Units (SI). Originally intended to be one ten-millionth of the distance from the Earth's equator to the North Pole (at sea level), its definition has been periodically refined to reflect growing knowledge of metrology. Since 1983, it is defined as the distance travelled by light in vacuum in 1⁄299,792,458 of a second.</Description>
+		</Object>
+	</Collection>
+</ObjectDescription>

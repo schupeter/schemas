@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../stylesheets/legend2html.xsl"?>
+<Legend version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../palette.xsd">
+	<Title>Kind of Material (KIND)</Title>
+	<Abstract>Colors used to map Soil Name Table v2 Kind of Material.</Abstract>
+	<Classes type="nominal">
+		<Class identifier="M" color="A87000" title="Mineral"/>
+		<Class identifier="O" color="FF99EB" title="Organic"/>
+		<Class identifier="N" color="E04A2C" title="Non-soil"/>
+		<Class identifier="U" color="B2B2B2" title="Urban"/>
+	</Classes>
+</Legend>

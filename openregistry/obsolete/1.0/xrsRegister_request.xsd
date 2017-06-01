@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xrs="http://www.opengis.net/xrs/1.0.0" targetNamespace="http://www.opengis.net/xrs/1.0.0" elementFormDefault="qualified" version="1.0.0" xml:lang="en">
+	<xs:annotation>
+		<xs:appinfo>$Id: xrsRegisterRequestType.xsd 2007-06-12 $</xs:appinfo>
+		<xs:documentation>
+			<xs:description>XRS Register Request.</xs:description>
+			<xs:copyright>Copyright (c) 2007 Government of Canada, All Rights Reserved. </xs:copyright>
+		</xs:documentation>
+	</xs:annotation>
+	<!-- ==============================================================-->
+	<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="../../xlink/1.0.0/xlinks.xsd"/>
+	<xs:include schemaLocation="common/xrsSimpleElements.xsd"/>
+	<!-- ==============================================================-->
+	<xs:element name="Register">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="CollectionIdentifier" type="xs:string"/>
+				<xs:element ref="xrs:URL"/>
+			</xs:sequence>
+			<xs:attribute name="language" type="xs:string" use="required">
+				<xs:annotation>
+					<xs:documentation>The language of the human readable text to be returned in response to this request. </xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

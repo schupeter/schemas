@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GDAS service="GLS" version="0.12" xml:lang="en-CA" xmlns="http://www.opengis.net/gls/0.12" xmlns:gls="http://www.opengis.net/gls/0.12" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/gls/0.12  ..\glsGetData_response.xsd">
+	<Framework>
+		<FrameworkURI>http://ec.gc.ca/province/2001</FrameworkURI>
+		<Organization>Statistics Canada</Organization>
+		<Title>Provinces and Territories of Canada as defined for the 2001 Census. </Title>
+		<Abstract>String</Abstract>
+		<ReleaseDate>2002-05-01</ReleaseDate>
+		<Documentation>http://geodepot.statcan.ca/Diss/Data/Geography/n_cd_e.cfm</Documentation>
+		<FrameworkKey>pr</FrameworkKey>
+		<BoundingBox>
+			<Minimum>
+				<Latitude>40</Latitude>
+				<Longitude>-138</Longitude>
+			</Minimum>
+			<Maximum>
+				<Latitude>90</Latitude>
+				<Longitude>-47</Longitude>
+			</Maximum>
+		</BoundingBox>
+		<Dataset>
+			<DatasetURI>http://agr.gc.ca/province/agcensus/2001</DatasetURI>
+			<Organization>Statistics Canada</Organization>
+			<Title>2001 Census of Agriculture</Title>
+			<Abstract>2001 Census of Agriculture</Abstract>
+			<ReleaseDate>2003-06-12</ReleaseDate>
+			<Documentation>http://www.statcan.ca/english/agcensus2001/about.htm</Documentation>
+			<DatasetKey type="http://www.w3.org/TR/xmlschema-2/#integer" length="2">province</DatasetKey>
+			<KeyRelationship>one</KeyRelationship>
+			<KeyComplete>true</KeyComplete>
+			<Attribute>
+				<AttributeName>cows</AttributeName>
+				<Title>Total cows</Title>
+				<Abstract>Mature female cattle (more than one year old).</Abstract>
+				<Documentation>http://www.statcan.ca/english/agcensus2001/about.htm</Documentation>
+				<Values>
+					<Count type="http://www.w3.org/TR/xmlschema-2/#integer" length="7">
+						<UOM>cows</UOM>
+					</Count>
+				</Values>
+			</Attribute>
+			<Attribute>
+				<AttributeName>heifers</AttributeName>
+				<Title>Total Heifers</Title>
+				<Abstract>Immature female cattle (less than one year old).</Abstract>
+				<Documentation>http://www.statcan.ca/english/agcensus2001/about.htm</Documentation>
+				<Values>
+					<Count type="http://www.w3.org/TR/xmlschema-2/#integer" length="7">
+						<UOM>cows</UOM>
+					</Count>
+				</Values>
+			</Attribute>
+			<Attribute>
+				<AttributeName>totcattle</AttributeName>
+				<Title>Total cattle and calves</Title>
+				<Abstract>Cows, bulls, steers, heifers, and calves.</Abstract>
+				<Documentation>http://www.statcan.ca/english/agcensus2001/about.htm</Documentation>
+				<Values>
+					<Count type="http://www.w3.org/TR/xmlschema-2/#integer" length="7">
+						<UOM>cows</UOM><Exceptions>
+							<Null>
+								<Identifier>NS</Identifier>
+								<Title>Not Surveyed</Title>
+								<Abstract>The census forms for agriculture were not sent out in this area because of logistical issues in this far northern region.  It is expected that these values would approach zero.</Abstract>
+							</Null>
+						</Exceptions>
+					</Count>
+				</Values>
+			</Attribute>
+			<Rowset>
+				<Row>
+					<K>10</K>
+					<V aid="cows">36712</V>
+					<V aid="heifers">11449</V>
+					<V aid="totcattle">90293</V>
+				</Row>
+				<Row>
+					<K>11</K>
+					<V aid="cows">339164</V>
+					<V aid="heifers">255175</V>
+					<V aid="totcattle">1197276</V>
+				</Row>
+				<Row>
+					<K>12</K>
+					<V aid="cows">321264</V>
+					<V aid="heifers">431543</V>
+					<V aid="totcattle">1343234</V>
+				</Row>
+				<Row>
+					<K>13</K>
+					<V aid="cows">1234324</V>
+					<V aid="heifers">87437</V>
+					<V aid="totcattle">1343764376</V>
+				</Row>
+				<Row>
+					<K>24</K>
+					<V aid="cows">32187</V>
+					<V aid="heifers">74321879</V>
+					<V aid="totcattle">7439874</V>
+				</Row>
+				<Row>
+					<K>35</K>
+					<V aid="cows">9817</V>
+					<V aid="heifers">84317</V>
+					<V aid="totcattle">432871</V>
+				</Row>
+				<Row>
+					<K>46</K>
+					<V aid="cows">4341</V>
+					<V aid="heifers">411432</V>
+					<V aid="totcattle">9858096</V>
+				</Row>
+				<Row>
+					<K>47</K>
+					<V aid="cows">987643</V>
+					<V aid="heifers">645</V>
+					<V aid="totcattle">35345</V>
+				</Row>
+				<Row>
+					<K>48</K>
+					<V aid="cows">545</V>
+					<V aid="heifers">845554</V>
+					<V aid="totcattle">766543</V>
+				</Row>
+				<Row>
+					<K>59</K>
+					<V aid="cows">53424</V>
+					<V aid="heifers">876745</V>
+					<V aid="totcattle">6564445</V>
+				</Row>
+				<Row>
+					<K>60</K>
+					<V aid="cows">253</V>
+					<V aid="heifers">3453</V>
+					<V aid="totcattle">35334</V>
+				</Row>
+				<Row>
+					<K>61</K>
+					<V aid="cows">0</V>
+					<V aid="heifers">0</V>
+					<V aid="totcattle">0</V>
+				</Row>
+				<Row>
+					<K>62</K>
+					<V aid="cows" null="true">NS</V>
+					<V aid="heifers" null="true">NS</V>
+					<V aid="totcattle" null="true">NS</V>
+				</Row>
+			</Rowset>
+		</Dataset>
+	</Framework>
+</GDAS>

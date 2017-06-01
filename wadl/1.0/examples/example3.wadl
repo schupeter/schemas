@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../stylesheets/wadl_en.xsl"?>
+<wadl:application xmlns:wadl="http://wadl.dev.java.net/2009/02"
+	xmlns:jr="http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" xmlns:r="http://anydomain/ReportParameters.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://wadl.dev.java.net/2009/02 wadl.xsd ">
+	<wadl:doc title="CanSIS Glossary of Soil Science Service">This service creates different views of the CanSIS Glossary of Soil Science.</wadl:doc>
+	<wadl:resources base="http://sis.agr.gc.ca">
+		<wadl:resource path="/pls/meta/web_glossary">
+			<wadl:doc title="Description">Executes (generates) custom and standard reports.</wadl:doc>
+			<wadl:method name="GET" id="getGlossaryTerms">
+				<wadl:doc>Description: Generates a custom glossary page.</wadl:doc>
+				<wadl:doc>Example:  http://sis.agr.gc.ca/pls/meta/web_glossary?term=horizon&amp;lang=en</wadl:doc>
+				<wadl:doc>Example:  http://sis.agr.gc.ca/pls/meta/web_glossary?char1=e&amp;lang=en</wadl:doc>
+				<wadl:doc>Example:  http://sis.agr.gc.ca/pls/meta/web_glossary?term=placic&amp;form=BOX</wadl:doc>
+				<wadl:request>
+					<wadl:param name="char1" style="query" type="xsi:string" required="false">
+						<wadl:doc>First character of the terms to be displayed.</wadl:doc>
+					</wadl:param>
+					<wadl:param name="term" style="query" type="xsi:string" required="false">
+						<wadl:doc>Term to be displayed. Partial matches allowed.</wadl:doc>
+					</wadl:param>
+					<wadl:param name="form" style="query" type="xsi:string" required="false">
+						<wadl:option value="BOX" mediaType="text/html"/>
+						<wadl:option value="PAGE" mediaType="text/html"/>
+						<wadl:doc>Report form (either "BOX" which has limited context information, or "PAGE" which has full headers and footers.  The default is "PAGE".  This parameter is valid only in conjunction with parameter "term".</wadl:doc>
+					</wadl:param>
+					<wadl:param name="lang" style="query" type="xsi:string" required="false">
+						<wadl:option value="en"/>
+						<wadl:option value="fr"/>
+						<wadl:doc>Language of output (either "en" for English or "fr" for French). The default is "en".</wadl:doc>
+					</wadl:param>
+				</wadl:request>
+				<wadl:response status="200">
+					<wadl:doc title="OK" />
+					<wadl:representation mediaType="application/html">
+						<wadl:doc title="HTML">Hypertext Markup Language (HTML) formatted report.</wadl:doc>
+					</wadl:representation>
+					<wadl:representation mediaType="application/vnd.sun.wadl+xml">
+						<wadl:doc title="XML">Web Application Description Language (WADL) document.</wadl:doc>
+						<wadl:doc>This representation is returned when the "char1" and "term" parameters are both absent.</wadl:doc>
+					</wadl:representation>
+				</wadl:response>
+				<wadl:response status="404">
+					<wadl:doc title="Not Found" />
+				</wadl:response>
+			</wadl:method>
+		</wadl:resource>
+	</wadl:resources>
+</wadl:application>

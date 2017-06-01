@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../stylesheets/legend2html.xsl"?>
+<Legend version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../legend.xsd">
+	<Title>Soil Survey Status</Title>
+	<Abstract>Classes used to map the status of detailed soil surveys.</Abstract>
+	<Classes type="ordinal">
+		<Class rank="1" identifier="COMPLETE" color="2AFF7F" title="Complete"/>
+		<Class rank="2" identifier="INCOMPLETE" color="FFFFAA" title="Incomplete"/>
+		<Class rank="3" identifier="NOT ONLINE" color="FFAA7F" title="Not Online"/>
+		<Class rank="4" identifier="NOT DIGITAL" color="FF0055" title="Not Digital"/>
+	</Classes>
+</Legend>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../stylesheets/legend2html.xsl"?>
+<Legend version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../legend.xsd">
+	<Title>Soil Survey Scale</Title>
+	<Abstract>Classes used to map the scale of maps included in detailed soil surveys.</Abstract>
+	<Classes type="ordinal" title_en="Soil Survey Scale" title_fr="Études pédologique: Échelle">
+		<Class rank="1" identifier="verydetailed" color="00FF2A" title_en="Very detailed (~ 1:25,000)" title_fr="très détaillées (~ 1:25 000)"/>
+		<Class rank="2" identifier="detailed" color="AAFF2A" title_en="Detailed (~ 1:50,000)" title_fr="détaillée (~ 1:50 000)"/>
+		<Class rank="3" identifier="reconnaissance" color="FFAA7F" title_en="Reconnaissance (~ 1:100,000)" title_fr="reconnaissance (~ 1:100 000)"/>
+		<Class rank="4" identifier="exploratory" color="FF0055" title_en="Exploratory (~ 1:250,000)" title_fr="exploratoire (~ 1:250 000)"/>
+	</Classes>
+</Legend>

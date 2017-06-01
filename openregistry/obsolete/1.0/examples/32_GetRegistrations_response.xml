@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Collection service="XRS" version="1.0" serviceURL="http://foo.bar/foo">
+	<ResourceType>GDAS:1.0</ResourceType>
+	<Title>GDAS XML files version 1.0</Title>
+	<URI>OGC:…</URI>
+	<SchemaURL>http://foo.bar/foo.xsd</SchemaURL>
+	<RegisteredURLs>
+		<URL>http://foo.bar/foo1</URL>
+		<URL>http://foo.bar/foo2</URL>
+		<URL>http://foo.bar/foo3</URL>
+	</RegisteredURLs>
+</Collection>

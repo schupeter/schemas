@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NumericClassification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="/schemas/classify/1.0/NumericClassification.xsd">
+	<Title>Temperature Classification #1</Title>
+	<Abstract>This transformation will rank temperature data into 5 classes.</Abstract>
+	<AttributeToRank>
+		<Title>Temperature</Title>
+		<Abstract>Temperature</Abstract>
+		<Measure type="http://www.w3.org/TR/xmlschema-2/#float" length="3">
+			<UOM reference="http://en.wikipedia.org/wiki/Celsius">°C</UOM>
+		</Measure>
+	</AttributeToRank>
+	<RankingScheme>
+		<FirstRange rank="1">
+			<StartPoint include="true">-30</StartPoint>
+			<Identifier>EC</Identifier>
+			<Title>Extremely Cold</Title>
+		</FirstRange>
+		<MidRange rank="2">
+			<StartPoint include="true">-20</StartPoint>
+			<Identifier>VC</Identifier>
+			<Title>Very Cold</Title>
+		</MidRange>
+		<MidRange rank="3">
+			<StartPoint include="true">-10</StartPoint>
+			<Identifier>C</Identifier>
+			<Title>Cold</Title>
+		</MidRange>
+		<MidRange rank="4">
+			<StartPoint include="true">0</StartPoint>
+			<Identifier>M</Identifier>
+			<Title>Moderate</Title>
+		</MidRange>
+		<LastRange rank="5">
+			<StartPoint include="true">10</StartPoint>
+			<EndPoint include="true">30</EndPoint>
+			<Identifier>W</Identifier>
+			<Title>Warm</Title>
+		</LastRange>
+	</RankingScheme>
+</NumericClassification>

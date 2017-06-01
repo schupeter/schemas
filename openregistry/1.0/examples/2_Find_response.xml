@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QueryHits service="OpenRegistry" version="1.0" serviceURL="http://foo.bar/foo"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openregistry.info/schemas/openregistry/1.0 ..\orsFind_response.xsd" xmlns="http://openregistry.info/schemas/openregistry/1.0" xml:lang="en">
+	<OriginalRequest>
+		<Find collection="GDAS:0.12" text="ecozones Canada" firstHit="1" showHits="10" />
+	</OriginalRequest>
+	<Collection identifier="GDAS:0.12" uri="http://foo.bar/foo" schema="http://foo.bar/foo.xsd" objectCount="45">
+		<Title>GDAS XML files</Title>
+		<QueryOptions>
+			<Text supported="true">Dataset Title and Description</Text>
+			<LatLong supported="true">Framework BoundingCoordinates</LatLong>
+			<MinMax supported="false"></MinMax>
+			<Time supported="false"></Time>
+		</QueryOptions>
+	</Collection>
+	<Hits start="1" end="10" total="22">
+		<Object identifier="http://foo.bar/foo1">
+			<Title>Title from the first hit</Title>
+			<Description>Description from the first hit</Description>
+		</Object>
+		<Object identifier="http://foo.bar/foo2">
+			<Title>Title from the second hit</Title>
+			<Description>Description from the second hit</Description>
+		</Object>
+	</Hits>
+</QueryHits>

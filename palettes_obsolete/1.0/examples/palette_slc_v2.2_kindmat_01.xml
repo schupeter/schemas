@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../stylesheets/palette2html.xsl"?>
+<Palette xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../palette.xsd">
+	<Title>Kind of Material</Title>
+	<Abstract>Colors used to map SLC v2.2 Kind of Material (KINDMAT).</Abstract>
+	<ColorSet ramp="false">
+		<Color id="SO" value="A87000" tip="Soil"/>
+		<Color id="OR" value="FF99EB" tip="Organic"/>
+		<Color id="R1" value="F9957E" tip="Soft rock"/>
+		<Color id="R2" value="E77B62" tip="Hard rock, acidic"/>
+		<Color id="R3" value="D55E43" tip="Hard rock, basic"/>
+		<Color id="R4" value="C33819" tip="Hard rock"/>
+		<Color id="F" value="C33819" tip="Rock field"/>
+		<Color id="UR" value="EFEF0E" tip="Urban"/>
+		<Color id="IC" value="FFFFFF" tip="Ice and snow"/>
+		<Color id="WA" value="002AFF" tip="Water"/>
+	</ColorSet>
+</Palette>

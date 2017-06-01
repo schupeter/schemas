@@ -1,0 +1,68 @@
+{
+	"NumericClassification": {
+		"Title": "Percent Classification #1",
+		"Abstract": "This classification ranks percentages into 3 classes.",
+		"AttributeToRank": {
+			"Title": "Percent",
+			"Abstract": "Percent",
+			"DataForm": "measure",
+			"DataType": "float",
+			"Length": 3,
+			"Decimals": 0,
+			"UOM": {
+				"Reference": "http://unitsofmeasure.org/",
+				"ShortForm": "%",
+				"LongForm": "percent"
+			}
+		},
+		"RankingResult": {
+			"Title": "Percent",
+			"Abstract": "Percentage classes consisting of three classes.",
+			"DataForm": "measure",
+			"DataType": "string",
+			"Length": 2,
+			"Decimals": 0
+		},
+		"RankingScheme": {
+			"DataClasses": [
+				{
+					"Rank": 1,
+					"MinValue": 66,
+					"IncludeMinValue": "true",
+					"Identifier": "H",
+					"Title": "High (>65%)",
+					"Color": "db310f"
+				},
+				{
+					"Rank": 2,
+					"MinValue": 33,
+					"IncludeMinValue": "true",
+					"Identifier": "M",
+					"Title": "Medium",
+					"Color": "da7878"
+				},
+				{
+					"Rank": 3,
+					"Identifier": "L",
+					"Title": "Low (<33%)",
+					"Color": "f8c8c8"
+				}
+			],
+			"MissingClasses": [
+				{
+					"Identifier": "nil",
+					"Title": "Missing",
+					"Color": "E2E2E2"
+				}
+			],
+			"ExceptionClasses": [
+				{
+					"Identifier": "n/a",
+					"OriginalValue": "n/a",
+					"Title": "Not Available",
+					"Color": "CCCCCC"
+				}
+			]
+		}
+	}
+}

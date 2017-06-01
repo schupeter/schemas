@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ors="http://openregistry.info/schemas/openregistry/1.0" targetNamespace="http://openregistry.info/schemas/openregistry/1.0" elementFormDefault="qualified" version="1.0" xml:lang="en">
+	<annotation>
+		<appinfo>$Id: orsGetCapabilities_response.xsd 2011-01-03 $</appinfo>
+		<documentation>
+			<description>Response to an OpenRegistry GetCapabilities Request.</description>
+			<copyright>Copyright (c) 2011 Government of Canada, All Rights Reserved. </copyright>
+		</documentation>
+	</annotation>
+	<!-- ==============================================================-->
+	<import namespace="http://www.w3.org/1999/xlink" schemaLocation="../../xlink/1.0.0/xlinks.xsd"/>
+	<include schemaLocation="common/orsSimpleElements.xsd"/>
+	<include schemaLocation="common/orsCollectionType.xsd"/>
+	<include schemaLocation="common/orsRootAttributeGroup.xsd"/>
+	<import namespace="http://www.opengis.net/ows/1.1" schemaLocation="../../ows/1.1.0/owsServiceIdentification.xsd"/>
+	<import namespace="http://www.opengis.net/ows/1.1" schemaLocation="../../ows/1.1.0/owsServiceProvider.xsd"/>
+	<import namespace="http://www.opengis.net/ows/1.1" schemaLocation="../../ows/1.1.0/owsOperationsMetadata.xsd"/>
+	<!-- ==============================================================-->
+	<element name="Capabilities">
+		<annotation>
+			<documentation>The description of the capabilities of this registry instance.</documentation>
+		</annotation>
+		<complexType>
+			<sequence>
+				<element name="ServiceProvider">
+					<complexType>
+						<sequence>
+							<element name="ProviderName"/>
+							<element name="ProviderURL"/>
+							<element name="ContactInfo">
+								<complexType>
+									<sequence>
+										<element name="IndividualName"/>
+										<element name="PositionName"/>
+										<element name="Phone">
+											<complexType>
+												<sequence>
+													<element name="Voice"/>
+													<element name="Facsimile"/>
+												</sequence>
+											</complexType>
+										</element>
+										<element name="Address">
+											<complexType>
+												<sequence>
+													<element name="DeliveryPoint"/>
+													<element name="City"/>
+													<element name="AdministrativeArea"/>
+													<element name="PostalCode"/>
+													<element name="Country"/>
+												</sequence>
+											</complexType>
+										</element>
+										<element name="Email"/>
+									</sequence>
+								</complexType>
+							</element>
+						</sequence>
+					</complexType>
+				</element>
+				<element ref="ors:ResourceCollections">
+					<annotation>
+						<documentation>The set of collections of XML documents that are housed and searchable via this registry.</documentation>
+					</annotation>
+				</element>
+			</sequence>
+			<attributeGroup ref="ors:RootAttributeGroup"/>
+		</complexType>
+	</element>
+	<!-- ==============================================================-->
+	<element name="ResourceCollections">
+		<annotation>
+			<documentation>The set of collections that are housed and searchable via this registry.</documentation>
+		</annotation>
+		<complexType>
+			<sequence>
+				<element name="Collection" type="ors:CollectionType" maxOccurs="unbounded">
+					<annotation>
+						<documentation>A collection of XML documents that is housed and searchable via this registry.</documentation>
+					</annotation>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

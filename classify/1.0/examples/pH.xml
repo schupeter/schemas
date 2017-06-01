@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/schemas/classify/1.0/stylesheets/NumericClassification.xsl"?>
+<NumericClassification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../NumericClassification.xsd">
+	<Title>pH Classification #1</Title>
+	<Abstract>This classification ranks pH data into 9 classes.</Abstract>
+	<AttributeToRank>
+		<Title>pH</Title>
+		<Abstract>pH</Abstract>
+		<Values>
+			<Measure type="http://www.w3.org/TR/xmlschema-2/#float" length="3" decimals="0">
+				<UOM reference="http://unitsofmeasure.org/">
+					<ShortForm>pH</ShortForm>
+					<LongForm>pH</LongForm>
+				</UOM>
+			</Measure>
+		</Values>
+	</AttributeToRank>
+	<ResultantValues>
+		<Ordinal type="http://www.w3.org/TR/xmlschema-2/#string" length="3" decimals="0">
+			<Classes>
+				<Title>pH classes from EUSOILS</Title>
+				<Abstract></Abstract>
+				<Documentation></Documentation>
+			</Classes>
+		</Ordinal>
+	</ResultantValues>
+	<RankingScheme>
+		<HighestClass rank="1" minValue="8.5" includeMinValue="true" identifier="a" title="&gt; 8.5" color="FFF2FF"/>
+		<MidClass rank="2" minValue="8.0" includeMinValue="true" identifier="b" title="8 - 8.5" color="E3B8C1"/>
+		<MidClass rank="3" minValue="7.5" includeMinValue="true" identifier="c" title="7.5 - 8" color="C28C7C"/>
+		<MidClass rank="4" minValue="7.0" includeMinValue="true" identifier="d" title="7 - 7.5" color="D9A982"/>
+		<MidClass rank="5" minValue="6.5" includeMinValue="true" identifier="e" title="6.5 - 7" color="F2CE85"/>
+		<MidClass rank="6" minValue="6.0" includeMinValue="true" identifier="f" title="6 - 6.5" color="F2E096"/>
+		<MidClass rank="7" minValue="5.5" includeMinValue="true" identifier="g" title="5.5 - 6" color="F2EEA2"/>
+		<MidClass rank="8" minValue="4.5" includeMinValue="true" identifier="h" title="4.5 - 5.5" color="B0C47C"/>
+		<LowestClass rank="9" identifier="i" title="&lt; 4.5" color="709959"/>
+		<MissingClass identifier="nil" title="Missing" color="E2E2E2"/>
+		<ExceptionClass identifier="n/a" originalValue="n/a" title="Not Available" color="CCCCCC"/>
+	</RankingScheme>
+</NumericClassification>

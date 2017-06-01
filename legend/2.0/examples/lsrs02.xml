@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../stylesheets/legend2html.xsl"?>
+<Legend version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../NumericClassification.xsd">
+	<Title>Land Suitability Rating System (LSRS)</Title>
+	<Abstract>This colour palette was suggested by Tony Brierley to display LSRS ratings.</Abstract>
+	<Classes type="ordinal">
+		<Class rank="1" identifier="1" color="46B208" title="Class 1" />
+		<Class rank="2" identifier="2" color="9DDF57" title="Class 2" />
+		<Class rank="3" identifier="3" color="BFD892" title="Class 3" />
+		<Class rank="4" identifier="4" color="FBFB83" title="Class 4" />
+		<Class rank="5" identifier="5" color="F9CF51" title="Class 5" />
+		<Class rank="6" identifier="6" color="AB7F55" title="Class 6" />
+		<Class rank="7" identifier="7" color="E15252" title="Class 7" />
+	</Classes>
+	<Exceptions>
+		<Exception identifier="n/a" color="CCCCCC" title="Unclassified"/>
+		<Exception identifier="Wa" color="99CCCC" title="Water"/>
+	</Exceptions>
+</Legend>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 (http://www.altova.com) by Peter Schut (Agriculture Canada) -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:gls="http://www.opengis.net/gls/0.12" xmlns:xml="http://www.w3.org/XML/1998/namespace" targetNamespace="http://www.opengis.net/gls/0.12" elementFormDefault="qualified" version="0.12" xml:lang="en">
+	<annotation>
+		<appinfo>$Id: glsService.xsd 2008-01-04 $</appinfo>
+		<documentation>
+			<description>This XML Schema Document encodes elements and types that are common to the GLS service operations, but not the GDAS data encoding schema.</description>
+			<copyright>Copyright (c) 2008 OpenGIS, All Rights Reserved. </copyright>
+		</documentation>
+	</annotation>
+	<!-- ==============================================================
+		Import or include schema
+	============================================================== -->
+	<import namespace="http://www.opengis.net/ows/1.1" schemaLocation="../../ows/1.1.0/owsAll.xsd"/>
+	<import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+	<!-- ==============================================================
+		elements and types
+	============================================================== -->
+	<complexType name="RequestBaseType">
+		<annotation>
+			<documentation>GLS operation request base, for all gls operations except GetCapabilities. In this XML encoding, no "request" parameter is included, since the element name specifies the specific operation.</documentation>
+		</annotation>
+		<attribute name="service" use="required" fixed="GLS">
+			<annotation>
+				<documentation>Service type identifier (GLS)</documentation>
+			</annotation>
+		</attribute>
+		<attribute name="version" use="required" fixed="0.12">
+			<annotation>
+				<documentation>Version of the GLS interface specification implemented by the server (0.12)</documentation>
+			</annotation>
+		</attribute>
+		<attribute name="language" type="string" use="optional">
+			<annotation>
+				<documentation>RFC 4646 language code of the human-readable text (e.g. "en-CA").</documentation>
+			</annotation>
+		</attribute>
+	</complexType>
+	<!-- =========================================================== -->
+	<complexType name="ResponseBaseType">
+		<annotation>
+			<documentation>GLS operation response base, for all gls operations except GetCapabilities.</documentation>
+		</annotation>
+		<attribute name="service" use="required" fixed="GLS">
+			<annotation>
+				<documentation>Service type identifier (GLS)</documentation>
+			</annotation>
+		</attribute>
+		<attribute name="version" use="required" fixed="0.12">
+			<annotation>
+				<documentation>Version of the GLS interface specification implemented by the server (0.12)</documentation>
+			</annotation>
+		</attribute>
+		<attribute ref="xml:lang" use="required">
+			<annotation>
+				<documentation>RFC 4646 language code of the human-readable text (e.g. "en-CA").</documentation>
+			</annotation>
+		</attribute>
+	</complexType>
+	<!-- =========================================================== -->
+	<attribute name="service" fixed="GLS">
+		<annotation>
+			<documentation>OGC service identifier.</documentation>
+		</annotation>
+	</attribute>
+	<!-- =========================================================== -->
+	<attribute name="version" fixed="0.12">
+		<annotation>
+			<documentation>OGC version identifier.</documentation>
+		</annotation>
+	</attribute>
+</schema>

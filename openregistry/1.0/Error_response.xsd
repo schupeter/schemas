@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:annotation>
+		<xs:appinfo>$Id: orsGetPeers_response.xsd 2010-05-19 $</xs:appinfo>
+		<xs:documentation>
+			<xs:description>Error response to an OpenRegistry request.</xs:description>
+			<xs:copyright>Copyright (c) 2010 Government of Canada, All Rights Reserved. </xs:copyright>
+		</xs:documentation>
+	</xs:annotation>
+	<!-- ==============================================================-->
+	<!-- ==============================================================-->
+	<xs:element name="ExceptionReport">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Exception">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Code" type="xs:string"/>
+							<xs:element name="Parameter" type="xs:string"/>
+							<xs:element name="ParameterValue" type="xs:string"/>
+							<xs:element name="Text" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

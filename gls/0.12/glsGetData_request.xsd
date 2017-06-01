@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:gls="http://www.opengis.net/gls/0.12" targetNamespace="http://www.opengis.net/gls/0.12" elementFormDefault="qualified" version="0.12" xml:lang="en">
+	<annotation>
+		<appinfo>$Id: glsGetData_request.xsd 2008-09-26 $</appinfo>
+		<documentation>
+			<description>This XML Schema encodes common descriptions for GLS request and responses</description>
+			<copyright>Copyright (c) 2008 OpenGIS, All Rights Reserved. </copyright>
+		</documentation>
+	</annotation>
+	<!-- ========= includes and imports ================================ -->
+	<include schemaLocation="glsAll.xsd"/>
+	<!-- ========= top level element =================================== -->
+	<element name="GetData">
+		<annotation>
+			<documentation>Request to get a specified portion of the data residing on this server.</documentation>
+		</annotation>
+		<complexType>
+			<complexContent>
+				<extension base="gls:RequestBaseType">
+					<sequence>
+						<element ref="gls:FrameworkURI"/>
+						<element ref="gls:DatasetURI"/>
+						<element ref="gls:Attributes" minOccurs="0"/>
+						<element ref="gls:LinkageKeys" minOccurs="0"/>
+						<element name="XSL" minOccurs="0">
+							<annotation>
+								<documentation>Valid URL for an XSL document which will be referenced in the response XML in a fashion that it will be applied by web browsers.</documentation>
+							</annotation>
+						</element>
+					</sequence>
+					<attribute name="aid" type="boolean" use="optional" default="false">
+						<annotation>
+							<documentation>Boolean switch to request Attribute IDentifier.  If "aid=true" then an "aid" attribute will be included with each "V" element of  the response.</documentation>
+						</annotation>
+					</attribute>
+				</extension>
+			</complexContent>
+		</complexType>
+	</element>
+	<!-- ========= other elements and types ============================ -->
+	<element name="Attributes" type="string">
+		<annotation>
+			<documentation>The AttributeNames requested by the user, in comma-delimited format</documentation>
+		</annotation>
+	</element>
+	<element name="LinkageKeys" type="string">
+		<annotation>
+			<documentation>The DatasetKey identifiers requested by the user.  Identifiers shall be in comma-delimited format, where ranges shall be indicated with a minimum value and maximum value separated by a dash (“-“).  The same Identifier cannot be requested multiple times.</documentation>
+		</annotation>
+	</element>
+</schema>

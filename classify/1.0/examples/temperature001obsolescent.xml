@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/schemas/classify/1.0/stylesheets/NumericClassification.xsl"?>
+<NumericClassification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../NumericClassification.xsd">
+	<Title>Temperature Classification #1</Title>
+	<Abstract>This transformation will rank temperature data into 7 classes.</Abstract>
+	<AttributeToRank>
+		<Title>Temperature</Title>
+		<Abstract>Temperature</Abstract>
+		<Values>
+			<Measure>
+				<UOM reference="http://unitsofmeasure.org/">
+					<ShortForm>°C</ShortForm>
+					<LongForm>degrees centigrade</LongForm>
+				</UOM>
+			</Measure>
+		</Values>
+	</AttributeToRank>
+	<ResultantValues>
+		<Ordinal type="http://www.w3.org/TR/xmlschema-2/#string" length="3" decimals="0">
+			<Classes>
+				<Title>Canadian Temperature Guide</Title>
+				<Abstract>Monthly normals temperature classes for Canada</Abstract>
+				<Documentation>
+				</Documentation>
+			</Classes>
+		</Ordinal>
+	</ResultantValues>
+	<RankingScheme>
+		<FirstRange rank="1" color="CCFFCC">
+			<Identifier>EC</Identifier>
+			<Title>Extremely Cold</Title>
+		</FirstRange>
+		<MidRange rank="2" color="CCFFCC">
+			<StartPoint include="true">-30</StartPoint>
+			<Identifier>VC</Identifier>
+			<Title>Very Cold</Title>
+		</MidRange>
+		<MidRange rank="3" color="CCFFCC">
+			<StartPoint include="true">-20</StartPoint>
+			<Identifier>C</Identifier>
+			<Title>Cold</Title>
+		</MidRange>
+		<MidRange rank="4" color="CCFFCC">
+			<StartPoint include="true">-10</StartPoint>
+			<Identifier>L</Identifier>
+			<Title>Cool</Title>
+		</MidRange>
+		<MidRange rank="5" color="CCFFCC">
+			<StartPoint include="true">0</StartPoint>
+			<Identifier>M</Identifier>
+			<Title>Mild</Title>
+		</MidRange>
+		<MidRange rank="6" color="CCFFCC">
+			<StartPoint include="true">10</StartPoint>
+			<Identifier>W</Identifier>
+			<Title>Warm</Title>
+		</MidRange>
+		<LastRange rank="7" color="CCFFCC">
+			<StartPoint include="true">20</StartPoint>
+			<Identifier>H</Identifier>
+			<Title>Hot</Title>
+		</LastRange>
+		<Missing color="CCFFCC">
+			<Identifier>nil</Identifier>
+			<Title>Missing</Title>
+		</Missing>
+		<Exception color="CCFFCC">
+			<OriginalValue>n/a</OriginalValue>
+			<Identifier>n/a</Identifier>
+			<Title>Not Available</Title>
+		</Exception>
+	</RankingScheme>
+</NumericClassification>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GDAS xmlns:ows="http://www.opengis.net/ows/1.1" service="TJS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://www.opengis.net/tjs/1.0  ../schemas/tjs/1.0/tjsGetData_response.xsd" xmlns="http://www.opengis.net/tjs/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:lang="en">
+  <Framework>
+		<FrameworkURI>http://sis.agr.gc.ca/cansis/nsdb/political/prov/2001</FrameworkURI>
+		<Organization>Environment Canada</Organization>
+		<Title>Provinces </Title>
+		<Abstract>Provinces stuff.</Abstract>
+		<ReferenceDate>1995-06-03</ReferenceDate>
+		<Version>1</Version>
+		<Documentation>http://sis.agr.gc.ca/cansis/nsdb/ecostrat/hierarchy.html</Documentation>
+		 <FrameworkKey>
+			<Column name="ecoregion" type="http://www.w3.org/TR/xmlschema-2/#string" length="2" decimals="0" />
+		</FrameworkKey>
+		<BoundingCoordinates>
+			<North>90</North>
+			<South>43</South>
+			<East>-50</East>
+			<West>-145</West>
+		</BoundingCoordinates>
+		<DescribeDatasetsRequest xlink:href="xx"/>
+		<Dataset>
+			<DatasetURI>http://sis.agr.gc.ca/cansis/nsdb/ecostrat/region/v1/population_1991</DatasetURI>
+			<Organization>Agriculture and Agri-Food Canada</Organization>
+			<Title>Test data Population 1991</Title>
+			<Abstract>Census of Population and Housing</Abstract>
+			<ReferenceDate>1999-09-16</ReferenceDate>
+			<Version/>
+			<Documentation/>
+			<DescribeDataRequest xlink:href="http://sis.agr.gc.ca/pls/meta/tjs_1x0_describedata?Service=TJS&amp;Version=1.0&amp;Request=DescribeData&amp;FrameworkURI=http://sis.agr.gc.ca/cansis/nsdb/ecostrat/zone/v1&amp;DatasetURI=http://sis.agr.gc.ca/cansis/nsdb/ecostrat/zone/v1/area&amp;Language=en"/>
+			<Columnset>
+				<FrameworkKey complete="true" relationship="one">
+					<Column name="ecoregion" type="http://www.w3.org/TR/xmlschema-2/#string" length="2" decimals="0"/>
+				</FrameworkKey>
+				<Column name="rurf_91" type="http://www.w3.org/TR/xmlschema-2/#integer" length="" decimals="0" purpose="Attribute">
+					<Title>Test data  Rural Female Population</Title>
+					<Abstract>Junk Rural Female Population numbers</Abstract>
+					<Documentation>http://sis.agr.gc.ca/cansis/nsdb/ecostrat/population.html</Documentation>
+					<Values>
+						<Count>
+							<UOM>
+								<ShortForm>people</ShortForm>
+								<LongForm>people</LongForm>
+							</UOM>
+						</Count>
+					</Values>
+				</Column>
+			</Columnset>
+			<Rowset>
+				<Row>
+					<K>AL</K>
+					<V null="true">0.0</V>
+				</Row>
+				<Row>
+					<K>BC</K>
+					<V>237000</V>
+				</Row>
+				<Row>
+					<K>MA</K>
+					<V>23123</V>
+				</Row>
+				<Row>
+					<K>NB</K>
+					<V null="true">0.0</V>
+				</Row>
+				<Row>
+					<K>NS</K>
+					<V null="true">0.0</V>
+				</Row>
+				<Row>
+					<K>ON</K>
+					<V>110000</V>
+				</Row>
+				<Row>
+					<K>QU</K>
+					<V>234231</V>
+				</Row>
+      </Rowset>
+    </Dataset>
+  </Framework>
+</GDAS>

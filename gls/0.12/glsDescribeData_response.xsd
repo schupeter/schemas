@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:gls="http://www.opengis.net/gls/0.12" targetNamespace="http://www.opengis.net/gls/0.12" elementFormDefault="qualified" version="0.12" xml:lang="en">
+	<annotation>
+		<appinfo>$Id: glsDescribeData_response.xsd 2008-09-26 $</appinfo>
+		<documentation>
+			<description>This XML Schema specifies the content of the GLS DescribeData response.</description>
+			<copyright>Copyright (c) 2008 OpenGIS, All Rights Reserved. </copyright>
+		</documentation>
+	</annotation>
+	<!-- ========= includes and imports ================================ -->
+	<include schemaLocation="glsAll.xsd"/>
+	<!-- ========= top level element =================================== -->
+	<element name="DataDescriptions">
+		<annotation>
+			<documentation>Response containing full descriptions of data which can be joined to the identified spatial frameworks.</documentation>
+		</annotation>
+		<complexType>
+			<complexContent>
+				<extension base="gls:ResponseBaseType">
+					<sequence>
+						<element name="Framework" type="gls:FrameworkDatasetDescribeDataType" maxOccurs="unbounded">
+							<annotation>
+								<documentation>Spatial framework for which attribute data is housed on this server.</documentation>
+							</annotation>
+						</element>
+					</sequence>
+				</extension>
+			</complexContent>
+		</complexType>
+	</element>
+	<!-- ========= other elements and types ============================ -->
+	<complexType name="FrameworkDatasetDescribeDataType">
+		<sequence>
+			<element ref="gls:FrameworkURI"/>
+			<element ref="gls:Organization"/>
+			<element ref="gls:Title"/>
+			<element ref="gls:Abstract"/>
+			<element ref="gls:ReleaseDate"/>
+			<element ref="gls:Documentation" minOccurs="0"/>
+			<element ref="gls:FrameworkKey"/>
+			<element ref="gls:BoundingBox"/>
+			<element name="Dataset" maxOccurs="unbounded">
+				<complexType>
+					<sequence>
+						<element ref="gls:DatasetURI"/>
+						<element ref="gls:Organization"/>
+						<element ref="gls:Title"/>
+						<element ref="gls:Abstract"/>
+						<element ref="gls:ReleaseDate"/>
+						<element ref="gls:Documentation" minOccurs="0"/>
+						<element ref="gls:DatasetKey"/>
+						<element ref="gls:KeyRelationship"/>
+						<element ref="gls:KeyComplete"/>
+						<element ref="gls:Attribute" maxOccurs="unbounded"/>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+</schema>

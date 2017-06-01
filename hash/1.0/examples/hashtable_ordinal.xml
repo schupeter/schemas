@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="hash2html2.xsl"?>
+<Hash xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="hashtable_nominal_ordinal.xsd">
+	<Title>SLC Drainage Generalization</Title>
+	<Description>This transformation will generalize the SLC Drainage field into four new classes that describe potential for commercial crop growth.</Description>
+	<KeyDescriptions>
+		<Attribute>
+			<AttributeName>drainage</AttributeName>
+			<Title>Drainage</Title>
+			<Description>Drainage of water through the soil.  Classes including well drained, poorly drained, and six others.</Description>
+			<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v2.0/component/drain.html</Documentation>
+			<Values>
+				<Ordinal type="http://www.w3.org/TR/xmlschema-2/#string" length="1">
+					<Classes>
+						<Value rank="1">
+							<Identifier>E</Identifier>
+							<Title>Excessive</Title>
+							<Abstract>Water is removed from the soil very rapidly in relation to supply; excess water flows downward very rapidly if underlying material is pervious; subsurface flow may be very rapid during heavy rainfall provided the gradient is steep; source of water is precipitation.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v2.0/component/drain.html</Documentation>
+						</Value>
+						<Value rank="2">
+							<Identifier>R</Identifier>
+							<Title>Rapid</Title>
+							<Abstract>Water is removed from the soil rapidly in relation to supply; excess water flows downward if underlying material is pervious; subsurface flow may occur on steep gradients during heavy rainfall; source of water is precipitation.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v2.0/component/drain.html</Documentation>
+						</Value>
+						<Value rank="3">
+							<Identifier>W</Identifier>
+							<Title>Well</Title>
+							<Abstract>Water is removed from the soil readily but not rapidly; excess water flows downward into underlying pervious material or laterally as subsurface flow. These soils commonly retain optimum amounts of moisture for plant growth after rains or addition of irrigation water.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v2.0/component/drain.html</Documentation>
+						</Value>
+						<Value rank="4">
+							<Identifier>M</Identifier>
+							<Title>Moderately well</Title>
+							<Abstract>Water is removed from the soil somewhat slowly in relation to supply due to low perviousness, a shallow water table, lack of gradient, or a combination of these factors; precipitation is the dominant source of water in medium to fine textured soils; precipitation and significant additions by subsurface flow are necessary in coarse-textured soils.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v2.0/component/drain.html</Documentation>
+						</Value>
+						<Value rank="5">
+							<Identifier>I</Identifier>
+							<Title>Imperfect</Title>
+							<Abstract>Water is removed from the soil sufficiently slowly in relation to supply leaving the soil wet for a significant part of the growing season; excess water moves slowly downward if precipitation is the major supply; if subsurface water, groundwater, or both are the main source the flow rate may vary.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v2.0/component/drain.html</Documentation>
+						</Value>
+						<Value rank="6">
+							<Identifier>P</Identifier>
+							<Title>Poor</Title>
+							<Abstract>Water is removed so slowly in relation to supply that the soil remains wet for a comparatively large part of the time that the soil is not frozen; excess water is evident in the soil for much of the time; subsurface flow, groundwater flow, or both, in addition to precipitation, are the main sources of water; a perched water table may also be present.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v2.0/component/drain.html</Documentation>
+						</Value>
+						<Value rank="7">
+							<Identifier>V</Identifier>
+							<Title>Very poor</Title>
+							<Abstract>Water is removed from the soil so slowly that the water table remains at or on the surface for a majority of the time the soil is not frozen; groundwater flow and subsurface flow are the major sources of water; precipitation is less important except where there is a perched water table.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v2.0/component/drain.html</Documentation>
+						</Value>
+						<Value rank="0">
+							<Identifier>#</Identifier>
+							<Title>Non-applicable</Title>
+							<Abstract>Perennial surface water or ice, or rock.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v2.0/component/drain.html</Documentation>
+						</Value>
+					</Classes>
+				</Ordinal>
+			</Values>
+		</Attribute>
+	</KeyDescriptions>
+	<ValueDescription>
+		<Attribute>
+			<AttributeName>drainage</AttributeName>
+			<Title>Drainage</Title>
+			<Description>Drainage of water through the soil.  Classes including excessive, adequate, and inadequate.</Description>
+			<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v2.0/component/drain.html</Documentation>
+			<Values>
+				<Ordinal type="http://www.w3.org/TR/xmlschema-2/#string" length="1">
+					<Classes>
+						<Value rank="1">
+							<Identifier>E</Identifier>
+							<Title>Excessive</Title>
+							<Abstract>Water is removed from the soil at an excessive rate  Inadequate moisture remains for growth.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v2.0/component/drain.html</Documentation>
+						</Value>
+						<Value rank="2">
+							<Identifier>A</Identifier>
+							<Title>Well</Title>
+							<Abstract>Water is removed from the soil at a rate adequate to support healthy plant growth.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v2.0/component/drain.html</Documentation>
+						</Value>
+						<Value rank="3">
+							<Identifier>I</Identifier>
+							<Title>Inadequate</Title>
+							<Abstract>Water is removed from the soil too slowly, resulitng in poor growth.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v2.0/component/drain.html</Documentation>
+						</Value>
+						<Value rank="0">
+							<Identifier>#</Identifier>
+							<Title>Non-applicable</Title>
+							<Abstract>Perennial surface water or ice, or rock.</Abstract>
+							<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v2.0/component/drain.html</Documentation>
+						</Value>
+					</Classes>
+				</Ordinal>
+			</Values>
+		</Attribute>
+	</ValueDescription>
+	<Table>
+		<Pair>
+			<Key>E</Key>
+			<Value>E</Value>
+		</Pair>
+		<Pair>
+			<Key>R</Key>
+			<Value>E</Value>
+		</Pair>
+		<Pair>
+			<Key>W</Key>
+			<Value>A</Value>
+		</Pair>
+		<Pair>
+			<Key>M</Key>
+			<Value>A</Value>
+		</Pair>
+		<Pair>
+			<Key>I</Key>
+			<Value>I</Value>
+		</Pair>
+		<Pair>
+			<Key>P</Key>
+			<Value>I</Value>
+		</Pair>
+		<Pair>
+			<Key>V</Key>
+			<Value>I</Value>
+		</Pair>
+		<Pair>
+			<Key>#</Key>
+			<Value>#</Value>
+		</Pair>
+	</Table>
+</Hash>

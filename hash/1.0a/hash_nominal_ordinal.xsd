@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- based on TJS 1.0 -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<!-- =============================================================
+		simple elements 
+	============================================================== -->
+	<xs:element name="Abstract" type="xs:anyType"/>
+	<xs:element name="Description" type="xs:string"/>
+	<xs:element name="Documentation" type="xs:anyURI"/>
+	<xs:element name="Identifier" type="xs:string"/>
+	<xs:element name="Key" type="xs:string"/>
+	<xs:element name="Title" type="xs:string"/>
+	<xs:element name="Value" type="xs:string"/>
+	<!-- =============================================================
+		simple base types
+	============================================================== -->
+	<xs:element name="Hash">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Title"/>
+				<xs:element ref="Abstract"/>
+				<xs:element name="KeyDescriptions" type="KeyDescriptionsType"/>
+				<xs:element name="ValueDescription" type="ValueDescriptionType"/>
+				<xs:element name="Table" type="TableType"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- =========================================================== -->
+	<xs:complexType name="KeyDescriptionsType">
+		<xs:sequence>
+			<xs:element name="Column" type="ColumnType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- =========================================================== -->
+	<xs:complexType name="ColumnType">
+		<xs:sequence>
+			<xs:element ref="Title"/>
+			<xs:element ref="Abstract"/>
+			<xs:element ref="Documentation"/>
+			<xs:element name="Values" type="ValuesType"/>
+		</xs:sequence>
+		<xs:attribute name="name" type="xs:string" use="required"/>
+		<xs:attribute name="type" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:anyURI">
+					<xs:enumeration value="http://www.w3.org/TR/xmlschema-2/#string"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="length" type="xs:integer" use="required"/>
+		<xs:attribute name="decimals" type="xs:integer" use="required"/>
+		<xs:attribute name="purpose" type="xs:string" use="required"/>
+	</xs:complexType>
+	<!-- =========================================================== -->
+	<xs:complexType name="ValuesType">
+		<xs:choice>
+			<xs:element name="Nominal" type="NominalType"/>
+			<xs:element name="Ordinal" type="OrdinalType"/>
+		</xs:choice>
+	</xs:complexType>
+	<!-- =========================================================== -->
+	<xs:complexType name="NominalType">
+		<xs:sequence>
+			<xs:element name="Classes" type="NominalClassesType"/>
+			<xs:element name="Exceptions" type="ExceptionsType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- =========================================================== -->
+	<xs:complexType name="NominalClassesType">
+		<xs:sequence>
+			<xs:element ref="Title"/>
+			<xs:element ref="Abstract"/>
+			<xs:element ref="Documentation"/>
+			<xs:element name="Value" type="NominalValueType" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- =========================================================== -->
+	<xs:complexType name="NominalValueType">
+		<xs:sequence>
+			<xs:element ref="Identifier"/>
+			<xs:element ref="Title"/>
+			<xs:element ref="Abstract"/>
+			<xs:element ref="Documentation"/>
+		</xs:sequence>
+		<xs:attribute name="color" type="xs:string" use="required"/>
+	</xs:complexType>
+	<!-- =========================================================== -->
+	<xs:complexType name="OrdinalType">
+		<xs:sequence>
+			<xs:element name="Classes" type="OrdinalClassesType"/>
+			<xs:element name="Exceptions" type="ExceptionsType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- =========================================================== -->
+	<xs:complexType name="ExceptionsType">
+		<xs:sequence>
+			<xs:element name="Value" type="NominalValueType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- =========================================================== -->
+	<xs:complexType name="OrdinalClassesType">
+		<xs:sequence>
+			<xs:element ref="Title"/>
+			<xs:element ref="Abstract"/>
+			<xs:element ref="Documentation"/>
+			<xs:element name="Value" type="OrdinalValueType" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- =========================================================== -->
+	<xs:complexType name="OrdinalValueType">
+		<xs:complexContent>
+			<xs:extension base="NominalValueType">
+				<xs:attribute name="rank" type="xs:nonNegativeInteger" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- =========================================================== -->
+	<xs:complexType name="TableType">
+		<xs:sequence>
+			<xs:element name="Pair" type="PairType" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- =========================================================== -->
+	<xs:complexType name="PairType">
+		<xs:attribute name="key"/>
+		<xs:attribute name="value"/>
+	</xs:complexType>
+	<!-- =========================================================== -->
+	<xs:complexType name="ValueDescriptionType">
+		<xs:sequence>
+			<xs:element name="Column" type="ColumnType"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

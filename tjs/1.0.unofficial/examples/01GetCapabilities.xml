@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<tjs:Capabilities version="1.0.0" service="TJS" xmlns:tjs="http://www.opengis.net/tjs/1.0" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/tjs/1.0 ../schemas/tjs/1.0/tjsGetCapabilities_response.xsd" xml:lang="en">
+  <ows:ServiceIdentification>
+    <ows:Title>CanSIS internal TJS server</ows:Title>
+    <ows:Abstract>Canadian Soil Information System - Table Joining Service - Internal server.</ows:Abstract>
+    <ows:Keywords>
+      <ows:Keyword>TJS</ows:Keyword>
+      <ows:Keyword>GDAS</ows:Keyword>
+      <ows:Keyword>AAFC</ows:Keyword>
+    </ows:Keywords>
+    <ows:ServiceType>TJS</ows:ServiceType>
+    <ows:ServiceTypeVersion>1.0.0</ows:ServiceTypeVersion>
+    <ows:Fees>none</ows:Fees>
+    <ows:AccessConstraints>none</ows:AccessConstraints>
+  </ows:ServiceIdentification>
+  <ows:ServiceProvider>
+    <ows:ProviderName>Agriculture and Agri-Food Canada</ows:ProviderName>
+    <ows:ProviderSite xlink:href="http://sis.agr.gc.ca/cansis"/>
+    <ows:ServiceContact>
+      <ows:IndividualName>Peter Schut</ows:IndividualName>
+      <ows:PositionName>Information System Scientist</ows:PositionName>
+      <ows:ContactInfo>
+        <ows:Phone>
+          <ows:Voice>+1 613 759-1874</ows:Voice>
+          <ows:Facsimile>+1 613 759-1937</ows:Facsimile>
+        </ows:Phone>
+        <ows:Address>
+          <ows:DeliveryPoint>Room 1135, Neatby Building, 960, Carling Avenue</ows:DeliveryPoint>
+          <ows:City>Ottawa</ows:City>
+          <ows:AdministrativeArea>true</ows:AdministrativeArea>
+          <ows:PostalCode>K1AOC6</ows:PostalCode>
+          <ows:Country>Canada</ows:Country>
+          <ows:ElectronicMailAddress>schutp@agr.gc.ca</ows:ElectronicMailAddress>
+        </ows:Address>
+      </ows:ContactInfo>
+    </ows:ServiceContact>
+  </ows:ServiceProvider>
+  <ows:OperationsMetadata>
+    <ows:Operation name="GetCapabilities">
+      <ows:DCP>
+        <ows:HTTP>
+          <ows:Get xlink:href="http://tjs.gis.agr.gc.ca/tjs"/>
+        </ows:HTTP>
+      </ows:DCP>
+    </ows:Operation>
+    <ows:Operation name="DescribeFrameworks">
+      <ows:DCP>
+        <ows:HTTP>
+          <ows:Get xlink:href="http://metamapper.com/tjs/serv"/>
+        </ows:HTTP>
+      </ows:DCP>
+    </ows:Operation>
+    <ows:Operation name="DescribeDatasets">
+      <ows:DCP>
+        <ows:HTTP>
+          <ows:Get xlink:href="http://tjs.gis.agr.gc.ca/tjs"/>
+        </ows:HTTP>
+      </ows:DCP>
+    </ows:Operation>
+    <ows:Operation name="DescribeData">
+      <ows:DCP>
+        <ows:HTTP>
+          <ows:Get xlink:href="http://tjs.gis.agr.gc.ca/tjs"/>
+        </ows:HTTP>
+      </ows:DCP>
+    </ows:Operation>
+    <ows:Operation name="GetData">
+      <ows:DCP>
+        <ows:HTTP>
+          <ows:Get xlink:href="http://tjs.gis.agr.gc.ca/tjs"/>
+        </ows:HTTP>
+      </ows:DCP>
+      <ows:Constraint name="GeolinkidsLimit">
+        <ows:AllowedValues>
+          <ows:Range>
+            <ows:MaximumValue>1000</ows:MaximumValue>
+          </ows:Range>
+        </ows:AllowedValues>
+        <ows:Meaning>The maximum number of Keys that can be included in the LinkageKeys element of a GetData request.</ows:Meaning>
+      </ows:Constraint>
+      <ows:Constraint name="AttributeLimit">
+        <ows:AllowedValues>
+          <ows:Range>
+            <ows:MaximumValue>1</ows:MaximumValue>
+          </ows:Range>
+        </ows:AllowedValues>
+        <ows:Meaning>The maximum number of Attributes that can be included as part of one GetData request.</ows:Meaning>
+      </ows:Constraint>
+    </ows:Operation>
+    <ows:Operation name="DescribeJoinAbilities">
+      <ows:DCP>
+        <ows:HTTP>
+          <ows:Get xlink:href="http://tjs.gis.agr.gc.ca/tjs"/>
+        </ows:HTTP>
+      </ows:DCP>
+    </ows:Operation>
+    <ows:Operation name="DescribeKey">
+      <ows:DCP>
+        <ows:HTTP>
+          <ows:Get xlink:href="http://tjs.gis.agr.gc.ca/tjs"/>
+        </ows:HTTP>
+      </ows:DCP>
+    </ows:Operation>
+    <ows:Operation name="JoinData">
+      <ows:DCP>
+        <ows:HTTP>
+          <ows:Get xlink:href="http://tjs.gis.agr.gc.ca/tjs"/>
+        </ows:HTTP>
+      </ows:DCP>
+      <ows:Constraint name="AttributeLimit">
+        <ows:AllowedValues>
+          <ows:Range>
+            <ows:MaximumValue>1</ows:MaximumValue>
+          </ows:Range>
+        </ows:AllowedValues>
+        <ows:Meaning>The maximum number of Attributes that can be included as part of one JoinData request.</ows:Meaning>
+      </ows:Constraint>
+    </ows:Operation>
+  </ows:OperationsMetadata>
+  <tjs:Languages>
+    <ows:Language>fr</ows:Language>
+    <ows:Language>en</ows:Language>
+  </tjs:Languages>
+</tjs:Capabilities>

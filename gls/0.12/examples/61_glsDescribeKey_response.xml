@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameworkKeyDescription service="GLS" version="0.12" xml:lang="en-CA" xmlns="http://www.opengis.net/gls/0.12" xmlns:gls="http://www.opengis.net/gls/0.12" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/gls/0.12  ..\glsDescribeKey_response.xsd">
+	<Framework>
+		<FrameworkURI>http://www.statcan.ca/provinces/2001</FrameworkURI>
+		<Organization>Statistics Canada</Organization>
+		<Title>Provinces and Territories of Canada as defined for the 2001 Census. </Title>
+		<Abstract>String</Abstract>
+		<ReleaseDate>2002-05-01</ReleaseDate>
+		<Documentation>http://geodepot.statcan.ca/Diss/Data/Geography/n_cd_e.cfm</Documentation>
+		<FrameworkKey>pr</FrameworkKey>
+		<BoundingBox>
+			<Minimum>
+				<Latitude>40</Latitude>
+				<Longitude>-138</Longitude>
+			</Minimum>
+			<Maximum>
+				<Latitude>90</Latitude>
+				<Longitude>-47</Longitude>
+			</Maximum>
+		</BoundingBox>
+		<Rowset>
+			<Row>
+				<K>10</K>
+				<Title>Newfoundland</Title>
+			</Row>
+			<Row>
+				<K>11</K>
+				<Title>Prince Edward Island</Title>
+			</Row>
+			<Row>
+				<K>12</K>
+				<Title>Nova Scotia</Title>
+			</Row>
+			<Row>
+				<K>13</K>
+				<Title>New Brunswick</Title>
+			</Row>
+			<Row>
+				<K>24</K>
+				<Title>Quebec</Title>
+			</Row>
+			<Row>
+				<K>35</K>
+				<Title>Ontario</Title>
+			</Row>
+			<Row>
+				<K>46</K>
+				<Title>Manitoba</Title>
+			</Row>
+			<Row>
+				<K>47</K>
+				<Title>Saskatchewan</Title>
+			</Row>
+			<Row>
+				<K>48</K>
+				<Title>Alberta</Title>
+			</Row>
+			<Row>
+				<K>59</K>
+				<Title>British Columbia</Title>
+			</Row>
+			<Row>
+				<K>60</K>
+				<Title>Yukon</Title>
+			</Row>
+			<Row>
+				<K>61</K>
+				<Title>North West Territories</Title>
+			</Row>
+			<Row>
+				<K>62</K>
+				<Title>Nunavut</Title>
+			</Row>
+		</Rowset>
+	</Framework>
+</FrameworkKeyDescription>

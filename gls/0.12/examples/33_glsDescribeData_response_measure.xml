@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataDescriptions service="GLS" version="0.12" xml:lang="en-CA" xmlns="http://www.opengis.net/gls/0.12" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/gls/0.12  ../glsDescribeData_response.xsd">
+	<Framework>
+		<FrameworkURI>http://ec.gc.ca/ecozone/1995</FrameworkURI>
+		<Organization>Environment Canada</Organization>
+		<Title>Ecozones of Canada</Title>
+		<Abstract>Ecozones are the highest level of the Terrestrial Ecostratification of Canada. </Abstract>
+		<ReleaseDate>1995-09-03</ReleaseDate>
+		<Documentation>http://sis.agr.gc.ca/cansis/nsdb/ecostrat/intro.html#ecological%20framework</Documentation>
+		<FrameworkKey>prov</FrameworkKey>
+		<BoundingBox>
+			<Minimum>
+				<Latitude>40</Latitude>
+				<Longitude>-138</Longitude>
+			</Minimum>
+			<Maximum>
+				<Latitude>90</Latitude>
+				<Longitude>-47</Longitude>
+			</Maximum>
+		</BoundingBox>
+		<Dataset>
+			<DatasetURI>http://agr.gc.ca/ecozone/temperature/1999</DatasetURI>
+			<Organization>Agriculture Canada</Organization>
+			<Title>Temperature Normals 1961-1990</Title>
+			<Abstract>Temperature normals from the period 1961 - 1990</Abstract>
+			<ReleaseDate>1999-01-01</ReleaseDate>
+			<Documentation>http://sis.agr.gc.ca/cansis/nsdb/ecostrat/climate_normals_1961-90.html#temperature</Documentation>
+			<DatasetKey type="http://www.w3.org/TR/xmlschema-2/#integer" length="2">ecozone</DatasetKey>
+			<KeyRelationship>one</KeyRelationship>
+			<KeyComplete>true</KeyComplete>
+			<Attribute>
+				<AttributeName>tmean_ann</AttributeName>
+				<Title>Mean Annual Temperature</Title>
+				<Abstract>Average daily mean air temperature for the year (°C)</Abstract>
+				<Documentation>http://sis.agr.gc.ca/cansis/nsdb/ecostrat/climate_normals_1961-90.html#temperature</Documentation>
+				<Values>
+					<Measure type="http://www.w3.org/TR/xmlschema-2/#float" length="2">
+						<UOM ows:reference="http://www.thefreedictionary.com/degree+Centigrade">Degrees Centigrade</UOM>
+					</Measure>
+				</Values>
+			</Attribute>
+		</Dataset>
+	</Framework>
+</DataDescriptions>

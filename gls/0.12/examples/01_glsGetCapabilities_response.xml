@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gls:Capabilities xmlns:xlink="http://www.w3.org/1999/xlink" gls:service="GLS" version="0.12.0" xml:lang="en-CA" xmlns:gls="http://www.opengis.net/gls/0.12" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/gls/0.12 ..\glsGetCapabilities_response.xsd">
+	<ows:ServiceIdentification>
+		<ows:Title>AAFC Geospatial Linkage Service</ows:Title>
+		<ows:Abstract>AAFC GLS server based on the OGC GLS standard.</ows:Abstract>
+		<ows:Keywords>
+			<ows:Keyword>GLS</ows:Keyword>
+			<ows:Keyword>GDAS</ows:Keyword>
+			<ows:Keyword>AAFC</ows:Keyword>
+			<ows:Keyword>geospatial</ows:Keyword>
+			<ows:Keyword>geoprocessing</ows:Keyword>
+		</ows:Keywords>
+		<ows:ServiceType>GLS</ows:ServiceType>
+		<ows:ServiceTypeVersion>0.12.0</ows:ServiceTypeVersion>
+		<ows:Fees>NONE</ows:Fees>
+		<ows:AccessConstraints>NONE</ows:AccessConstraints>
+	</ows:ServiceIdentification>
+	<ows:ServiceProvider>
+		<ows:ProviderName>Agriculture and Agri-Food Canada</ows:ProviderName>
+		<ows:ProviderSite xlink:href="http://gis.agr.gc.ca/"/>
+		<ows:ServiceContact>
+			<ows:IndividualName>Peter Schut</ows:IndividualName>
+			<ows:PositionName>Information System Scientist</ows:PositionName>
+			<ows:ContactInfo>
+				<ows:Phone>
+					<ows:Voice>+1 613 759-1874</ows:Voice>
+					<ows:Facsimile>+1 613 759-1937</ows:Facsimile>
+				</ows:Phone>
+				<ows:Address>
+					<ows:DeliveryPoint>Room 1135, Neatby Building, 960, Carling Avenue</ows:DeliveryPoint>
+					<ows:City>Ottawa</ows:City>
+					<ows:AdministrativeArea>ON</ows:AdministrativeArea>
+					<ows:PostalCode>K1AOC6</ows:PostalCode>
+					<ows:Country>Canada</ows:Country>
+					<ows:ElectronicMailAddress>schutp@agr.gc.ca</ows:ElectronicMailAddress>
+				</ows:Address>
+			</ows:ContactInfo>
+		</ows:ServiceContact>
+	</ows:ServiceProvider>
+	<ows:OperationsMetadata>
+		<ows:Operation name="GetCapabilities">
+			<ows:DCP>
+				<ows:HTTP>
+					<ows:Get xlink:href="http://wms1.agr.gc.ca/gls?"/>
+				</ows:HTTP>
+			</ows:DCP>
+		</ows:Operation>
+		<ows:Operation name="DescribeFrameworks">
+			<ows:DCP>
+				<ows:HTTP>
+					<ows:Get xlink:href="http://wms1.agr.gc.ca/gls?"/>
+					<ows:Post xlink:href="http://wms1.agr.gc.ca/gls"/>
+				</ows:HTTP>
+			</ows:DCP>
+		</ows:Operation>
+		<ows:Operation name="DescribeDatasets">
+			<ows:DCP>
+				<ows:HTTP>
+					<ows:Get xlink:href="http://wms1.agr.gc.ca/gls?"/>
+					<ows:Post xlink:href="http://wms1.agr.gc.ca/gls"/>
+				</ows:HTTP>
+			</ows:DCP>
+		</ows:Operation>
+		<ows:Operation name="DescribeData">
+			<ows:DCP>
+				<ows:HTTP>
+					<ows:Get xlink:href="http://wms1.agr.gc.ca/gls?"/>
+					<ows:Post xlink:href="http://wms1.agr.gc.ca/gls"/>
+				</ows:HTTP>
+			</ows:DCP>
+		</ows:Operation>
+		<ows:Operation name="GetData">
+			<ows:DCP>
+				<ows:HTTP>
+					<ows:Get xlink:href="http://wms1.agr.gc.ca/gls?"/>
+					<ows:Post xlink:href="http://wms1.agr.gc.ca/gls"/>
+				</ows:HTTP>
+			</ows:DCP>
+			<ows:Constraint name="GeolinkidsLimit">
+				<ows:AllowedValues>
+					<ows:Range>
+						<ows:MaximumValue>1000</ows:MaximumValue>
+					</ows:Range>
+				</ows:AllowedValues>
+				<ows:Meaning>The maximum number of GeolinkIds that can be specified as part of the GeolinkIds element in a GetData request.</ows:Meaning>
+			</ows:Constraint>
+			<ows:Constraint name="AttributeLimit">
+				<ows:AllowedValues>
+					<ows:Range>
+						<ows:MaximumValue>1</ows:MaximumValue>
+					</ows:Range>
+				</ows:AllowedValues>
+				<ows:Meaning>The maximum number of Attributes that can be requested in one GetData request.</ows:Meaning>
+			</ows:Constraint>
+		</ows:Operation>
+		<ows:Operation name="DescribeJoinAbilities">
+			<ows:DCP>
+				<ows:HTTP>
+					<ows:Get xlink:href="http://wms1.agr.gc.ca/gls?"/>
+					<ows:Post xlink:href="http://wms1.agr.gc.ca/gls"/>
+				</ows:HTTP>
+			</ows:DCP>
+		</ows:Operation>
+		<ows:Operation name="DescribeKey">
+			<ows:DCP>
+				<ows:HTTP>
+					<ows:Get xlink:href="http://wms1.agr.gc.ca/gls?"/>
+					<ows:Post xlink:href="http://wms1.agr.gc.ca/gls"/>
+				</ows:HTTP>
+			</ows:DCP>
+		</ows:Operation>
+		<ows:Operation name="JoinData">
+			<ows:DCP>
+				<ows:HTTP>
+					<ows:Get xlink:href="http://wms1.agr.gc.ca/gls?"/>
+					<ows:Post xlink:href="http://wms1.agr.gc.ca/gls"/>
+				</ows:HTTP>
+			</ows:DCP>
+		</ows:Operation>
+			<ows:Constraint name="AttributeLimit">
+				<ows:AllowedValues>
+					<ows:Range>
+						<ows:MaximumValue>1</ows:MaximumValue>
+					</ows:Range>
+				</ows:AllowedValues>
+				<ows:Meaning>The maximum number of Attributes that can be joined as part of one JoinData request.</ows:Meaning>
+			</ows:Constraint>
+	</ows:OperationsMetadata>
+	<gls:Languages>
+		<ows:Language>en-CA</ows:Language>
+		<ows:Language>fr-CA</ows:Language>
+	</gls:Languages>
+	<gls:WSDL xlink:href="http://foo.bar/gls?WSDL"/>
+</gls:Capabilities>

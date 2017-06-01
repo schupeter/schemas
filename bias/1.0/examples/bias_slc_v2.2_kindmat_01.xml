@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../xsl/bias2html.xsl"?>
+<Bias xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../bias.xsd">
+	<Title>KINDMAT biased for agriculture</Title>
+	<Abstract>Values used to set an agricultural bias for maps of SLC v2.2 Kind of Material (KINDMAT).</Abstract>
+	<Parameter ramp="false">
+		<Value rank="1" id="SO" tip="Soil" />
+		<Value rank="2" id="OR" tip="Organic" />
+		<Value rank="3" id="R1" tip="Soft rock" />
+		<Value rank="4" id="R2" tip="Hard rock, acidic" />
+		<Value rank="5" id="R3" tip="Hard rock, basic" />
+		<Value rank="6" id="R4" tip="Hard rock" />
+		<Value rank="7" id="F" tip="Rock field" />
+		<Value rank="8" id="UR" tip="Urban" />
+		<Value rank="9" id="IC" tip="Ice and snow" />
+		<Value rank="10" id="WA" tip="Water" />
+	</Parameter>
+</Bias>

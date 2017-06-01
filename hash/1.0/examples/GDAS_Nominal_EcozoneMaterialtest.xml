@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="gdashash.xsl"?>
+<GDAS>
+	<Framework>
+		<FrameworkDomain>ec.gc.ca</FrameworkDomain>
+		<FrameworkName>Ecozones</FrameworkName>
+		<FrameworkVersion>1995</FrameworkVersion>
+		<Organization>Environment Canada</Organization>
+		<Title>Ecozones of Canada</Title>
+		<Description>Ecozones are the highest level of the Terrestrial Ecostratification of Canada. </Description>
+		<ReleaseDate>1995-09-03</ReleaseDate>
+		<Documentation>http://sis.agr.gc.ca/cansis/nsdb/ecostrat/intro.html#ecological%20framework</Documentation>
+		<GeolinkageField>zone</GeolinkageField>
+		<Dataset>
+			<DatasetDomain>agr.gc.ca</DatasetDomain>
+			<DatasetName>zn_material</DatasetName>
+			<DatasetVersion>1999</DatasetVersion>
+			<Organization>Agriculture Canada</Organization>
+			<Title>Surface Material</Title>
+			<Description>Surface material includes the abiotic material at the earth's surface. </Description>
+			<ReleaseDate>1999-01-01</ReleaseDate>
+			<Documentation>http://sis.agr.gc.ca/cansis/nsdb/ecostrat/surface_material.html</Documentation>
+			<GeolinkageField>ecozone</GeolinkageField>
+			<GeolinkageRelationship>one</GeolinkageRelationship>
+			<GeolinkageComplete>true</GeolinkageComplete>
+			<Attribute>
+				<AttributeName>material</AttributeName>
+				<Title>Surface Material</Title>
+				<Description>Surface material includes the abiotic material at the earth's surface</Description>
+				<Documentation>http://sis.agr.gc.ca/cansis/nsdb/ecostrat/surface_material.html</Documentation>
+				<Values>
+					<Ordinal type="http://www.w3.org/TR/xmlschema-2/#string" length="3">
+						<Classes>
+							<Value>
+								<Identifier>IC</Identifier>
+								<Title>Ice and Snow</Title>
+								<Abstract>Glacial ice and permanent snow</Abstract>
+								<Documentation>http://sis.agr.gc.ca/cansis/nsdb/ecostrat/surface_material.html</Documentation>
+							</Value>
+							<Value>
+								<Identifier>OR</Identifier>
+								<Title>Organic Soil</Title>
+								<Abstract>Contains &gt; 30% organic matter as measured by weight</Abstract>
+								<Documentation>http://sis.agr.gc.ca/cansis/nsdb/ecostrat/surface_material.html</Documentation>
+							</Value>
+							<Value>
+								<Identifier>RK</Identifier>
+								<Title>Rock</Title>
+								<Abstract>Rock undifferentiated</Abstract>
+								<Documentation>http://sis.agr.gc.ca/cansis/nsdb/ecostrat/surface_material.html</Documentation>
+							</Value>
+							<Value>
+								<Identifier>SO</Identifier>
+								<Title>Mineral Soil</Title>
+								<Abstract>Predominantly mineral particles: contains &lt; 30% organic matter as measured by weight</Abstract>
+								<Documentation>http://sis.agr.gc.ca/cansis/nsdb/ecostrat/surface_material.html</Documentation>
+							</Value>
+							<Value>
+								<Identifier>UR</Identifier>
+								<Title>Urban</Title>
+								<Abstract>Urban areas. Note that only a few major urban area polygons are included on SLC source maps, therefore, do not use for tabulating total urban coverage</Abstract>
+								<Documentation>http://sis.agr.gc.ca/cansis/nsdb/ecostrat/surface_material.html</Documentation>
+							</Value>
+						</Classes>
+					</Ordinal>
+				</Values>
+			</Attribute>
+			<Rowset>
+				<Row>
+					<I>1</I>
+					<V>IC</V>
+				</Row>
+				<Row>
+					<I>2</I>
+					<V>R1</V>
+				</Row>
+				<Row>
+					<I>3</I>
+					<V>R2</V>
+				</Row>
+				<Row>
+					<I>4</I>
+					<V>SO</V>
+				</Row>
+				<Row>
+					<I>5</I>
+					<V>SO</V>
+				</Row>
+				<Row>
+					<I>6</I>
+					<V>SO</V>
+				</Row>
+				<Row>
+					<I>7</I>
+					<V>SO</V>
+				</Row>
+				<Row>
+					<I>8</I>
+					<V>SO</V>
+				</Row>
+				<Row>
+					<I>9</I>
+					<V>SO</V>
+				</Row>
+				<Row>
+					<I>10</I>
+					<V>SO</V>
+				</Row>
+				<Row>
+					<I>11</I>
+					<V>SO</V>
+				</Row>
+				<Row>
+					<I>12</I>
+					<V>RK</V>
+				</Row>
+				<Row>
+					<I>13</I>
+					<V>SO</V>
+				</Row>
+				<Row>
+					<I>14</I>
+					<V>SO</V>
+				</Row>
+				<Row>
+					<I>15</I>
+					<V>OR</V>
+				</Row>
+			</Rowset>
+		</Dataset>
+	</Framework>
+</GDAS>

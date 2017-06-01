@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 rel. 2 (http://www.altova.com) by Peter Schut (Agriculture Canada) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<!-- ========= top level element =================================== -->
+	<xs:element name="NumericClassification">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Title"/>
+				<xs:element ref="Abstract"/>
+				<xs:element ref="AttributeToRank"/>
+				<xs:element ref="ResultantValues"/>
+				<xs:element ref="RankingScheme"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ========= other elements ==================================== -->
+	<xs:element name="Abstract" type="xs:string"/>
+	<xs:element name="AttributeToRank">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Title"/>
+				<xs:element ref="Abstract"/>
+				<xs:element ref="Values"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Classes">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Title"/>
+				<xs:element ref="Abstract" minOccurs="0"/>
+				<xs:element ref="Documentation" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Documentation" type="xs:anyURI"/>
+	<xs:element name="LastRange">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="StartPoint"/>
+				<xs:element name="EndPoint" minOccurs="0">
+					<xs:complexType>
+						<xs:attribute name="include"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="Identifier"/>
+				<xs:element ref="Title"/>
+				<xs:element ref="Abstract" minOccurs="0"/>
+				<xs:element ref="Documentation" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="rank" type="xs:integer" use="required"/>
+			<xs:attribute name="color" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Exception">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="OriginalValue" maxOccurs="unbounded"/>
+				<xs:element ref="Identifier"/>
+				<xs:element ref="Title"/>
+			</xs:sequence>
+			<xs:attribute name="color" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="FirstRange">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="StartPoint" minOccurs="0"/>
+				<xs:element ref="Identifier"/>
+				<xs:element ref="Title"/>
+				<xs:element ref="Abstract" minOccurs="0"/>
+				<xs:element ref="Documentation" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="rank" type="xs:string" use="required"/>
+			<xs:attribute name="color" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Identifier" type="xs:string"/>
+	<xs:element name="LongForm" type="xs:string"/>
+	<xs:element name="MidRange">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="StartPoint"/>
+				<xs:element ref="Identifier"/>
+				<xs:element ref="Title"/>
+				<xs:element ref="Abstract" minOccurs="0"/>
+				<xs:element ref="Documentation" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="rank" type="xs:integer" use="required"/>
+			<xs:attribute name="color" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Missing">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Identifier"/>
+				<xs:element ref="Title"/>
+			</xs:sequence>
+			<xs:attribute name="color" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Ordinal">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Classes"/>
+			</xs:sequence>
+			<xs:attribute name="type" type="xs:anyURI" use="required"/>
+			<xs:attribute name="length" type="xs:integer" use="required"/>
+			<xs:attribute name="decimals" type="xs:integer" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="OriginalValue" type="xs:string"/>
+	<xs:element name="RankingScheme">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="FirstRange"/>
+				<xs:element ref="MidRange" maxOccurs="unbounded"/>
+				<xs:element ref="LastRange"/>
+				<xs:element ref="Missing" minOccurs="0"/>
+				<xs:element ref="Exception" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ResultantValues">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Ordinal"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ShortForm" type="xs:string"/>
+	<xs:element name="StartPoint">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:float">
+					<xs:attribute name="include" type="xs:boolean" use="required"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Title" type="xs:string"/>
+	<xs:element name="UOM">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ShortForm"/>
+				<xs:element ref="LongForm"/>
+			</xs:sequence>
+			<xs:attribute name="reference" type="xs:anyURI"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Count">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="UOM"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Measure">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="UOM"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Values">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element ref="Count"/>
+				<xs:element ref="Measure"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

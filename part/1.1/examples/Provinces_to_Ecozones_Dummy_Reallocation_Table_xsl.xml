@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/schemas/part/1.1/xsl/part2html.xsl"?>
+<PART xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="/schemas/part/1.1/PART.xsd">
+	<Title>Dummy PART</Title>
+	<Source>
+		<Framework>
+			<FrameworkURI>http://sis.agr.gc.ca/cansis/nsdb/political/prov/2001</FrameworkURI>
+			<Organization>Agriculture and Agri-Food Canada</Organization>
+			<Title>Provinces and Territories of Canada</Title>
+			<Abstract>Province boundaries</Abstract>
+			<ReferenceDate>2008-01-01</ReferenceDate>
+			<Version>1</Version>
+			<Documentation/>
+			<FrameworkKey>
+				<Column name="prov" type="http://www.w3.org/TR/xmlschema-2/#string" length="2" decimals="0" />
+			</FrameworkKey>
+			<BoundingCoordinates>
+				<North>90</North>
+				<South>43</South>
+				<East>-50</East>
+				<West>-145</West>
+			</BoundingCoordinates>
+		</Framework>
+		<Filter>
+			<Abstract>none</Abstract>
+		</Filter>
+	</Source>
+	<Target>
+		<Framework>
+			<FrameworkURI>http://sis.agr.gc.ca/cansis/nsdb/ecostrat/zone/v1</FrameworkURI>
+			<Organization>Agriculture and Agri-Food Canada</Organization>
+			<Title>EcoZones</Title>
+			<Abstract>Ecozones</Abstract>
+			<ReferenceDate>2006-04-27</ReferenceDate>
+			<Version>1</Version>
+			<Documentation>http://sis.agr.gc.ca/cansis/nsdb/slc/v3.1.1/intro.html</Documentation>
+			<FrameworkKey>
+				<Column name="zone" type="http://www.w3.org/TR/xmlschema-2/#string" length="2" decimals="0" />
+			</FrameworkKey>
+			<BoundingCoordinates>
+				<North>90</North>
+				<South>43</South>
+				<East>-50</East>
+				<West>-145</West>
+			</BoundingCoordinates>
+		</Framework>
+		<Filter>
+			<Abstract>All water bodies as defined in the Hydro coverage</Abstract>
+		</Filter>
+	</Target>
+	<Rowset>
+<Row><S>AL</S><T>1</T><P>0.5</P></Row>
+<Row><S>AL</S><T>2</T><P>0.5</P></Row>
+<Row><S>BC</S><T>1</T><P>0.5</P></Row>
+<Row><S>BC</S><T>2</T><P>0.5</P></Row>
+<Row><S>MA</S><T>2</T><P>0.4</P></Row>
+<Row><S>MA</S><T>3</T><P>0.6</P></Row>
+<Row><S>NB</S><T>4</T><P>1</P></Row>
+<Row><S>NS</S><T>4</T><P>1</P></Row>
+<Row><S>ON</S><T>5</T><P>0.2</P></Row>
+<Row><S>ON</S><T>6</T><P>0.8</P></Row>
+<Row><S>QU</S><T>6</T><P>0.2</P></Row>
+<Row><S>QU</S><T>7</T><P>0.8</P></Row>
+</Rowset>
+</PART>

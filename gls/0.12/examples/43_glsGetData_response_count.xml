@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="http://www.ogcnetwork.net/schemas/gls/0.11/examples_xslt/gdas2html2.xsl"?>
+<GDAS service="GLS" version="0.12" xml:lang="en-CA" xmlns="http://www.opengis.net/gls/0.12" xmlns:gls="http://www.opengis.net/gls/0.12" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/gls/0.12  ..\glsGetData_response.xsd">
+	<Framework>
+		<FrameworkURI>http://ec.gc.ca/ecozone/1995</FrameworkURI>
+		<Organization>Environment Canada</Organization>
+		<Title>Ecozones of Canada</Title>
+		<Abstract>Ecozones are the highest level of the Terrestrial Ecostratification of Canada. </Abstract>
+		<ReleaseDate>1995-09-03</ReleaseDate>
+		<Documentation>http://sis.agr.gc.ca/cansis/nsdb/ecostrat/intro.html#ecological%20framework</Documentation>
+		<FrameworkKey>prov</FrameworkKey>
+		<BoundingBox>
+			<Minimum>
+				<Latitude>40</Latitude>
+				<Longitude>-138</Longitude>
+			</Minimum>
+			<Maximum>
+				<Latitude>90</Latitude>
+				<Longitude>-47</Longitude>
+			</Maximum>
+		</BoundingBox>
+		<Dataset>
+			<DatasetURI>http://agr.gc.ca/ecozone/population/1991</DatasetURI>
+			<Organization>Agriculture Canada</Organization>
+			<Title>Population in 1991</Title>
+			<Abstract>Population statistics from the 1991 Census of Population and Housing, reaggregated to EcoZones.</Abstract>
+			<ReleaseDate>1999-01-01</ReleaseDate>
+			<Documentation>http://sis.agr.gc.ca/cansis/nsdb/ecostrat/population.html</Documentation>
+			<DatasetKey type="http://www.w3.org/TR/xmlschema-2/#integer" length="7">ecozone</DatasetKey>
+			<KeyRelationship>one</KeyRelationship>
+			<KeyComplete>true</KeyComplete>
+			<Attribute>
+				<AttributeName>totf_91</AttributeName>
+				<Title>Total Female</Title>
+				<Abstract>Estimated total female population.</Abstract>
+				<Documentation>http://sis.agr.gc.ca/cansis/nsdb/ecostrat/population.html</Documentation>
+				<Values>
+					<Count type="http://www.w3.org/TR/xmlschema-2/#integer" length="7">
+						<UOM>Females</UOM>
+					</Count>
+				</Values>
+			</Attribute>
+			<Rowset>
+				<Row>
+					<K>1</K>
+					<V>515</V>
+				</Row>
+				<Row>
+					<K>2</K>
+					<V>7785</V>
+				</Row>
+				<Row>
+					<K>3</K>
+					<V>5001</V>
+				</Row>
+				<Row>
+					<K>4</K>
+					<V>10225</V>
+				</Row>
+				<Row>
+					<K>5</K>
+					<V>16235</V>
+				</Row>
+				<Row>
+					<K>6</K>
+					<V>1414249</V>
+				</Row>
+				<Row>
+					<K>7</K>
+					<V>1273294</V>
+				</Row>
+				<Row>
+					<K>8</K>
+					<V>7164550</V>
+				</Row>
+				<Row>
+					<K>9</K>
+					<V>344371</V>
+				</Row>
+				<Row>
+					<K>10</K>
+					<V>1942659</V>
+				</Row>
+				<Row>
+					<K>11</K>
+					<V>144</V>
+				</Row>
+				<Row>
+					<K>12</K>
+					<V>14687</V>
+				</Row>
+				<Row>
+					<K>13</K>
+					<V>1269512</V>
+				</Row>
+				<Row>
+					<K>14</K>
+					<V>374258</V>
+				</Row>
+				<Row>
+					<K>15</K>
+					<V>4794</V>
+				</Row>
+			</Rowset>
+		</Dataset>
+	</Framework>
+</GDAS>

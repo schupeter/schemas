@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by Peter Schut (Agriculture & Agri-Food Canada) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xrs="http://www.opengis.net/xrs/1.0.0" targetNamespace="http://www.opengis.net/xrs/1.0.0" elementFormDefault="qualified" version="1.0.0" xml:lang="en">
+	<xs:annotation>
+		<xs:appinfo>$Id: xrsRegisteredURLsResponse.xsd 2007-05-31 $</xs:appinfo>
+		<xs:documentation>
+			<xs:description>Response to an XRS RegisteredURLs Request.</xs:description>
+			<xs:copyright>Copyright (c) 2007 Government of Canada, All Rights Reserved. </xs:copyright>
+		</xs:documentation>
+	</xs:annotation>
+	<!-- ==============================================================-->
+	<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="../../xlink/1.0.0/xlinks.xsd"/>
+	<xs:include schemaLocation="common/xrsSimpleElements.xsd"/>
+	<xs:include schemaLocation="common/xrsCollectionType.xsd"/>
+	<xs:include schemaLocation="common/xrsRootAttributeGroup.xsd"/>
+	<!-- ==============================================================-->
+	<xs:element name="Collection">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="xrs:CollectionType">
+					<xs:sequence>
+						<xs:element ref="xrs:RegisteredURLs">
+							<xs:annotation>
+								<xs:documentation>The set of URLs that were harvested to create this collection.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+					<xs:attributeGroup ref="xrs:RootAttributeGroup"/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="RegisteredURLs">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="xrs:URL" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

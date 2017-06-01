@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../stylesheets/legend2html.xsl"?>
+<Legend version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../palette.xsd">
+	<Title>Soil Order (ORDER3)</Title>
+	<Abstract>Colors used to map Soil Name Table v2 Soil Order (ORDER3).</Abstract>
+	<Classes type="nominal">
+		<Class identifier="BR" color="B08D0B" title="Brunisol" />
+		<Class identifier="CH" color="DC660F" title="Chernozem" />
+		<Class identifier="CY" color="3E88E1" title="Cryosol" />
+		<Class identifier="GL" color="2E6EAE" title="Gleysol" />
+		<Class identifier="LU" color="E5E56B" title="Luvisol" />
+		<Class identifier="OR" color="FF99EB" title="Organic" />
+		<Class identifier="PZ" color="064A11" title="Podzol" />
+		<Class identifier="RG" color="5E5999" title="Regosol" />
+		<Class identifier="SZ" color="B31400" title="Solonetz" />
+		<Class identifier="VE" color="B6A071" title="Vertisol" />
+	</Classes>
+	<Exceptions>
+		<Exception identifier="-" color="B2B2B2" title="n/a" />
+	</Exceptions>
+</Legend>

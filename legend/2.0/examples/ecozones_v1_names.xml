@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../stylesheets/legend2html.xsl"?>
+<Legend version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../palette.xsd">
+	<Title>Ecozones of Canada</Title>
+	<Abstract>Colours used on the original Ecozones of Canada map.</Abstract>
+	<Classes type="nominal">
+		<Class identifier="1" color="CCFFFF" title="Arctic Cordillera" />
+		<Class identifier="2" color="99CCCC" title="Northern Arctic" />
+		<Class identifier="3" color="0099CC" title="Southern Arctic" />
+		<Class identifier="4" color="CCCCCC" title="Taiga Plains" />
+		<Class identifier="5" color="999999" title="Taiga Shield" />
+		<Class identifier="6" color="66CC66" title="Boreal Shield" />
+		<Class identifier="7" color="66CCCC" title="Atlantic Maritime" />
+		<Class identifier="8" color="CCCC99" title="Mixedwood Plains" />
+		<Class identifier="9" color="CCFFCC" title="Boreal Plains" />
+		<Class identifier="10" color="FFFF99" title="Prairies" />
+		<Class identifier="11" color="CC99CC" title="Taiga Cordillera" />
+		<Class identifier="12" color="9966CC" title="Boreal Cordillera" />
+		<Class identifier="13" color="006600" title="Pacific Maritime" />
+		<Class identifier="14" color="99CC00" title="Montane Cordillera" />
+		<Class identifier="15" color="CCFF99" title="Hudson Plains" />
+	</Classes>
+</Legend>

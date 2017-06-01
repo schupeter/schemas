@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:gls="http://www.opengis.net/gls/0.12" targetNamespace="http://www.opengis.net/gls/0.12" elementFormDefault="qualified" version="0.12" xml:lang="en">
+	<annotation>
+		<appinfo>$Id: glsAll.xsd 2008-09-26 $</appinfo>
+		<documentation>
+			<description>This XML Schema Document includes and imports, directly and indirectly, all the XML Schemas defined by the GLS Implementation Standard.</description>
+			<copyright>Copyright (c) 2008 OpenGIS, All Rights Reserved. </copyright>
+		</documentation>
+	</annotation>
+	<!-- ========= includes and imports ================================ -->
+	<include schemaLocation="glsGetCapabilities_request.xsd"/>
+	<include schemaLocation="glsGetCapabilities_response.xsd"/>
+	<include schemaLocation="glsDescribeFrameworks_request.xsd"/>
+	<include schemaLocation="glsDescribeFrameworks_response.xsd"/>
+	<include schemaLocation="glsDescribeDatasets_request.xsd"/>
+	<include schemaLocation="glsDescribeDatasets_response.xsd"/>
+	<include schemaLocation="glsDescribeData_request.xsd"/>
+	<include schemaLocation="glsDescribeData_response.xsd"/>
+	<include schemaLocation="glsGetData_request.xsd"/>
+	<include schemaLocation="glsGetData_response.xsd"/>
+	<include schemaLocation="glsDescribeJoinAbilities_request.xsd"/>
+	<include schemaLocation="glsDescribeJoinAbilities_response.xsd"/>
+	<include schemaLocation="glsDescribeKey_request.xsd"/>
+	<include schemaLocation="glsDescribeKey_response.xsd"/>
+	<include schemaLocation="glsJoinData_request.xsd"/>
+	<include schemaLocation="glsJoinData_response.xsd"/>
+	<include schemaLocation="glsService.xsd"/>
+</schema>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+Should be converted to a Numeric Classification file!
+
+<?xml-stylesheet type="text/xsl" href="../xsl/hash2html2.xsl"?>
+<Hash xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="hashtable_measure_count.xsd">
+	<Title>LSRS EGDD Estimate</Title>
+	<Description>This transformation will convert EGDD values to an LSRS class.</Description>
+	<KeyDescriptions>
+		<Attribute>
+			<AttributeName>EGDD</AttributeName>
+			<Title>EGDD</Title>
+			<Description>Effective Growing Degree Days.</Description>
+			<Documentation></Documentation>
+			<Values>
+				<Measure type="http://www.w3.org/TR/xmlschema-2/#integer" length="5"/>
+			</Values>
+		</Attribute>
+	</KeyDescriptions>
+	<ValueDescription>
+		<Attribute>
+			<AttributeName>LSRS_EGDD</AttributeName>
+			<Title>LSRS class based on EGDD values</Title>
+			<Description>LSRS class estimate based on EGDD values.</Description>
+			<Documentation></Documentation>
+			<Values>
+				<Ordinal type="http://www.w3.org/TR/xmlschema-2/#string" length="1">
+					<Classes>
+						<Value rank="1">
+							<Identifier>1</Identifier>
+							<Title>Class 1</Title>
+							<Abstract>Class 1</Abstract>
+							<Documentation></Documentation>
+						</Value>
+						<Value rank="2">
+							<Identifier>2</Identifier>
+							<Title>Class 2</Title>
+							<Abstract>Class 2</Abstract>
+							<Documentation></Documentation>
+						</Value>
+						<Value rank="3">
+							<Identifier>3</Identifier>
+							<Title>Class 3</Title>
+							<Abstract>Class 3</Abstract>
+							<Documentation></Documentation>
+						</Value>
+						<Value rank="4">
+							<Identifier>4</Identifier>
+							<Title>Class 4</Title>
+							<Abstract>Class 4</Abstract>
+							<Documentation></Documentation>
+						</Value>
+						<Value rank="5">
+							<Identifier>5</Identifier>
+							<Title>Class 5</Title>
+							<Abstract>Class 5</Abstract>
+							<Documentation></Documentation>
+						</Value>
+						<Value rank="6">
+							<Identifier>6</Identifier>
+							<Title>Class 6</Title>
+							<Abstract>Class 6</Abstract>
+							<Documentation></Documentation>
+						</Value>
+						<Value rank="7">
+							<Identifier>7</Identifier>
+							<Title>Class 7</Title>
+							<Abstract>Class 7</Abstract>
+							<Documentation></Documentation>
+						</Value>
+					</Classes>
+				</Ordinal>
+			</Values>
+		</Attribute>
+	</ValueDescription>
+	<Mapping>
+		<Range>
+			<GE>1435</GE>
+			<LT>9999</LT>
+			<Value>1</Value>
+		</Range>
+		<Range>
+			<GE>1260</GE>
+			<LT>1435</LT>
+			<Value>2</Value>
+		</Range>
+		<Range>
+			<GE>1135</GE>
+			<LT>1260</LT>
+			<Value>3</Value>
+		</Range>
+		<Range>
+			<GE>1015</GE>
+			<LT>1135</LT>
+			<Value>4</Value>
+		</Range>
+		<Range>
+			<GE>900</GE>
+			<LT>1015</LT>
+			<Value>5</Value>
+		</Range>
+		<Range>
+			<GE>0</GE>
+			<LT>900</LT>
+			<Value>6</Value>
+		</Range>
+	</Mapping>
+</Hash>

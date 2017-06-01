@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../stylesheets/legend2html.xsl"?>
+<Legend version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../legend.xsd">
+	<Title>Soils of Canada</Title>
+	<Abstract>Classes used to map the Soils of Canada map from circa 2000.</Abstract>
+	<Classes type="nominal" title_en="Soil "  title_fr="Sol">
+		<Class identifier="FO" color="FFBFFF" title_en="Folisol" title_fr=""/>
+		<Class identifier="H" color="FF99FF" title_en="Humisol" title_fr=""/>
+		<Class identifier="M" color="FF4DFF" title_en="Mesisol" title_fr=""/>
+		<Class identifier="F" color="FF00FF" title_en="Fibrisol" title_fr=""/>
+		<Class identifier="R" color="FFFF26" title_en="Regosol" title_fr=""/>
+		<Class identifier="TC" color="" title_en="Turbic Cryosol" title_fr=""/>
+		<Class identifier="SC" color="" title_en="" title_fr=""/>
+		<Class identifier="SZ" color="" title_en="Solonetz" title_fr=""/>
+		<Class identifier="SS" color="" title_en="Solodized Solonetz" title_fr=""/>
+		<Class identifier="MB" color="" title_en="" title_fr=""/>
+		<Class identifier="SB" color="" title_en="" title_fr=""/>
+		<Class identifier="DYB" color="" title_en="" title_fr=""/>
+		<Class identifier="EB" color="" title_en="" title_fr=""/>
+		<Class identifier="GBL" color="" title_en="" title_fr=""/>
+		<Class identifier="HP" color="" title_en="" title_fr=""/>
+		<Class identifier="HV" color="" title_en="" title_fr=""/>
+		<Class identifier="V" color="" title_en="" title_fr=""/>
+		<Class identifier="VSZ" color="" title_en="" title_fr=""/>
+		<Class identifier="BC" color="" title_en="" title_fr=""/>
+		<Class identifier="GL" color="" title_en="" title_fr=""/>
+		<Class identifier="DBC" color="" title_en="" title_fr=""/>
+		<Class identifier="OC" color="" title_en="" title_fr=""/>
+		<Class identifier="BLC" color="" title_en="" title_fr=""/>
+		<Class identifier="DGC" color="" title_en="" title_fr=""/>
+		<Class identifier="G" color="" title_en="" title_fr=""/>
+		<Class identifier="FHP" color="" title_en="" title_fr=""/>
+		<Class identifier="HFP" color="" title_en="" title_fr=""/>
+	</Classes>
+	<Exceptions>
+		<Class identifier="ICE" color="BFBFBF" title_en="Ice" title_fr=""/>
+		<Class identifier="ROC" color="4D4D4D" title_en="Rock" title_fr=""/>
+		<Class identifier="WAT" color="FFFFFF" title_en="Ice" title_fr=""/>
+	</Exceptions>
+</Legend>

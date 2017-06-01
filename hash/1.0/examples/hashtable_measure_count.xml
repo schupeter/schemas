@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+Should be converted to a Numeric Classification file!
+
+<?xml-stylesheet type="text/xsl" href="../xsl/hash2html2.xsl"?>
+<Hash xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="hashtable_measure_count.xsd">
+	<Title>SLC Surface Material Generalization #1</Title>
+	<Description>This transformation will generalize the SLC Surface Material field into five new classes.</Description>
+	<KeyDescriptions>
+		<Attribute>
+			<AttributeName>material</AttributeName>
+			<Title>Surface Material</Title>
+			<Description>Surface material includes the abiotic material at the earth's surface.</Description>
+			<Documentation>http://sis.agr.gc.ca/cansis/nsdb/ecostrat/surface_material.html</Documentation>
+			<Values>
+				<Count type="http://www.w3.org/TR/xmlschema-2/#integer" length="3"/>
+			</Values>
+		</Attribute>
+	</KeyDescriptions>
+	<ValueDescription>
+		<Attribute>
+			<AttributeName>material</AttributeName>
+			<Title>Surface Material</Title>
+			<Description>Surface material includes the abiotic material at the earth's surface.  Generated from Surface Material in the original database.</Description>
+			<Documentation>http://sis.agr.gc.ca/cansis/nsdb/ecostrat/surface_material.html</Documentation>
+			<Values>
+				<Ordinal type="http://www.w3.org/TR/xmlschema-2/#string" length="3">
+					<Classes>
+						<Value rank="1">
+							<Identifier>Low</Identifier>
+							<Title>Low Risk</Title>
+							<Abstract>Low risk</Abstract>
+							<Documentation></Documentation>
+						</Value>
+						<Value rank="2">
+							<Identifier>Medium</Identifier>
+							<Title>Medium Risk</Title>
+							<Abstract>Medium risk</Abstract>
+							<Documentation></Documentation>
+						</Value>
+						<Value rank="3">
+							<Identifier>High</Identifier>
+							<Title>High Risk</Title>
+							<Abstract>High risk</Abstract>
+							<Documentation></Documentation>
+						</Value>
+					</Classes>
+				</Ordinal>
+			</Values>
+		</Attribute>
+	</ValueDescription>
+	<Mapping>
+		<Range>
+			<GE>0</GE>
+			<LT>10</LT>
+			<Value>Low</Value>
+		</Range>
+		<Range>
+			<GE>10</GE>
+			<LT>25</LT>
+			<Value>Medium</Value>
+		</Range>
+		<Range>
+			<GE>25</GE>
+			<LT>100</LT>
+			<Value>High</Value>
+		</Range>
+	</Mapping>
+</Hash>

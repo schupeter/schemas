@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../stylesheets/legend2html.xsl"?>
+<Legend version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../legend.xsd">
+	<Title>Soil Survey Scans</Title>
+	<Abstract>Classes used to map the availability of soil survey scans.</Abstract>
+	<Classes type="ordinal" title_en="Soil Survey Availability" title_fr="Études pédologique: Disponibilité">
+		<Class rank="1" identifier="Y" color="2AFF7F" title_en="Available online" title_fr="disponible en ligne"/>
+		<Class rank="2" identifier="N" color="FF0055" title_en="Not scanned" title_fr="non disponible"/>
+	</Classes>
+</Legend>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../stylesheets/hash2html2.xsl"?>
+<Hash xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="hashtable_measure_count.xsd">
+	<Title>LSRS PPE Estimate</Title>
+	<Description>This transformation will take P-PE values and estimate an LSRS class.</Description>
+	<KeyDescriptions>
+		<Attribute>
+			<AttributeName>PPE</AttributeName>
+			<Title>P-PE</Title>
+			<Description>Precipitation minus Potential Evapotranspiration.</Description>
+			<Documentation></Documentation>
+			<Values>
+				<Measure type="http://www.w3.org/TR/xmlschema-2/#integer" length="5"/>
+			</Values>
+		</Attribute>
+	</KeyDescriptions>
+	<ValueDescription>
+		<Attribute>
+			<AttributeName>LSRS_PPE</AttributeName>
+			<Title>LSRS class based on PPE</Title>
+			<Description>LSRS class estimate based on P-PE.</Description>
+			<Documentation></Documentation>
+			<Values>
+				<Ordinal type="http://www.w3.org/TR/xmlschema-2/#string" length="1">
+					<Classes>
+						<Value rank="1">
+							<Identifier>1</Identifier>
+							<Title>Class 1</Title>
+							<Abstract>Class 1</Abstract>
+							<Documentation></Documentation>
+						</Value>
+						<Value rank="2">
+							<Identifier>2</Identifier>
+							<Title>Class 2</Title>
+							<Abstract>Class 2</Abstract>
+							<Documentation></Documentation>
+						</Value>
+						<Value rank="3">
+							<Identifier>3</Identifier>
+							<Title>Class 3</Title>
+							<Abstract>Class 3</Abstract>
+							<Documentation></Documentation>
+						</Value>
+						<Value rank="4">
+							<Identifier>4</Identifier>
+							<Title>Class 4</Title>
+							<Abstract>Class 4</Abstract>
+							<Documentation></Documentation>
+						</Value>
+						<Value rank="5">
+							<Identifier>5</Identifier>
+							<Title>Class 5</Title>
+							<Abstract>Class 5</Abstract>
+							<Documentation></Documentation>
+						</Value>
+						<Value rank="6">
+							<Identifier>6</Identifier>
+							<Title>Class 6</Title>
+							<Abstract>Class 6</Abstract>
+							<Documentation></Documentation>
+						</Value>
+						<Value rank="7">
+							<Identifier>7</Identifier>
+							<Title>Class 7</Title>
+							<Abstract>Class 7</Abstract>
+							<Documentation></Documentation>
+						</Value>
+					</Classes>
+				</Ordinal>
+			</Values>
+		</Attribute>
+	</ValueDescription>
+	<Mapping>
+		<Range>
+			<GE>-250</GE>
+			<LT>1000</LT>
+			<Value>1</Value>
+		</Range>
+		<Range>
+			<GE>-350</GE>
+			<LT>-250</LT>
+			<Value>2</Value>
+		</Range>
+		<Range>
+			<GE>-425</GE>
+			<LT>-350</LT>
+			<Value>3</Value>
+		</Range>
+		<Range>
+			<GE>-500</GE>
+			<LT>-425</LT>
+			<Value>4</Value>
+		</Range>
+		<Range>
+			<GE>-2000</GE>
+			<LT>-500</LT>
+			<Value>5</Value>
+		</Range>
+	</Mapping>
+</Hash>

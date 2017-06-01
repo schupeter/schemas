@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/schemas/legend/1.0/stylesheets/legend.xsl"?>
+<Legend xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../NumericClassification.xsd">
+	<Title>Land Suitability Rating System</Title>
+	<Abstract>This ranking system is used to display LSRS ratings.</Abstract>
+	<Classes>
+		<Class rank="1" color="46B208">
+			<Identifier>1</Identifier>
+			<Title>Class 1</Title>
+		</Class>
+		<Class rank="2" color="9ACD32">
+			<Identifier>2</Identifier>
+			<Title>Class 2</Title>
+		</Class>
+		<Class rank="3" color="DEF181">
+			<Identifier>3</Identifier>
+			<Title>Class 3</Title>
+		</Class>
+		<Class rank="4" color="FBFB83">
+			<Identifier>4</Identifier>
+			<Title>Class 4</Title>
+		</Class>
+		<Class rank="5" color="FAD566">
+			<Identifier>5</Identifier>
+			<Title>Class 5</Title>
+		</Class>
+		<Class rank="6" color="FAA958">
+			<Identifier>6</Identifier>
+			<Title>Class 6</Title>
+		</Class>
+		<Class rank="7" color="E15252">
+			<Identifier>7</Identifier>
+			<Title>Class 7</Title>
+		</Class>
+		<Exception color="CCCCCC">
+			<Identifier>n/a</Identifier>
+			<Title>Unclassified</Title>
+		</Exception>
+		<Exception color="99CCCC">
+			<Identifier>Wa</Identifier>
+			<Title>Water</Title>
+		</Exception>
+	</Classes>
+</Legend>
